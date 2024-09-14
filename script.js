@@ -12,6 +12,42 @@
             },
         });
 
+      // Tüm butonları ve bölümleri seç
+      const buttons = document.querySelectorAll('.tab-btn');
+      const sections = document.querySelectorAll('.text-section');
+      const aboutImage = document.getElementById('aboutImage');
+      
+      // Her sekmeye özel resimler
+      const imageMap = {
+          about: 'images/mainContainerBG.jpg',
+          industrial: 'images/mainContainerBG2.jpg',
+          vehicle: 'images/mainContainerBG3.jpg',
+          approach: 'images/solar_aku.jpg',
+          sustainability: 'images/iyon_aku.jpg'
+      };
+      
+      // Butonlara tıklama olaylarını dinle
+      buttons.forEach(button => {
+          button.addEventListener('click', () => {
+              // Aktif butonu ayarlama
+              buttons.forEach(btn => btn.classList.remove('active'));
+              button.classList.add('active');
+      
+              // İçerik bölümlerini gizleme
+              sections.forEach(section => section.classList.remove('active'));
+              
+              // Tıklanan butona ait içeriği gösterme
+              const target = button.getAttribute('data-target');
+              document.getElementById(target).classList.add('active');
+      
+              // Tıklanan butona göre resmi değiştirme
+              aboutImage.src = imageMap[target];
+          });
+      });
+      
+
+
+
         function smoothScrollTo2(targetY, duration) {
     const startY = window.pageYOffset;
     const distance = targetY - startY;
@@ -41,7 +77,7 @@
 
 // Swiper bölümü için yeni Intersection Observer ayarları
 const swiperSection2 = document.querySelector('.main.swiper');
-const aboutSection2 = document.querySelector('.aboutContent');
+const aboutSection2 = document.querySelector('.aboutText');
 
 // İkinci gözlemciyi tanımlıyoruz
 const observer2 = new IntersectionObserver(function(entries) {
@@ -107,6 +143,8 @@ observerToTop.observe(heroSection);
 // Yeni gözlemci ile bölümleri gözlemlemeye başlıyoruz
 observer2.observe(swiperSection2);
 observer2.observe(aboutSection2);
+
+// Butonlara tıklama ile içerik değiştirme fonksiyonu
 
 
 

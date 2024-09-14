@@ -82,7 +82,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/mainContainerBG.jpg');
+    
     background-size: cover;
     background-position: center;
     position: relative;
@@ -316,55 +316,234 @@ nav ul li a:hover {
     background-color: #79630c;
 }
 
-.aboutContent {
-    width: 90%;
+/* Genel stiller */
+
+
+/* Genel animasyonlar */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9); /* Hafif aşağıda ve küçük başlar */
+        visibility: visible; /* Visibility'yi baştan açık yap */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Normal boyut ve konum */
+    }
+}
+
+/* Metinler için daha doğal bir animasyon */
+@keyframes fadeTextIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Hafif aşağıdan gelir */
+        visibility: visible; /* Visibility'yi baştan açık yap */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Normal konuma gelir */
+    }
+}
+/* .aboutContainer için animasyon */
+.aboutContainer {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     margin: 0 auto;
     padding: 20px;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
+    background-color: #ffffff;
     border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+border: 1px solid black;
+    position: relative;
+   
 }
 
-.aboutData {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+/* Navbar stilleri */
+.aboutNavbar {
+    display: flex;  
+    justify-content: space-between; /* Butonlar arasında eşit boşluk bırak */
+    margin-bottom: 40px;
+    position: relative;
+    left: 0; /* Başlangıç noktası sol olacak */
+    right: 0; /* Bitiş noktası sağ olacak */
+    top: 0px;
+    padding: 0 30px; /* Kenarlardan boşluk bırak */
+    animation: fadeInUp 1.2s ease; /* Navbar kayarak görünme */
 }
 
-.aboutText {
-    width: 60%;
-    max-height: 85vh; /* Tamamı 400px yüksekliği geçerse kaydırma başlar */
-    overflow-y: auto;
-    padding-right: 20px;
-}
-
-.aboutText p {
-    line-height: 1.6;
-    color: #333;
-    font-size: 16px;
-    padding: 10px;
-    justify-content: center;
-    text-align: center;
+.aboutNavbar button {
+    padding: 0 20px;
+    margin: 0; /* Butonlar arası boşluk kaldırıldı */
+    border: none;
     background-color: #fff;
-    border-left: 4px solid #007BFF;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    position: relative;
+    animation: slideInRight 1.2s ease; /* Butonlar sağdan kayarak görünme */
+    flex: 1; /* Butonların eşit genişlikte olmasını sağlar */
+    max-width: 150px; /* Buton genişliğini sınırlamak için */
+    text-align: center; /* Buton içeriğini ortalar */
 }
 
-.aboutImage {
-    width: 35%; /* Sağ tarafta görsel */
+.aboutNavbar button:not(:last-child) {
+    margin-right: 10px; /* Son buton hariç diğerleri arasında küçük boşluk */
+}
+
+
+.aboutNavbar button::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: white; /* Alt çizgi rengi */
+    transition: width 0.3s ease;
+    margin-top: 5px;
+}
+
+.aboutNavbar button.active::after {
+    width: 100%; /* Aktif butona çizgi */
+}
+
+.aboutNavbar button:hover::after {
+    width: 100%;
+    background-color: #002244;
+}
+
+.aboutNavbar button.active {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    transition: width 0.3s ease;
+}
+
+.aboutNavbar button:hover {
+    background-color: #ffffff;
+    
+    transform: translateY(-3px);
+}
+
+
+/* Content (İçerik) alanı */
+.content {
     display: flex;
-    height: 100vh;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 10px; /* Fotoğraflar ve içerik arasında boşluk */
+    animation: fadeIn 1.5s ease; /* İçerik kısmı yavaşça görünme */
+}
+
+.text-section {
+     margin-right: auto;
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.text-section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease; /* Aktif olan içerik kayarak görünme */
+}
+
+.text-section h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+    font-size: 28px;
+    position: relative;
+    animation: fadeInUp 0.8s ease; /* Başlık kayarak görünme */
+}
+
+.text-section p {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards; /* Metin soluklaşarak görünme */
+    animation-delay: 0.2s; /* Gecikmeli görünme */
+}
+
+/* hr çizgisi */
+.text-section hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #007BFF, transparent);
+    margin: 20px 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+
+.text-section.active hr {
+    opacity: 1;
+    transform: scaleX(1);
+    animation: fadeInUp 0.8s ease; /* Çizgi kayarak görünme */
+}
+
+/* Resim alanı */
+.aboutImage {
+    width: 200%;
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px; /* Eşit genişlik */
+    margin-left:auto;
+    animation: fadeIn 1.2s ease; /* Resimler soluklaşarak görünme */
 }
 
 .aboutImage img {
-   
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40vh;
+    height: 40vh;
+    max-width: 300px; /* Eşit resim boyutları */
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.aboutImage img:hover {
+    transform: scale(1.05); /* Üzerine gelindiğinde hafif büyüme efekti */
+}
+
+/* Hover ve geçiş efektleri */
+
+
+
+.aboutText {
+    font-family: monospace;
+    text-align: center; /* İçeriği ortalamak için */
+    position: relative; /* Çizgilerin konumunu ayarlamak için */
+    padding: 20px 0; /* Üst ve alt padding */
+}
+
+.aboutText h2 {
+    display: inline; /* Başlığın çizgilerle düzgün hizalanmasını sağlar */
+    position: relative; /* ::before ve ::after pseudo-elementler için */
+    padding: 0 70px; /* Çizgiler ile başlık arasına boşluk ekler */
+    margin: 0; /* Başlık için varsayılan margin'i sıfırlar */
+}
+
+.aboutText h2::before, .aboutText h2::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Çizgilerin başlığın ortasında olmasını sağlar */
+    width: 50%; /* Çizgilerin genişliği */
+    height: 1px; /* Çizgilerin kalınlığı */
+    background: #007BFF; /* Çizgilerin rengi */
+    transform: translateY(-50%); /* Çizgileri başlığın ortasına hizalar */
+}
+
+.aboutText h2::before {
+    left: -50%; /* Çizgiyi başlığın solundan başlatır */
+}
+
+.aboutText h2::after {
+    right: -50%; /* Çizgiyi başlığın sağında bitirir */
 }
 
 
@@ -376,13 +555,37 @@ nav ul li a:hover {
 
 
 
-hr {
-    border: none; /* Varsayılan çizgiyi kaldırır */
-    height: 2px; /* İnce bir çizgi */
-    background: linear-gradient(to right, #f7dfad, #c925ee); /* Renk geçişli bir çizgi */
-    margin: 10px 0; /* Başlıkla arasına boşluk bırakır */
-    border-radius: 5px; /* Yuvarlatılmış köşeler */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Hafif gölge */
+
+.featuresText {
+    font-family: monospace;
+    text-align: center; /* İçeriği ortalamak için */
+    position: relative; /* Çizgilerin konumunu ayarlamak için */
+    padding: 20px 0; /* Üst ve alt padding */
+}
+
+.featuresText h2 {
+    display: inline; /* Başlığın çizgilerle düzgün hizalanmasını sağlar */
+    position: relative; /* ::before ve ::after pseudo-elementler için */
+    padding: 0 70px; /* Çizgiler ile başlık arasına boşluk ekler */
+    margin: 0; /* Başlık için varsayılan margin'i sıfırlar */
+}
+
+.featuresText h2::before, .featuresText h2::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Çizgilerin başlığın ortasında olmasını sağlar */
+    width: 50%; /* Çizgilerin genişliği */
+    height: 1px; /* Çizgilerin kalınlığı */
+    background: #007BFF; /* Çizgilerin rengi */
+    transform: translateY(-50%); /* Çizgileri başlığın ortasına hizalar */
+}
+
+.featuresText h2::before {
+    left: -50%; /* Çizgiyi başlığın solundan başlatır */
+}
+
+.featuresText h2::after {
+    right: -50%; /* Çizgiyi başlığın sağında bitirir */
 }
 
 
@@ -492,16 +695,14 @@ hr {
 
 /* Features Section */
 .features {
-    padding: 60px 0;
+   margin-bottom: 10px;
     background-color: #fff;
 }
 
 .features h2 {
     font-family: monospace;
     text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
+    
 }
 
 .features .grid {
