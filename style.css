@@ -5,9 +5,10 @@
     box-sizing: border-box;
 }
 
-/* Telefon numarası ve diğer bilgiler için Header-Row */
+
+/* Header kalsın ancak kaydırma sonrası arka plan rengi değişsin 
 .header-row {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -19,7 +20,8 @@
     align-items: center;
     font-size: 18px;
     width: 100%;
-    
+    background-color: transparent; 
+    transition: background-color 0.5s ease; 
 }
 
 .header-row .nav-link {
@@ -32,11 +34,11 @@
 .header-row .nav-link:hover {
     color: #ffdd00;
 }
-
-/* Logo ve Menü İçin Header */
+*/
+/* Header en üstte sabit kalacak ve menü ortalanacak */
 header {
-    position: absolute;
-    top: 10px;
+    position: fixed; /* Header sabit */
+    top: 0;
     left: 0;
     right: 0;
     z-index: 10;
@@ -45,6 +47,12 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-color: transparent; /* Başlangıçta transparan */
+    transition: background-color 0.5s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.7); /* Kaydırınca yarı opak renk */
 }
 
 header .container {
@@ -52,33 +60,68 @@ header .container {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    position: relative; /* Menü ortalaması için relative pozisyon */
+}
+
+header .logo {
+    position: absolute;
+     /* Solda sabitlenmiş logo */
 }
 
 header .logo h1 {
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 30px;
     font-weight: 600;
-    font-family: monospace;
+    font-family: 'Arial', sans-serif; /* Güzel bir font kullan */
+    margin-left: auto; /* Soldan 5px boşluk */
+}
+
+/* Menü ortada yer alacak */
+nav {
+    flex-grow: 1; /* Menü ortada olacak şekilde genişlik sağlar */
+    display: flex;
+    justify-content: center; /* Menüyü ortalar */
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    margin: 0;
+    padding: 10px;
+    
 }
 
 nav ul li a {
+
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 13px;
     font-weight: bold;
+    
+    
     transition: color 0.4s ease;
-    font-family: monospace;
+    font-family: 'Arial', sans-serif;
 }
 
 nav ul li a:hover {
     color: #ffdd00;
 }
+
+/* Ana içerik tam ortada yer alacak */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Sayfa yüksekliği boyunca ortalanmış */
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Sayfa kaydırılınca header'a arka plan rengi ekleyen JavaScript */
+
 
 /* Hero Section */
 .hero {
@@ -122,18 +165,18 @@ nav ul li a:hover {
     font-size: 3rem;
     margin-bottom: 10px;
     color: #fff;
-    font-family: monospace;
+    font-family: 'Arial', sans-serif;
 }
 
 .hero .mainText p {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #fff;
-    font-family: monospace;
+    font-family: 'Arial', sans-serif;
 }
 
 .btn {
-    font-family: monospace;
+    font-family: 'Arial', sans-serif;
     background-color: #ffdd00;
     color: #002244;
     padding: 10px 20px;
@@ -188,12 +231,14 @@ nav ul li a:hover {
 
 
 
-/* Swiper Slider */
 .swiper {
     position: relative;
-    width: 100%;
-    height: 100%;
-    
+    width: 80%; /* Ekran genişliğinin %80'ine sığacak şekilde ayarladım */
+    max-width: 1200px; /* Maksimum genişlik sınırlaması */
+    margin: 50px auto; /* Ekrana ortalamak için margin kullanıyorum */
+    height: 60vh; /* Yüksekliği %80vh'den %60vh'ye düşürdüm */
+    overflow: hidden;
+    background-color: #000; /* Arka planı siyah yaparak kontrast arttırıyoruz */
 }
 
 .swiper-slide {
@@ -202,193 +247,192 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    
     transition: transform 0.6s ease;
+    background: rgba(0, 0, 0, 0.5); /* Hafif karartılmış arka plan */
+    height: 100%; /* Slaytın tamamını kaplaması için %100 yükseklik */
 }
 
 .swiper-slide img {
-    width: 140vh;
-    height: 100vh;
+    width: 100%;
+    height: 100%; /* Resmi tamamen kaplaması için %100 yükseklik */
     object-fit: cover;
-   
-    transition: opacity 1s ease;
+    transition: opacity 1s ease, transform 1s ease;
     position: relative;
-    -webkit-mask-image: linear-gradient(to left, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 1) 50%);
-    mask-image: linear-gradient(to left, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 1) 50%);
-}
-
-.swiper-slide-active img {
-    opacity: 1;
-    
+    filter: brightness(70%); /* Görsellerin parlaklığını azaltarak metni öne çıkaralım */
+    -webkit-mask-image: linear-gradient(to left, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 60%);
+    mask-image: linear-gradient(to left, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 60%);
 }
 
 .image-data {
     position: absolute;
     top: 50%;
-    color: #333;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
     z-index: 2;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     transition: all 0.9s ease;
-    transform: translateY(-50%);
-    right: 10%;
     text-align: right;
-    font-family: monospace;
+    font-family: 'Arial', sans-serif; /* Daha modern bir font */
+    max-width: 80%; /* Metin genişliğini sınırla */
 }
-.image-data a
-{
+
+/* Diğer stiller aynı şekilde kullanılabilir */
+
+
+.image-data a {
     font-size: 15px;
+    color: #ffdd00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
-.image-data h2
-{
-    font-size: 30px;
+
+.image-data h2 {
+    font-size: 36px;
+    color: #ffdd00;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Hafif gölge efekti */
 }
-.image-data span
-{
-    font-size: 17px;
+
+.image-data span {
+    font-size: 18px;
+    color: #f0f0f0;
+    letter-spacing: 0.5px;
 }
 
 .image-data span,
 .image-data h2,
 .image-data a {
     opacity: 0;
-    transform: translateX(50%); /* Sağdan gelsin */
-    animation: slideInRight 0.8s ease forwards; /* Sağdan kayma animasyonu */
+    transform: translateX(50%);
+    animation: slideInRight 0.8s ease forwards;
 }
 
 .image-data span {
-    animation-delay: 0.2s; /* İlk satır */
+    animation-delay: 0.2s;
 }
 
 .image-data h2 {
-    animation-delay: 0.4s; /* İkinci satır */
+    animation-delay: 0.4s;
 }
 
 .image-data a {
-    animation-delay: 0.6s; /* Üçüncü satır */
+    animation-delay: 0.6s;
 }
 
-/* Animasyon keyframes */
-@keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50%); /* Sağdan başla */
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0); /* Normal pozisyona gel */
-    }
-}
-
-
-
-.swiper-slide .image-data {
-    right: 10%;
-    text-align: right;
-    
-}
-
-.swiper-slide-active .image-data {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* Button için daha şık bir stil */
 .image-data .button {
     display: inline-block;
-    background-color: #ffdd00;
+    background: linear-gradient(135deg, #ffdd00, #ffc400);
     color: #002244;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     text-align: center;
-    font-weight: 600;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(255, 221, 0, 0.3);
     transform: translateX(50%);
-    transition: transform 1s ease, opacity 1s ease 0.6s;
+    transition: transform 1s ease, opacity 1s ease 0.6s, box-shadow 0.4s ease;
 }
 
 .swiper-slide-active .image-data .button {
     transform: translateX(0);
     opacity: 1;
+    box-shadow: 0 12px 25px rgba(255, 221, 0, 0.6); /* Butona parlama efekti ekleyelim */
 }
 
 .image-data .button:hover {
-    transition: background-color 0.4s ease;
-    background-color: #79630c;
+    background: linear-gradient(135deg, #ffc400, #ffb700);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 12px 30px rgba(255, 221, 0, 0.9); /* Hover durumunda daha parlak bir efekt */
 }
 
-/* Genel stiller */
+/* Yeni animasyonlar */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-
-/* Genel animasyonlar */
 @keyframes fadeSlideIn {
     0% {
         opacity: 0;
-        transform: translateY(50px) scale(0.9); /* Hafif aşağıda ve küçük başlar */
-        visibility: visible; /* Visibility'yi baştan açık yap */
+        transform: translateY(50px) scale(0.9);
     }
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1); /* Normal boyut ve konum */
+        transform: translateY(0) scale(1);
     }
 }
 
-/* Metinler için daha doğal bir animasyon */
 @keyframes fadeTextIn {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* Hafif aşağıdan gelir */
-        visibility: visible; /* Visibility'yi baştan açık yap */
+        transform: translateY(20px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Normal konuma gelir */
+        transform: translateY(0);
     }
 }
+
+
 /* .aboutContainer için animasyon */
 .aboutContainer {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    margin: 0 auto;
+    margin: 100px auto; /* Sayfanın üstünden boşluk ve ortalama */
     padding: 20px;
     background-color: #ffffff;
-    border-radius: 10px;
-border: 1px solid black;
     position: relative;
-   
+    width: 80%; /* Genişlik küçültüldü */
+    max-width: 1200px; /* Maksimum genişlik ayarlandı */
+    height: auto; /* İçeriğe göre otomatik yükseklik */
+    padding-bottom: 5px; /* aboutText ile arada 5px boşluk */
 }
+
 
 /* Navbar stilleri */
 .aboutNavbar {
-    display: flex;  
-    justify-content: space-between; /* Butonlar arasında eşit boşluk bırak */
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: center; /* Butonları ortalar */
+    margin-bottom: 20px;
     position: relative;
-    left: 0; /* Başlangıç noktası sol olacak */
-    right: 0; /* Bitiş noktası sağ olacak */
+    left: 0;
+    right: 0;
     top: 0px;
-    padding: 0 30px; /* Kenarlardan boşluk bırak */
-    animation: fadeInUp 1.2s ease; /* Navbar kayarak görünme */
+    padding: 0 50px; /* En sağdan ve en soldan boşluk bırak */
+    animation: fadeInUp 1.2s ease;
+    max-width: 100%; /* Navbar'ın tam genişliğini korur */
 }
 
 .aboutNavbar button {
     padding: 0 20px;
-    margin: 0; /* Butonlar arası boşluk kaldırıldı */
+    margin: 0 5px; /* Butonlar arasındaki boşluğu ayarla */
     border: none;
     background-color: #fff;
     color: #000;
-    font-size: 16px;
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease;
     position: relative;
-    animation: slideInRight 1.2s ease; /* Butonlar sağdan kayarak görünme */
-    flex: 1; /* Butonların eşit genişlikte olmasını sağlar */
-    max-width: 150px; /* Buton genişliğini sınırlamak için */
-    text-align: center; /* Buton içeriğini ortalar */
+    animation: slideInRight 1.2s ease;
+    flex: 1;
+    max-width: 150px;
+    text-align: center;
 }
 
 .aboutNavbar button:not(:last-child) {
-    margin-right: 10px; /* Son buton hariç diğerleri arasında küçük boşluk */
+    margin-right: 5px; /* Son buton hariç diğerleri arasında küçük boşluk */
 }
+
 
 
 .aboutNavbar button::after {
@@ -396,7 +440,7 @@ border: 1px solid black;
     display: block;
     width: 0;
     height: 3px;
-    background-color: white; /* Alt çizgi rengi */
+    background-color: #002244; /* Alt çizgi rengi */
     transition: width 0.3s ease;
     margin-top: 5px;
 }
@@ -412,14 +456,17 @@ border: 1px solid black;
 
 .aboutNavbar button.active {
     background-color: #ffffff;
-    transform: translateY(-2px);
+    transform: translateY(-10px);
     transition: width 0.3s ease;
+    color:  #002244;
+    font-size: 15px;
+    font-style: bold;
 }
 
 .aboutNavbar button:hover {
     background-color: #ffffff;
     
-    transform: translateY(-3px);
+    transform: translateY(-10px);
 }
 
 
@@ -428,19 +475,19 @@ border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    padding-top: 10px; /* Fotoğraflar ve içerik arasında boşluk */
+    gap: 50px; /* Fotoğraflar ve içerik arasında boşluk */
     animation: fadeIn 1.5s ease; /* İçerik kısmı yavaşça görünme */
 }
 
 .text-section {
-     margin-right: auto;
+    margin-right: auto;
     display: none;
-    width: 100%;
+    text-align: center;
+    width: 600px; /* Sabit genişlik */
+    height: 400px; /* Sabit yükseklik */
     background-color: #fff;
-    padding: 20px;
+    padding: 20px; /* İç boşluğu ayarladım */
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(20px);
     opacity: 0;
@@ -448,21 +495,26 @@ border: 1px solid black;
 
 .text-section.active {
     display: block;
+    font-size: 20px;
     opacity: 1;
     transform: translateY(0);
-    animation: fadeInUp 1s ease; /* Aktif olan içerik kayarak görünme */
+    animation: fadeInUp 1s ease;
 }
 
 .text-section h2 {
     margin-bottom: 20px;
     color: #007BFF;
-    font-size: 28px;
+    font-size: 20px;
     position: relative;
+    font-family: 'Arial', sans-serif;
     animation: fadeInUp 0.8s ease; /* Başlık kayarak görünme */
 }
 
 .text-section p {
+    font-family: 'Arial', sans-serif;
     opacity: 0;
+    
+    font-size:large;
     animation: fadeIn 1s ease forwards; /* Metin soluklaşarak görünme */
     animation-delay: 0.2s; /* Gecikmeli görünme */
 }
@@ -486,39 +538,33 @@ border: 1px solid black;
 
 /* Resim alanı */
 .aboutImage {
-    width: 200%;
-    height: 200%;
+    width: 600px; /* Sabit genişlik */
+    height: 400px; /* Sabit yükseklik */
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 300px; /* Eşit genişlik */
-    margin-left:auto;
-    animation: fadeIn 1.2s ease; /* Resimler soluklaşarak görünme */
+    margin-left: auto;
+    animation: fadeIn 1.2s ease;
 }
 
 .aboutImage img {
-    width: 40vh;
-    height: 40vh;
-    max-width: 300px; /* Eşit resim boyutları */
-    border: 1px solid black;
+    width: 100%; /* Tam genişlik */
+    height: 100%; /* Tam yükseklik */
+    object-fit: cover; /* Resmin taşmasını engelle ve boyuta göre kırp */
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
-.aboutImage img:hover {
-    transform: scale(1.05); /* Üzerine gelindiğinde hafif büyüme efekti */
-}
 
 /* Hover ve geçiş efektleri */
 
 
 
 .aboutText {
-    font-family: monospace;
+    font-family: 'Arial', sans-serif;
     text-align: center; /* İçeriği ortalamak için */
     position: relative; /* Çizgilerin konumunu ayarlamak için */
-    padding: 20px 0; /* Üst ve alt padding */
+    margin-top: 20px; /* aboutContainer ile arada 5px boşluk */
 }
 
 .aboutText h2 {
@@ -548,16 +594,8 @@ border: 1px solid black;
 
 
 
-
-
-
-
-
-
-
-
 .featuresText {
-    font-family: monospace;
+    font-family: 'Arial', sans-serif;
     text-align: center; /* İçeriği ortalamak için */
     position: relative; /* Çizgilerin konumunu ayarlamak için */
     padding: 20px 0; /* Üst ve alt padding */
@@ -700,7 +738,7 @@ border: 1px solid black;
 }
 
 .features h2 {
-    font-family: monospace;
+    font-family: 'Arial', sans-serif;
     text-align: center;
     
 }
