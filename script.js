@@ -1,3 +1,6 @@
+
+
+
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     pagination: {
@@ -13,6 +16,14 @@ const swiper = new Swiper('.swiper-container', {
         disableOnInteraction: false,
     },
 });
+if (history.scrollRestoration) {
+  history.scrollRestoration = 'manual'; // Tarayıcıya kaydırma pozisyonunu saklamamasını söyler
+}
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0); // Sayfa kapanmadan önce kaydırmayı en üste çeker
+};
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const scrollWrapper = document.querySelector(".scroll-wrapper");
@@ -154,7 +165,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  document.addEventListener('scroll', function () {
+    const contactContainer = document.querySelector('.contact-container');
+    const containerPosition = contactContainer.getBoundingClientRect().top;
+    
+    // Ekranın %70'i kadarını belirleyen sabit
+    const screenPosition = window.innerHeight /1.5;
 
+    if (containerPosition < screenPosition) {
+        contactContainer.classList.add('show');
+    }
+});
+
+
+  
 document.addEventListener('scroll', function () {
     const aboutContainer = document.querySelector('.aboutContainer');
     const containerPosition = aboutContainer.getBoundingClientRect().top;
