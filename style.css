@@ -125,17 +125,45 @@ nav ul li a:hover {
 
 
 /* Hero section */
-.hero {
-    position: relative;
-    color: #fff;
+
+
+.hero-slide-1
+{
+    background-image: url('images/mainContainerBG.jpg'); 
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+    width: 100%;
+    position: relative;
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+.hero-slide-2
+{
+    background-image: url('images/mainContainerBG2.jpg');
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-position: center 65%;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+.hero-slide-3
+{
+    background-image: url('images/mainContainerBG3.jpg');
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-position: center 65%;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
 }
 
-.hero::before {
+
+
+.hero-slide-1::before {
     content: '';
     position: absolute;
     top: 0;
@@ -145,6 +173,27 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.5); /* Tüm fotoğrafı karart */
     z-index: -1;
 }
+.hero-slide-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Tüm fotoğrafı karart */
+    z-index: -1;
+}
+.hero-slide-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Tüm fotoğrafı karart */
+    z-index: -1;
+}
+
 
 /* Swiper ve slide ayarları */
 .hero .swiper-container {
@@ -557,7 +606,7 @@ opacity: 1;
     transition: transform 0.5s ease-in-out;
     overflow-x: auto; /* Scroll bar eklemek için */
     scroll-behavior: smooth; /* Kaydırma davranışı */
-    padding-bottom: 20px; /* Scroll bar'ı sarmak için */
+    padding-bottom: 0px; /* Scroll bar'ı sarmak için */
     position: relative; /* Scroll bar'ı ortalamak için */
   }
   
@@ -752,30 +801,136 @@ opacity: 1;
     color: #555;
 }
 
-.mainScreen
-{
+
+.contact-section {
+    position: relative;
+    height: 60vh;
+    z-index: 1;
+    background-image: url('images/forklift.jpg'); /* Contact section arka plan resmi */
+    background-size: cover;
+    background-position: center;
     
-    background-color: #145329;
+    background-attachment: scroll;
+    padding-top: 10px; /* Fotoğrafın tablodan yukarıda 10px boşluk bırakmasını sağlar */
+    padding-bottom: 10px; /* Fotoğrafın tablodan aşağıda 10px boşluk bırakmasını sağlar */
+    display: flex;
+    justify-content: flex-end; /* Formu sağa hizalamak için */
+    align-items: center; /* Formu dikey olarak ortalamak için */
+
 }
 
+/* Background Image Common Styling */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 60vh; /* Fotoğrafın yüksekliğini %60'a düşürdüm */
+    object-fit: cover;
+    filter: brightness(25%); /* Fotoğrafı daha da karartmak için parlaklığı %25'e düşürdüm */
+    z-index: -1;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 2; /* Formun resmin üzerinde görünmesini sağlamak için */
+    background-color: rgba(0, 0, 0, 0.85); /* Daha koyu arka plan rengi (%85 şeffaf) */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    margin-right: 40px; /* Sağdan biraz boşluk bırakmak için */
+    height: auto; /* İçeriğe göre yüksekliği ayarlar */
+    box-sizing: border-box; /* İçerik ve padding ile uyumlu bir boyutlandırma sağlar */
+}
+
+.contact-container h1, .contact-container p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff; /* Koyu arka planda metin rengini beyaz yapar */
+}
+
+.contact-container h1 {
+    font-weight: bold;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contact-container p {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contact-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    flex: 1;
+}
+
+.contact-form label {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+    color: #fff; /* Koyu arka planda etiket rengini beyaz yapar */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #6c63ff;
+    background-color: #fff;
+}
+
+.contact-form textarea {
+    width: 100%;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #460770;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #594adb;
+}
 
 
 
 /* Footer Styles */
-
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-.main-content {
-    padding-bottom: 160px; /* Footer yüksekliğine göre ayar yapabilirsiniz */
-}
-
 .footer {
     position: relative;
     width: 100%;
-    height:50vh ;
+   
     background: #10182F;
     border-radius: 0;
     padding: 60px; /* Daha uzun footer için padding'i artırdık */
