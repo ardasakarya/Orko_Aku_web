@@ -72,7 +72,7 @@ header .logo h1 {
     color: #fff;
     font-size: 30px;
     font-weight: 600;
-    font-family: 'Arial', sans-serif; /* Güzel bir font kullan */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/* Güzel bir font kullan */
     margin-left: auto; /* Soldan 5px boşluk */
 }
 
@@ -101,7 +101,7 @@ nav ul li a {
     
     
     transition: color 0.4s ease;
-    font-family: 'Arial', sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 nav ul li a:hover {
@@ -120,28 +120,18 @@ nav ul li a:hover {
 }
 
 
-/* Sayfa kaydırılınca header'a arka plan rengi ekleyen JavaScript */
 
-
-/* Hero Section */
+/* Hero section */
 .hero {
-    
-    background-size: cover;
-    background-position: center;
     position: relative;
     color: #fff;
-    text-align: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-position: center 65%;
-    background-size: cover;
-    background-attachment: fixed;
     z-index: 1;
 }
 
-/* Arka planı koyulaştırmak için bir overlay */
 .hero::before {
     content: '';
     position: absolute;
@@ -149,10 +139,33 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Tüm fotoğrafı karart */
     z-index: -1;
 }
 
+/* Swiper ve slide ayarları */
+.hero .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6); /* Tüm resimlere karartma efekti */
+}
+
+/* Metinleri ortalama ve stil ayarları */
 .hero .container {
     display: flex;
     justify-content: center;
@@ -161,22 +174,38 @@ nav ul li a:hover {
     z-index: 2;
 }
 
+.hero .mainText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2; /* Üstte kalmasını sağlamak */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Yazıları tam ortada hizalar */
+}
+
 .hero .mainText h2 {
     font-size: 3rem;
     margin-bottom: 10px;
     color: #fff;
-    font-family: 'Arial', sans-serif;
+    
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: fadeIn 0.8s ease forwards;
 }
 
 .hero .mainText p {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #fff;
-    font-family: 'Arial', sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: fadeIn 1s ease forwards;
 }
 
 .btn {
-    font-family: 'Arial', sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #ffdd00;
     color: #002244;
     padding: 10px 20px;
@@ -187,14 +216,14 @@ nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.4s ease;
     text-decoration: none;
+    animation: fadeIn 1.5s ease forwards;
 }
 
 .btn:hover {
     background-color: #79630c;
 }
 
-
-/* Ana animasyon */
+/* Fade-in Animasyonu */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -206,202 +235,61 @@ nav ul li a:hover {
     }
 }
 
-/* H2 ve P elemanlarına animasyon ekleme */
+/* Swiper-specific styling */
+.swiper-pagination-bullet {
+    background: #ffdd00;
+}
+
+
+/* Animasyon gecikmeleri */
 .hero .mainText h2, 
 .hero .mainText p {
-    opacity: 0; /* Başlangıçta görünmez */
+    opacity: 0;
     animation: fadeIn 0.8s ease forwards;
 }
 
-/* Farklı animasyon süreleriyle giriş */
 .hero .mainText h2 {
-    animation-delay: 0.4s; /* H2 için 0.5 saniye gecikme */
-}
-
-.hero .mainText p {
-    animation-delay: 0.7s; /* P için 1 saniye gecikme */
-}
-
-/* Buton için animasyon */
-.btn {
-    opacity: 0; /* Başlangıçta görünmez */
-    animation: fadeIn 2s ease forwards;
-    animation-delay: 1.1s; /* Buton için 1.5 saniye gecikme */
-}
-
-
-
-.swiper {
-    position: relative;
-    width: 80%; /* Ekran genişliğinin %80'ine sığacak şekilde ayarladım */
-    max-width: 1200px; /* Maksimum genişlik sınırlaması */
-    margin: 50px auto; /* Ekrana ortalamak için margin kullanıyorum */
-    height: 60vh; /* Yüksekliği %80vh'den %60vh'ye düşürdüm */
-    overflow: hidden;
-    background-color: #000; /* Arka planı siyah yaparak kontrast arttırıyoruz */
-}
-
-.swiper-slide {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition: transform 0.6s ease;
-    background: rgba(0, 0, 0, 0.5); /* Hafif karartılmış arka plan */
-    height: 100%; /* Slaytın tamamını kaplaması için %100 yükseklik */
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 100%; /* Resmi tamamen kaplaması için %100 yükseklik */
-    object-fit: cover;
-    transition: opacity 1s ease, transform 1s ease;
-    position: relative;
-    filter: brightness(70%); /* Görsellerin parlaklığını azaltarak metni öne çıkaralım */
-    -webkit-mask-image: linear-gradient(to left, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 60%);
-    mask-image: linear-gradient(to left, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 60%);
-}
-
-.image-data {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    z-index: 2;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.9s ease;
-    text-align: right;
-    font-family: 'Arial', sans-serif; /* Daha modern bir font */
-    max-width: 80%; /* Metin genişliğini sınırla */
-}
-
-/* Diğer stiller aynı şekilde kullanılabilir */
-
-
-.image-data a {
-    font-size: 15px;
-    color: #ffdd00;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-.image-data h2 {
-    font-size: 36px;
-    color: #ffdd00;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Hafif gölge efekti */
-}
-
-.image-data span {
-    font-size: 18px;
-    color: #f0f0f0;
-    letter-spacing: 0.5px;
-}
-
-.image-data span,
-.image-data h2,
-.image-data a {
-    opacity: 0;
-    transform: translateX(50%);
-    animation: slideInRight 0.8s ease forwards;
-}
-
-.image-data span {
-    animation-delay: 0.2s;
-}
-
-.image-data h2 {
     animation-delay: 0.4s;
 }
 
-.image-data a {
-    animation-delay: 0.6s;
+.hero .mainText p {
+    animation-delay: 0.7s;
 }
 
-/* Button için daha şık bir stil */
-.image-data .button {
-    display: inline-block;
-    background: linear-gradient(135deg, #ffdd00, #ffc400);
-    color: #002244;
-    padding: 12px 24px;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 0 8px 20px rgba(255, 221, 0, 0.3);
-    transform: translateX(50%);
-    transition: transform 1s ease, opacity 1s ease 0.6s, box-shadow 0.4s ease;
+.btn {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 1.1s;
 }
 
-.swiper-slide-active .image-data .button {
-    transform: translateX(0);
-    opacity: 1;
-    box-shadow: 0 12px 25px rgba(255, 221, 0, 0.6); /* Butona parlama efekti ekleyelim */
-}
 
-.image-data .button:hover {
-    background: linear-gradient(135deg, #ffc400, #ffb700);
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 12px 30px rgba(255, 221, 0, 0.9); /* Hover durumunda daha parlak bir efekt */
-}
 
-/* Yeni animasyonlar */
-@keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeSlideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes fadeTextIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 /* .aboutContainer için animasyon */
 .aboutContainer {
-    margin: 100px auto; /* Sayfanın üstünden boşluk ve ortalama */
-    padding: 20px;
+    margin: 50px auto; /* Sayfanın üstünden boşluk ve ortalama */
+   
     background-color: #ffffff;
     position: relative;
     width: 80%; /* Genişlik küçültüldü */
     max-width: 1200px; /* Maksimum genişlik ayarlandı */
     height: auto; /* İçeriğe göre otomatik yükseklik */
     padding-bottom: 5px; /* aboutText ile arada 5px boşluk */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-
+.aboutContainer.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* Navbar stilleri */
 .aboutNavbar {
     display: flex;
     justify-content: center; /* Butonları ortalar */
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     position: relative;
     left: 0;
     right: 0;
@@ -418,7 +306,7 @@ nav ul li a:hover {
     background-color: #fff;
     color: #000;
     font-size: 15px;
-    font-family: 'Arial', sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease;
@@ -460,7 +348,7 @@ nav ul li a:hover {
     transition: width 0.3s ease;
     color:  #002244;
     font-size: 15px;
-    font-style: bold;
+    
 }
 
 .aboutNavbar button:hover {
@@ -482,7 +370,7 @@ nav ul li a:hover {
 .text-section {
     margin-right: auto;
     display: none;
-    text-align: center;
+    
     width: 600px; /* Sabit genişlik */
     height: 400px; /* Sabit yükseklik */
     background-color: #fff;
@@ -506,14 +394,14 @@ nav ul li a:hover {
     color: #007BFF;
     font-size: 20px;
     position: relative;
-    font-family: 'Arial', sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     animation: fadeInUp 0.8s ease; /* Başlık kayarak görünme */
 }
 
 .text-section p {
-    font-family: 'Arial', sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style:oblique;
     opacity: 0;
-    
     font-size:large;
     animation: fadeIn 1s ease forwards; /* Metin soluklaşarak görünme */
     animation-delay: 0.2s; /* Gecikmeli görünme */
@@ -523,7 +411,7 @@ nav ul li a:hover {
 .text-section hr {
     border: none;
     height: 1px;
-    background: linear-gradient(to right, transparent, #007BFF, transparent);
+    background: linear-gradient(to right, #007BFF, transparent);
     margin: 20px 0;
     opacity: 0;
     transform: scaleX(0);
@@ -559,76 +447,85 @@ nav ul li a:hover {
 /* Hover ve geçiş efektleri */
 
 
-
+/* Başlangıçta .aboutText görünmez */
 .aboutText {
-    font-family: 'Arial', sans-serif;
-    text-align: center; /* İçeriği ortalamak için */
-    position: relative; /* Çizgilerin konumunu ayarlamak için */
-    margin-top: 20px; /* aboutContainer ile arada 5px boşluk */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center; /* İçeriği yatay olarak ortalar */
+    display: flex;
+    flex-direction: column; /* İçeriği dikey olarak sıralar */
+    justify-content: center; /* Dikey olarak ortalar */
+    align-items: center; /* Yatay olarak ortalar */
+    margin-top: 150px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.aboutText h2 {
-    display: inline; /* Başlığın çizgilerle düzgün hizalanmasını sağlar */
-    position: relative; /* ::before ve ::after pseudo-elementler için */
-    padding: 0 70px; /* Çizgiler ile başlık arasına boşluk ekler */
-    margin: 0; /* Başlık için varsayılan margin'i sıfırlar */
+/* Görünür hale gelince yapılacak animasyon */
+.aboutText.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.aboutText h2::before, .aboutText h2::after {
-    content: "";
-    position: absolute;
-    top: 50%; /* Çizgilerin başlığın ortasında olmasını sağlar */
-    width: 50%; /* Çizgilerin genişliği */
-    height: 1px; /* Çizgilerin kalınlığı */
-    background: #007BFF; /* Çizgilerin rengi */
-    transform: translateY(-50%); /* Çizgileri başlığın ortasına hizalar */
+/* h4 başlığı da görünmez ve kayar şekilde gelir */
+.aboutText h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.aboutText h2::before {
-    left: -50%; /* Çizgiyi başlığın solundan başlatır */
-}
-
-.aboutText h2::after {
-    right: -50%; /* Çizgiyi başlığın sağında bitirir */
-}
-
-
-
-.featuresText {
-    font-family: 'Arial', sans-serif;
-    text-align: center; /* İçeriği ortalamak için */
-    position: relative; /* Çizgilerin konumunu ayarlamak için */
-    padding: 20px 0; /* Üst ve alt padding */
-}
-
-.featuresText h2 {
-    display: inline; /* Başlığın çizgilerle düzgün hizalanmasını sağlar */
-    position: relative; /* ::before ve ::after pseudo-elementler için */
-    padding: 0 70px; /* Çizgiler ile başlık arasına boşluk ekler */
-    margin: 0; /* Başlık için varsayılan margin'i sıfırlar */
-}
-
-.featuresText h2::before, .featuresText h2::after {
-    content: "";
-    position: absolute;
-    top: 50%; /* Çizgilerin başlığın ortasında olmasını sağlar */
-    width: 50%; /* Çizgilerin genişliği */
-    height: 1px; /* Çizgilerin kalınlığı */
-    background: #007BFF; /* Çizgilerin rengi */
-    transform: translateY(-50%); /* Çizgileri başlığın ortasına hizalar */
-}
-
-.featuresText h2::before {
-    left: -50%; /* Çizgiyi başlığın solundan başlatır */
-}
-
-.featuresText h2::after {
-    right: -50%; /* Çizgiyi başlığın sağında bitirir */
+/* h4 de görününce animasyon */
+.aboutText.show h4 {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
+.servicesText {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.servicesText.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.servicesText h1 {
+    font-size: 32px;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.servicesText.show h1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+.servicesText h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.servicesText.show h4{
+opacity: 1;
+    transform: translateY(0);
+}
 /* Kartlar */
 .grid {
+    margin: 100px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
@@ -638,15 +535,96 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
-.wrapper {
-    height: 300px;
-    width: 250px;
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
     position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    border: 1px solid black;
+    padding-bottom: 20px; /* Scroll bar için alan bırak */
+    display: flex;
+    justify-content: center; /* Scroll wrapper'ı ortala */
+  }
+  
+  .scroll-wrapper {
+    scroll-behavior: smooth; /* Kaydırma geçişlerini yumuşatır */
+
+    white-space: nowrap;
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: auto; /* Scroll bar eklemek için */
+    scroll-behavior: smooth; /* Kaydırma davranışı */
+    padding-bottom: 20px; /* Scroll bar'ı sarmak için */
+    position: relative; /* Scroll bar'ı ortalamak için */
+  }
+  
+  .scroll-wrapper::-webkit-scrollbar {
+    height: 8px; /* Scroll bar yüksekliği */
+  }
+  
+  .scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scroll bar rengi */
+    border-radius: 10px;
+  }
+  
+  .scroll-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Hover rengi */
+  }
+  
+  .scroll-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Scroll bar arka plan rengi */
+  }
+  
+  
+  .wrapper {
+    margin: 50px auto;
+    transition: transform 0.5s ease, z-index 0.5s ease; /* Geçiş süresini artırır */
+    height: 300px; /* Kartların yüksekliği */
+    width: 250px; /* Kartların genişliği */
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    flex-shrink: 0; /* Kartların sabit genişlikte kalmasını sağla */
+    border: 2px solid #ddd; /* Kutu border rengi ve kalınlığı */
+    border-radius: 10px; /* Köşeleri yuvarlatma */
 }
 
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .wrapper.active {
+    transform: scale(2); /* Kartı iki kat büyütme */
+
+    z-index: 1; /* Aktif kartın diğer kartların üzerinde görünmesini sağlar */
+  }
+
+.wrapper, .feature-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.wrapper.show, .feature-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 .wrapper .card {
     position: absolute;
     height: 100%;
@@ -662,6 +640,7 @@ nav ul li a:hover {
     flex-direction: column;
     padding: 20px;
 }
+
 
 .wrapper .card img {
     height: 150px;
@@ -703,44 +682,35 @@ nav ul li a:hover {
     background-color: #2ede98;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
 
-    .wrapper {
-        width: 100%;
-    }
-    .image-data
-    {
-        color: #f3f4f6;
-    }
-}
-
-@media (max-width: 480px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-    .image-data
-    {
-        color: #f3f4f6;
-    }
-    .wrapper {
-        width: 100%;
-    }
-}
 
 /* Features Section */
 .features {
-   margin-bottom: 10px;
+    margin-bottom: 10px;
     background-color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.features.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .features h2 {
-    font-family: 'Arial', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
-    
+    font-size: 32px;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.features.show h2 {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .features .grid {
@@ -833,61 +803,144 @@ footer {
     border-top: 1px solid #ffdd00;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+
+
+/* Mobil cihazlar için 
+
+@media only screen and (max-width: 600px) {
+  
+    header {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    .about {
+        padding: 10px;
+        font-size: 1em;
+        line-height: 1.5em;
     }
 
-    .hero .mainText h2 {
-        font-size: 2.5rem;
+    .aboutText h2 {
+        font-size: 1.5em; 
     }
 
-    .hero .mainText p {
-        font-size: 1.2rem;
+    .aboutText p {
+        font-size: 1em; 
+    }
+   
+    .content {
+        padding: 10px;
     }
 
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo h1 {
-        font-size: 2rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero .mainText h2 {
-        font-size: 2rem;
-    }
-
-    .hero .mainText p {
-        font-size: 1rem;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .wrapper {
+    img {
         width: 100%;
+        height: auto;
+    }
+    
+    
+    h1 {
+        font-size: 1.8em;
     }
 
-    .swiper-slide .image-data {
-        font-size: 0.9rem;
+    h2 {
+        font-size: 1.5em;
     }
 
-    .swiper-slide .image-data .button {
-        font-size: 0.9rem;
-    }
 
-    .features .grid {
-        flex-direction: column;
+    p {
+        font-size: 1em;
     }
 }
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+ 
+    header {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    .aboutText {
+        padding: 20px;
+        font-size: 1.1em;
+        line-height: 1.7em;
+    }
+
+    .aboutText h2 {
+        font-size: 1.8em;
+    }
+
+    .aboutText p {
+        font-size: 1.1em;
+    }
+
+    .content {
+        padding: 20px;
+    }
+    
+    
+    img {
+        width: 80%;
+        height: auto;
+    }
+    
+  
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+  
+    p {
+        font-size: 1.1em;
+    }
+}
+
+
+@media only screen and (min-width: 1025px) {
+   
+    header {
+        font-size: 1.8em;
+        padding: 20px;
+    }
+    .aboutText {
+        padding: 30px;
+        font-size: 1.2em;
+        line-height: 1.8em;
+    }
+
+    .aboutText h2 {
+        font-size: 2em;
+    }
+
+    .aboutText p {
+        font-size: 1.2em;
+    }
+    
+    .content {
+        padding: 30px;
+    }
+
+    img {
+        width: 70%;
+        height: auto;
+    }
+    
+  
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    
+    p {
+        font-size: 1.2em;
+    }
+}
+
+*/
