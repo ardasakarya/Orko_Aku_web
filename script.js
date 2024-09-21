@@ -294,9 +294,197 @@ document.querySelector('.swiper-button-prev').addEventListener('click', () => {
 
 updateActiveCard();
 
-
-
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Tüm butonlar
+    const tabButtons = document.querySelectorAll('.nav-btn');
+    const scrollWrapper = document.getElementById('scrollWrapper');
+
+    // Her bir kategori için kart içerikleri
+    const contentData = {
+        starter: [
+            {
+                imgSrc: 'starter_aku_img/tab_magic.png', // Fotoğraf yolunu burada belirtin
+                title: 'TAB MAGIC'
+            },
+            {
+                imgSrc: 'starter_aku_img/tab_agm_stop&go.png',
+                title: 'TAB AGM STOP&GO'
+            },
+            {
+              imgSrc: 'starter_aku_img/tab_efb_stop&go.png', // Fotoğraf yolunu burada belirtin
+              title: 'TAB EFB STOP&GO'
+          },
+          {
+              imgSrc: 'starter_aku_img/tab_efb_stop&go2.png',
+              title: 'TAB EFB STOP&GO TRUCK'
+          },
+          {
+            imgSrc: 'starter_aku_img/tab_magic_hr.png', // Fotoğraf yolunu burada belirtin
+            title: 'TAB HR - HOT REGION'
+        },
+        {
+            imgSrc: 'starter_aku_img/tab_magic_truck.png',
+            title: 'TAB MAGIC TRUCK'
+        },
+        {
+          imgSrc: 'starter_aku_img/tab_oem.png', // Fotoğraf yolunu burada belirtin
+          title: 'TAB OEM'
+      },
+      {
+          imgSrc: 'starter_aku_img/tab_polar.png',
+          title: 'TAB POLAR'
+      },
+      {
+        imgSrc: 'starter_aku_img/tab_polar_truck.png', // Fotoğraf yolunu burada belirtin
+        title: 'TAB POLAR TRUCK'
+    },
+    {
+        imgSrc: 'starter_aku_img/tab_polar_blue.png',
+        title: 'TAB POLAR BLUE'
+    },
+        ],
+        traction: [
+            {
+                imgSrc: 'traksiyoner_aku_img/TAB-BCI.png',
+                title: 'TAB BCI'
+            },
+            {
+              imgSrc: 'traksiyoner_aku_img/TAB-BS.png',
+              title: 'TAB BS'
+          },
+          {
+            imgSrc: 'traksiyoner_aku_img/TAB-DIN.png',
+            title: 'TAB DIN'
+        },
+        {
+          imgSrc: 'traksiyoner_aku_img/TAB-EX.png',
+          title: 'TABEX'
+      },
+      {
+        imgSrc: 'traksiyoner_aku_img/TAB-PSQ.png',
+        title: 'TAB PSQ'
+    },
+    {
+      imgSrc: 'traksiyoner_aku_img/TAB-PzRM1.png',
+      title: 'TAB PZRM'
+  },
+  {
+    imgSrc: 'traksiyoner_aku_img/TAB-PzV.png',
+    title: 'TAB PZV'
+},
+{
+  imgSrc: 'traksiyoner_aku_img/TAB-PzVB.png',
+  title: 'TAB PZRM'
+},
+
+           
+        ],
+        monoblock: [
+            {
+                imgSrc: 'monoblock_aku_img/MotionAGM.png',
+                title: 'MOTION AGM'
+            },
+            {
+              imgSrc: 'monoblock_aku_img/MotionGel.png',
+              title: 'MOTION GEL'
+          },
+          {
+            imgSrc: 'monoblock_aku_img/MotionPasted.png',
+            title: 'MOTION PASTED'
+        },
+        {
+          imgSrc: 'monoblock_aku_img/MotionTubular.png',
+          title: 'MOTION TUBULAR'
+      },
+      {
+        imgSrc: 'monoblock_aku_img/TAB_motion_BCI.png',
+        title: 'MOTION BCI'
+    },
+ 
+          
+        ],
+        stationary: [
+            {
+                imgSrc: 'stasyoner_aku_img/OGI.png',
+                title: 'OGI'
+            },
+            {
+              imgSrc: 'stasyoner_aku_img/OPzS.png',
+              title: 'OPZS CELLS & BLOCKS'
+          },
+          {
+            imgSrc: 'stasyoner_aku_img/OPzV.png',
+            title: 'OPZV'
+        },
+        {
+          imgSrc: 'stasyoner_aku_img/TOPzS.png',
+          title: 'TOPZS'
+      },
+      {
+        imgSrc: 'stasyoner_aku_img/UPS.png',
+        title: 'UPS'
+    },
+  
+            
+        ]
+    };
+
+    // Butonlara tıklanınca ilgili içeriği yükleme
+    function loadContent(category) {
+      // Mevcut içerikleri temizle
+      scrollWrapper.innerHTML = '';
+
+      // Yeni kartları oluştur ve ekle
+      contentData[category].forEach(item => {
+          const cardWrapper = document.createElement('div');
+          cardWrapper.classList.add('wrapper');
+
+          const card = `
+              <div class="card">
+                  <img src="${item.imgSrc}" alt="${item.title}">
+                  <h3>${item.title}</h3>
+                  <button class="btn">Daha Fazla</button>
+              </div>
+          `;
+          cardWrapper.innerHTML = card;
+          scrollWrapper.appendChild(cardWrapper);
+      });
+
+      // Yeni içerikleri ekledikten sonra görsel geçiş efektlerini uygula
+      // Zamanlayıcı ekleyerek görsellerin eklenmeden önce görüntülenmesini sağlar
+      setTimeout(() => {
+          document.querySelectorAll('.wrapper').forEach(wrapper => {
+              wrapper.style.opacity = 1; // Görsellerin görünürlüğünü ayarla
+              wrapper.style.transform = 'translateY(0)'; // Geçiş animasyonu
+          });
+      }, 50);  // 50ms bir gecikme uygulanarak görsel animasyonu sağlanır
+  }
+
+  // Sayfa yüklendiğinde "starter" kategorisi ile başlayalım
+  loadContent('starter');
+
+  // Butonlara tıklanınca ilgili içeriği yükleme
+  tabButtons.forEach(button => {
+      button.addEventListener('click', function () {
+          const target = this.getAttribute('data-target');
+
+          // Kategoriye göre içerikleri yükle
+          loadContent(target);
+
+          // Aktif butonu güncelle
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+      });
+  });
+});
+
+
+
+
 
 
 // Tüm butonları ve bölümleri seç
