@@ -1,0 +1,90 @@
+/* Genel ayarlar */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#akuDetails {
+    display: flex;
+    flex-direction: row-reverse; /* Fotoğrafı sağa alır */
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#akuImage {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Sol taraf (içerik kısmı) */
+.content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#akuTitle {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Tanıtım paragrafı */
+#akuDescription {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Tablo stili */
+#akuTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#akuTable th, #akuTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#akuTable th {
+    background-color: #333;
+    color: white;
+}
+
+#akuTable td {
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    #akuDetails {
+        flex-direction: column;
+    }
+    
+    #akuImage {
+        width: 100%;
+    }
+
+    #akuTitle {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #akuDescription {
+        text-align: center;
+    }
+}

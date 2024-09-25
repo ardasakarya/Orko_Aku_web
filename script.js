@@ -4,24 +4,24 @@
 const swiper = new Swiper('.swiper-container', {
   loop: true,
   pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    el: '.swiper-pagination',
+    clickable: true,
   },
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
+    delay: 5000,
+    disableOnInteraction: false,
   },
 });
 if (history.scrollRestoration) {
-history.scrollRestoration = 'manual'; // Tarayıcıya kaydırma pozisyonunu saklamamasını söyler
+  history.scrollRestoration = 'manual'; // Tarayıcıya kaydırma pozisyonunu saklamamasını söyler
 }
 
 window.onbeforeunload = function () {
-window.scrollTo(0, 0); // Sayfa kapanmadan önce kaydırmayı en üste çeker
+  window.scrollTo(0, 0); // Sayfa kapanmadan önce kaydırmayı en üste çeker
 };
 
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".wrapper");
     const viewportLeft = scrollWrapper.scrollLeft;
     const viewportRight = viewportLeft + scrollWrapper.clientWidth;
-    
+
     cards.forEach(card => {
       const cardLeft = card.offsetLeft;
       const cardRight = cardLeft + card.clientWidth;
@@ -106,27 +106,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  
-function scrollToNextCard() {
-const currentScrollLeft = scrollWrapper.scrollLeft;
-const maxScrollLeft = scrollWrapper.scrollWidth - scrollWrapper.clientWidth;
 
-// Eğer scroll pozisyonu son kartın görünümde olduğuna yakınsa kaydırmayı durdur
-if (currentScrollLeft >= maxScrollLeft) {
-    clearInterval(autoScrollInterval); // Otomatik kaydırmayı durdur
-    return;
-}
+  function scrollToNextCard() {
+    const currentScrollLeft = scrollWrapper.scrollLeft;
+    const maxScrollLeft = scrollWrapper.scrollWidth - scrollWrapper.clientWidth;
 
-const nextScrollLeft = currentScrollLeft + cardWidth;
-smoothScrollTo(nextScrollLeft);
-}
+    // Eğer scroll pozisyonu son kartın görünümde olduğuna yakınsa kaydırmayı durdur
+    if (currentScrollLeft >= maxScrollLeft) {
+      clearInterval(autoScrollInterval); // Otomatik kaydırmayı durdur
+      return;
+    }
 
-// Otomatik kaydırmayı başlat
-function initiateAutoScroll() {
-autoScrollInterval = setInterval(scrollToNextCard, autoScrollIntervalTime);
-}
+    const nextScrollLeft = currentScrollLeft + cardWidth;
+    smoothScrollTo(nextScrollLeft);
+  }
 
-initiateAutoScroll();
+  // Otomatik kaydırmayı başlat
+  function initiateAutoScroll() {
+    autoScrollInterval = setInterval(scrollToNextCard, autoScrollIntervalTime);
+  }
+
+  initiateAutoScroll();
 
 
   // Sürükleme ve fare olaylarını yönetme
@@ -169,12 +169,12 @@ initiateAutoScroll();
 document.addEventListener('scroll', function () {
   const contactContainer = document.querySelector('.contact-container');
   const containerPosition = contactContainer.getBoundingClientRect().top;
-  
+
   // Ekranın %70'i kadarını belirleyen sabit
-  const screenPosition = window.innerHeight /1.5;
+  const screenPosition = window.innerHeight / 1.5;
 
   if (containerPosition < screenPosition) {
-      contactContainer.classList.add('show');
+    contactContainer.classList.add('show');
   }
 });
 
@@ -183,11 +183,11 @@ document.addEventListener('scroll', function () {
 document.addEventListener('scroll', function () {
   const aboutContainer = document.querySelector('.aboutContainer');
   const containerPosition = aboutContainer.getBoundingClientRect().top;
-  
+
   const screenPosition = window.innerHeight / 1.5;
 
   if (containerPosition < screenPosition) {
-      aboutContainer.classList.add('show');
+    aboutContainer.classList.add('show');
   }
 });
 document.addEventListener('scroll', function () {
@@ -196,7 +196,7 @@ document.addEventListener('scroll', function () {
   const screenPosition = window.innerHeight / 1.5;
 
   if (textPosition < screenPosition) {
-      aboutText.classList.add('show');
+    aboutText.classList.add('show');
   }
 });
 
@@ -205,14 +205,14 @@ document.addEventListener('scroll', function () {
   const features = document.querySelector('.features');
   const wrappers = document.querySelectorAll('.wrapper');
   const featureCards = document.querySelectorAll('.feature-card');
-  
+
   const screenPosition = window.innerHeight / 1.5;
-  
+
   const checkVisibility = (element) => {
-      const elementPosition = element.getBoundingClientRect().top;
-      if (elementPosition < screenPosition) {
-          element.classList.add('show');
-      }
+    const elementPosition = element.getBoundingClientRect().top;
+    if (elementPosition < screenPosition) {
+      element.classList.add('show');
+    }
   };
 
   document.addEventListener('scroll', function () {
@@ -228,10 +228,10 @@ document.addEventListener('scroll', function () {
 
     // Elemanın görünürlüğünü kontrol eden fonksiyon
     const checkVisibility = (element) => {
-        const elementPosition = element.getBoundingClientRect().top;
-        if (elementPosition < screenPosition) {
-            element.classList.add('show');
-        }
+      const elementPosition = element.getBoundingClientRect().top;
+      if (elementPosition < screenPosition) {
+        element.classList.add('show');
+      }
     };
 
     // Her bir eleman için görünürlük kontrolü yapıyoruz
@@ -239,21 +239,21 @@ document.addEventListener('scroll', function () {
     checkVisibility(contactContainer);
     checkVisibility(features);
     checkVisibility(servicesText);
-    
+
     wrappers.forEach(wrapper => checkVisibility(wrapper));
     featureCards.forEach(card => checkVisibility(card));
-});
+  });
 
-document.addEventListener('scroll', function () {
-  const servicesNavbar = document.querySelector('.ServicesNavbar');
-  const containerPosition = servicesNavbar.getBoundingClientRect().top;
-  
-  const screenPosition = window.innerHeight / 1.5;
+  document.addEventListener('scroll', function () {
+    const servicesNavbar = document.querySelector('.ServicesNavbar');
+    const containerPosition = servicesNavbar.getBoundingClientRect().top;
 
-  if (containerPosition < screenPosition) {
+    const screenPosition = window.innerHeight / 1.5;
+
+    if (containerPosition < screenPosition) {
       servicesNavbar.classList.add('show');
-  }
-});
+    }
+  });
 
 
 
@@ -266,223 +266,281 @@ document.addEventListener('scroll', function () {
 
 
 
-let currentIndex = 0;
-const cards = document.querySelectorAll('.wrapper');
+  let currentIndex = 0;
+  const cards = document.querySelectorAll('.wrapper');
 
-function updateActiveCard() {
+  function updateActiveCard() {
     cards.forEach((card, index) => {
-        card.classList.remove('active');
-        if (index === currentIndex) {
-            card.classList.add('active');
-        }
+      card.classList.remove('active');
+      if (index === currentIndex) {
+        card.classList.add('active');
+      }
     });
-}
+  }
 
-document.querySelector('.swiper-button-next').addEventListener('click', () => {
+  document.querySelector('.swiper-button-next').addEventListener('click', () => {
     if (currentIndex < cards.length - 1) {
-        currentIndex++;
-        updateActiveCard();
+      currentIndex++;
+      updateActiveCard();
     }
-});
+  });
 
-document.querySelector('.swiper-button-prev').addEventListener('click', () => {
+  document.querySelector('.swiper-button-prev').addEventListener('click', () => {
     if (currentIndex > 0) {
-        currentIndex--;
-        updateActiveCard();
+      currentIndex--;
+      updateActiveCard();
     }
-});
+  });
 
-updateActiveCard();
+  updateActiveCard();
 
 });
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Tüm butonlar
-    const tabButtons = document.querySelectorAll('.nav-btn');
-    const scrollWrapper = document.getElementById('scrollWrapper');
+  // Tüm butonlar
+  const tabButtons = document.querySelectorAll('.nav-btn');
+  const scrollWrapper = document.getElementById('scrollWrapper');
 
-    // Her bir kategori için kart içerikleri
-    const contentData = {
-        starter: [
-            {
-                imgSrc: 'starter_aku_img/tab_magic.png', // Fotoğraf yolunu burada belirtin
-                title: 'TAB MAGIC'
-            },
-            {
-                imgSrc: 'starter_aku_img/tab_agm_stop&go.png',
-                title: 'TAB AGM STOP&GO'
-            },
-            {
-              imgSrc: 'starter_aku_img/tab_efb_stop&go.png', // Fotoğraf yolunu burada belirtin
-              title: 'TAB EFB STOP&GO'
-          },
-          {
-              imgSrc: 'starter_aku_img/tab_efb_stop&go2.png',
-              title: 'TAB EFB STOP&GO TRUCK'
-          },
-          {
-            imgSrc: 'starter_aku_img/tab_magic_hr.png', // Fotoğraf yolunu burada belirtin
-            title: 'TAB HR - HOT REGION'
-        },
+  // Her bir kategori için kart içerikleri
+  const contentData = {
+    starter: [
         {
-            imgSrc: 'starter_aku_img/tab_magic_truck.png',
-            title: 'TAB MAGIC TRUCK'
-        },
-        {
-          imgSrc: 'starter_aku_img/tab_oem.png', // Fotoğraf yolunu burada belirtin
-          title: 'TAB OEM'
-      },
-      {
-          imgSrc: 'starter_aku_img/tab_polar.png',
-          title: 'TAB POLAR'
-      },
-      {
-        imgSrc: 'starter_aku_img/tab_polar_truck.png', // Fotoğraf yolunu burada belirtin
-        title: 'TAB POLAR TRUCK'
-    },
-    {
-        imgSrc: 'starter_aku_img/tab_polar_blue.png',
-        title: 'TAB POLAR BLUE'
-    },
-        ],
-        traction: [
-            {
-                imgSrc: 'traksiyoner_aku_img/TAB-BCI.png',
-                title: 'TAB BCI'
-            },
-            {
-              imgSrc: 'traksiyoner_aku_img/TAB-BS.png',
-              title: 'TAB BS'
-          },
-          {
-            imgSrc: 'traksiyoner_aku_img/TAB-DIN.png',
-            title: 'TAB DIN'
-        },
-        {
-          imgSrc: 'traksiyoner_aku_img/TAB-EX.png',
-          title: 'TABEX'
-      },
-      {
-        imgSrc: 'traksiyoner_aku_img/TAB-PSQ.png',
-        title: 'TAB PSQ'
-    },
-    {
-      imgSrc: 'traksiyoner_aku_img/TAB-PzRM1.png',
-      title: 'TAB PZRM'
-  },
-  {
-    imgSrc: 'traksiyoner_aku_img/TAB-PzV.png',
-    title: 'TAB PZV'
-},
-{
-  imgSrc: 'traksiyoner_aku_img/TAB-PzVB.png',
-  title: 'TAB PZRM'
-},
-
-           
-        ],
-        monoblock: [
-            {
-                imgSrc: 'monoblock_aku_img/MotionAGM.png',
-                title: 'MOTION AGM'
-            },
-            {
-              imgSrc: 'monoblock_aku_img/MotionGel.png',
-              title: 'MOTION GEL'
-          },
-          {
-            imgSrc: 'monoblock_aku_img/MotionPasted.png',
-            title: 'MOTION PASTED'
-        },
-        {
-          imgSrc: 'monoblock_aku_img/MotionTubular.png',
-          title: 'MOTION TUBULAR'
-      },
-      {
-        imgSrc: 'monoblock_aku_img/TAB_motion_BCI.png',
-        title: 'MOTION BCI'
-    },
- 
-          
-        ],
-        stationary: [
-            {
-                imgSrc: 'stasyoner_aku_img/OGI.png',
-                title: 'OGI'
-            },
-            {
-              imgSrc: 'stasyoner_aku_img/OPzS.png',
-              title: 'OPZS CELLS & BLOCKS'
-          },
-          {
-            imgSrc: 'stasyoner_aku_img/OPzV.png',
-            title: 'OPZV'
-        },
-        {
-          imgSrc: 'stasyoner_aku_img/TOPzS.png',
-          title: 'TOPZS'
-      },
-      {
-        imgSrc: 'stasyoner_aku_img/UPS.png',
-        title: 'UPS'
-    },
-  
+          id: 'tab_magic',
+            imgSrc: 'starter_aku_img/tab_magic.png',
+            title: 'TAB MAGIC',
             
-        ]
-    };
-
-    // Butonlara tıklanınca ilgili içeriği yükleme
-    function loadContent(category) {
-      // Mevcut içerikleri temizle
-      scrollWrapper.innerHTML = '';
-
-      // Yeni kartları oluştur ve ekle
-      contentData[category].forEach(item => {
-          const cardWrapper = document.createElement('div');
-          cardWrapper.classList.add('wrapper');
-
-          const card = `
-              <div class="card">
-                  <img src="${item.imgSrc}" alt="${item.title}">
-                  <h3>${item.title}</h3>
-                  <button class="btn">Daha Fazla</button>
-              </div>
-          `;
-          cardWrapper.innerHTML = card;
-          scrollWrapper.appendChild(cardWrapper);
-      });
-
-      // Yeni içerikleri ekledikten sonra görsel geçiş efektlerini uygula
-      // Zamanlayıcı ekleyerek görsellerin eklenmeden önce görüntülenmesini sağlar
-      setTimeout(() => {
-          document.querySelectorAll('.wrapper').forEach(wrapper => {
-              wrapper.style.opacity = 1; // Görsellerin görünürlüğünü ayarla
-              wrapper.style.transform = 'translateY(0)'; // Geçiş animasyonu
-          });
-      }, 50);  // 50ms bir gecikme uygulanarak görsel animasyonu sağlanır
-  }
-
-  // Sayfa yüklendiğinde "starter" kategorisi ile başlayalım
-  loadContent('starter');
+        },
+        {
+          id: 'tab_agm',
+            imgSrc: 'starter_aku_img/tab_agm_stop&go.png',
+            title: 'TAB AGM STOP&GO',
+           
+        },
+        {
+          id: 'tab_efb',
+            imgSrc: 'starter_aku_img/tab_efb_stop&go.png',
+            title: 'TAB EFB STOP&GO',
+           
+        },
+        {
+          id: 'tab_efb_tr',
+            imgSrc: 'starter_aku_img/tab_efb_stop&go2.png',
+            title: 'TAB EFB STOP&GO TRUCK',
+           
+        },
+        {
+          id: 'tab_hr',
+            imgSrc: 'starter_aku_img/tab_magic_hr.png',
+            title: 'TAB HR - HOT REGION',
+         
+        },
+        {
+          id: 'tab_magic_tr',
+            imgSrc: 'starter_aku_img/tab_magic_truck.png',
+            title: 'TAB MAGIC TRUCK',
+            
+        },
+        {
+          id:'tab_oem',
+            imgSrc: 'starter_aku_img/tab_oem.png',
+            title: 'TAB OEM',
+            
+        },
+        {
+            id:'tab_polar',
+            imgSrc: 'starter_aku_img/tab_polar.png',
+            title: 'TAB POLAR',
+           
+        },
+        {
+         id:'tab_polar_tr',
+            imgSrc: 'starter_aku_img/tab_polar_truck.png',
+            title: 'TAB POLAR TRUCK',
+            
+        },
+        {
+          id:'tab_polar_blue',
+            imgSrc: 'starter_aku_img/tab_polar_blue.png',
+            title: 'TAB POLAR BLUE',
+            
+        }
+    ],
+    traction: [
+        {
+          id:'tab_bci',
+            imgSrc: 'traksiyoner_aku_img/TAB-BCI.png',
+            title: 'TAB BCI',
+            
+        },
+        {
+          id:'tab_bs',
+            imgSrc: 'traksiyoner_aku_img/TAB-BS.png',
+            title: 'TAB BS',
+            
+        },
+        {
+          id:'tab_din',
+            imgSrc: 'traksiyoner_aku_img/TAB-DIN.png',
+            title: 'TAB DIN',
+            
+        },
+        {
+          id:'tab_ex',
+            imgSrc: 'traksiyoner_aku_img/TAB-EX.png',
+            title: 'TABEX',
+           
+        },
+        {
+          id:'tab_psq',
+            imgSrc: 'traksiyoner_aku_img/TAB-PSQ.png',
+            title: 'TAB PSQ',
+            
+        },
+        {
+          id:'tab_pzrm',
+            imgSrc: 'traksiyoner_aku_img/TAB-PzRM1.png',
+            title: 'TAB PZRM',
+            
+        },
+        {
+          id:'tab_pzv',
+            imgSrc: 'traksiyoner_aku_img/TAB-PzV.png',
+            title: 'TAB PZV',
+            
+        },
+        {
+          id:'tab_pzvb',
+            imgSrc: 'traksiyoner_aku_img/TAB-PzVB.png',
+            title: 'TAB PZVB',
+            
+        }
+    ],
+    monoblock: [
+        {
+          id:'motion_agm',
+            imgSrc: 'monoblock_aku_img/MotionAGM.png',
+            title: 'MOTION AGM',
+           
+        },
+        {
+          id:'motion_gel',
+            imgSrc: 'monoblock_aku_img/MotionGel.png',
+            title: 'MOTION GEL',
+           
+        },
+        {
+          id:'motion_pasted',
+            imgSrc: 'monoblock_aku_img/MotionPasted.png',
+            title: 'MOTION PASTED',
+            
+        },
+        {
+          id:'motion_tubular',
+            imgSrc: 'monoblock_aku_img/MotionTubular.png',
+            title: 'MOTION TUBULAR',
+            
+        },
+        {
+          id:'motion_bci',
+            imgSrc: 'monoblock_aku_img/TAB_motion_BCI.png',
+            title: 'MOTION BCI',
+            
+        }
+    ],
+    stationary: [
+        {
+          id:'ogi',
+            imgSrc: 'stasyoner_aku_img/OGI.png',
+            title: 'OGI',
+            
+        },
+        {
+          id:'opzs',
+            imgSrc: 'stasyoner_aku_img/OPzS.png',
+            title: 'OPZS CELLS & BLOCKS',
+            
+        },
+        {
+          id:'opzv',
+            imgSrc: 'stasyoner_aku_img/OPzV.png',
+            title: 'OPZV',
+          
+        },
+        {
+          id:'topzs',
+            imgSrc: 'stasyoner_aku_img/TOPzS.png',
+            title: 'TOPZS',
+           
+        },
+        {
+          id:'ups',
+            imgSrc: 'stasyoner_aku_img/UPS.png',
+            title: 'UPS',
+           
+        }
+    ]
+};
 
   // Butonlara tıklanınca ilgili içeriği yükleme
-  tabButtons.forEach(button => {
-      button.addEventListener('click', function () {
-          const target = this.getAttribute('data-target');
+  function loadContent(category) {
+    scrollWrapper.innerHTML = ''; // Mevcut içerikleri temizle
 
-          // Kategoriye göre içerikleri yükle
-          loadContent(target);
+    contentData[category].forEach(item => {
+      const cardWrapper = document.createElement('div');
+      cardWrapper.classList.add('wrapper');
 
-          // Aktif butonu güncelle
-          tabButtons.forEach(btn => btn.classList.remove('active'));
-          this.classList.add('active');
+      const card = `
+        <div class="card" id="${item.id}">
+          <img src="${item.imgSrc}" alt="${item.title}">
+          <h3>${item.title}</h3>
+          <button class="CardBtn" data-id="${item.id}">Daha Fazla</button>
+        </div>
+      `;
+      cardWrapper.innerHTML = card;
+      scrollWrapper.appendChild(cardWrapper);
+    });
+
+    // Kartların görünür olmasını sağlamak için küçük bir animasyon
+    setTimeout(() => {
+      document.querySelectorAll('.wrapper').forEach(wrapper => {
+        wrapper.style.opacity = 1;
+        wrapper.style.transform = 'translateY(0)';
       });
+    }, 50);
+
+    // Dinamik olarak yüklenen butonlar için event listener ekleme
+    addCardButtonListeners();
+  }
+
+  // Kart butonlarına tıklama event listener'ını ekle
+  function addCardButtonListeners() {
+    const buttons = document.querySelectorAll('.CardBtn');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const id = this.getAttribute('data-id'); // Tıklanan butonun id'sini al
+
+        // Sayfayı ilgili id'yle yönlendir
+        window.location.href = `aku_ozellik.html?id=${id}`;
+      });
+    });
+  }
+
+  // Sayfa yüklendiğinde başlangıç kategorisi
+  loadContent('starter');
+
+  // Kategori butonlarına tıklanınca içerikleri yükleme
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const target = this.getAttribute('data-target');
+      loadContent(target); // Seçilen kategoriyi yükle
+      tabButtons.forEach(btn => btn.classList.remove('active')); // Diğer butonlardaki 'active' sınıfını kaldır
+      this.classList.add('active'); // Tıklanan butona 'active' sınıfını ekle
+    });
   });
 });
-
-
 
 
 
@@ -505,28 +563,28 @@ const imageMap = {
 // Butonlara tıklama olaylarını dinle
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-      // Aktif butonu ayarlama
-      buttons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+    // Aktif butonu ayarlama
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
 
-      // İçerik bölümlerini gizleme
-      sections.forEach(section => section.classList.remove('active'));
-      
-      // Tıklanan butona ait içeriği gösterme
-      const target = button.getAttribute('data-target');
-      document.getElementById(target).classList.add('active');
+    // İçerik bölümlerini gizleme
+    sections.forEach(section => section.classList.remove('active'));
 
-      // Tıklanan butona göre resmi değiştirme
-      aboutImage.src = imageMap[target];
+    // Tıklanan butona ait içeriği gösterme
+    const target = button.getAttribute('data-target');
+    document.getElementById(target).classList.add('active');
+
+    // Tıklanan butona göre resmi değiştirme
+    aboutImage.src = imageMap[target];
   });
 });
 
-window.onscroll = function() {
+window.onscroll = function () {
   var header = document.querySelector('header');
   if (window.scrollY > 50) {
-      header.classList.add('scrolled');
+    header.classList.add('scrolled');
   } else {
-      header.classList.remove('scrolled');
+    header.classList.remove('scrolled');
   }
 };
 
@@ -545,10 +603,10 @@ nextButton.addEventListener('click', () => {
 });
 
 // Otomatik kaydırma işlevini durdur
-clearInterval(autoScrollInterval); 
+
 
 // Daha fazla kart yüklendiğinde veya kaydırma yapıldığında aktif kartı kontrol et
-scrollWrapper.addEventListener('scroll', updateActiveCard);
+
 
 
 

@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-  }
+}
 
 /* Header kalsın ancak kaydırma sonrası arka plan rengi değişsin 
 .header-row {
@@ -40,7 +40,8 @@
 /* Header en üstte sabit kalacak ve menü ortalanacak */
 
 header {
-    position: fixed; /* Header sabit */
+    position: fixed;
+    /* Header sabit */
     top: 0;
     left: 0;
     right: 0;
@@ -50,12 +51,14 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: transparent; /* Başlangıçta transparan */
+    background-color: transparent;
+    /* Başlangıçta transparan */
     transition: background-color 0.5s ease;
 }
 
 header.scrolled {
-    background-color: rgba(0, 0, 0, 0.7); /* Kaydırınca yarı opak renk */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Kaydırınca yarı opak renk */
 }
 
 header .container {
@@ -63,27 +66,32 @@ header .container {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: relative; /* Menü ortalaması için relative pozisyon */
+    position: relative;
+    /* Menü ortalaması için relative pozisyon */
 }
 
 header .logo {
     position: absolute;
-     /* Solda sabitlenmiş logo */
+    /* Solda sabitlenmiş logo */
 }
 
 header .logo h1 {
     color: #fff;
     font-size: 30px;
     font-weight: 600;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/* Güzel bir font kullan */
-    margin-left: auto; /* Soldan 5px boşluk */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Güzel bir font kullan */
+    margin-left: auto;
+    /* Soldan 5px boşluk */
 }
 
 /* Menü ortada yer alacak */
 nav {
-    flex-grow: 1; /* Menü ortada olacak şekilde genişlik sağlar */
+    flex-grow: 1;
+    /* Menü ortada olacak şekilde genişlik sağlar */
     display: flex;
-    justify-content: center; /* Menüyü ortalar */
+    justify-content: center;
+    /* Menüyü ortalar */
 }
 
 nav ul {
@@ -92,7 +100,7 @@ nav ul {
     gap: 30px;
     margin: 0;
     padding: 10px;
-    
+
 }
 
 nav ul li a {
@@ -101,10 +109,10 @@ nav ul li a {
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
-    
-    
+
+
     transition: color 0.4s ease;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 nav ul li a:hover {
@@ -116,7 +124,8 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Sayfa yüksekliği boyunca ortalanmış */
+    height: 100vh;
+    /* Sayfa yüksekliği boyunca ortalanmış */
     font-size: 13px;
     color: #fff;
     text-align: center;
@@ -127,9 +136,8 @@ nav ul li a:hover {
 /* Hero section */
 
 
-.hero-slide-1
-{
-    background-image: url('images/mainContainerBG.jpg'); 
+.hero-slide-1 {
+    background-image: url('images/mainContainerBG.jpg');
     height: 100vh;
     width: 100%;
     position: relative;
@@ -138,27 +146,27 @@ nav ul li a:hover {
     background-attachment: fixed;
     z-index: -1;
 }
-.hero-slide-2
-{
+
+.hero-slide-2 {
     background-image: url('images/mainContainerBG2.jpg');
     height: 100vh;
     width: 100%;
     position: relative;
     background-position: center 65%;
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: -1;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
 }
-.hero-slide-3
-{
+
+.hero-slide-3 {
     background-image: url('images/mainContainerBG3.jpg');
     height: 100vh;
     width: 100%;
     position: relative;
     background-position: center 65%;
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: -1;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
 }
 
 
@@ -170,9 +178,11 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Tüm fotoğrafı karart */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Tüm fotoğrafı karart */
     z-index: -1;
 }
+
 .hero-slide-2::before {
     content: '';
     position: absolute;
@@ -180,9 +190,11 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Tüm fotoğrafı karart */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Tüm fotoğrafı karart */
     z-index: -1;
 }
+
 .hero-slide-3::before {
     content: '';
     position: absolute;
@@ -190,7 +202,8 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Tüm fotoğrafı karart */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Tüm fotoğrafı karart */
     z-index: -1;
 }
 
@@ -214,7 +227,8 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.6); /* Tüm resimlere karartma efekti */
+    filter: brightness(0.6);
+    /* Tüm resimlere karartma efekti */
 }
 
 /* Metinleri ortalama ve stil ayarları */
@@ -232,19 +246,21 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 2; /* Üstte kalmasını sağlamak */
+    z-index: 2;
+    /* Üstte kalmasını sağlamak */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Yazıları tam ortada hizalar */
+    transform: translate(-50%, -50%);
+    /* Yazıları tam ortada hizalar */
 }
 
 .hero .mainText h2 {
     font-size: 3rem;
     margin-bottom: 10px;
     color: #fff;
-    
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     animation: fadeIn 0.8s ease forwards;
 }
 
@@ -252,12 +268,12 @@ nav ul li a:hover {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #fff;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     animation: fadeIn 1s ease forwards;
 }
 
 .btn {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #0C4A83;
     color: #fff;
     padding: 10px 20px;
@@ -271,7 +287,7 @@ nav ul li a:hover {
     animation: fadeIn 1.5s ease forwards;
 }
 
-.btn:hover {         
+.btn:hover {
     background-color: #2e78d3;
 }
 
@@ -281,6 +297,7 @@ nav ul li a:hover {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -294,7 +311,7 @@ nav ul li a:hover {
 
 
 /* Animasyon gecikmeleri */
-.hero .mainText h2, 
+.hero .mainText h2,
 .hero .mainText p {
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
@@ -320,14 +337,19 @@ nav ul li a:hover {
 
 /* .aboutContainer için animasyon */
 .aboutContainer {
-    margin: 50px auto; /* Sayfanın üstünden boşluk ve ortalama */
-   
+    margin: 50px auto;
+    /* Sayfanın üstünden boşluk ve ortalama */
+
     background-color: #ffffff;
     position: relative;
-    width: 80%; /* Genişlik küçültüldü */
-    max-width: 1200px; /* Maksimum genişlik ayarlandı */
-    height: auto; /* İçeriğe göre otomatik yükseklik */
-    padding-bottom: 5px; /* aboutText ile arada 5px boşluk */
+    width: 80%;
+    /* Genişlik küçültüldü */
+    max-width: 1200px;
+    /* Maksimum genişlik ayarlandı */
+    height: auto;
+    /* İçeriğe göre otomatik yükseklik */
+    padding-bottom: 5px;
+    /* aboutText ile arada 5px boşluk */
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -337,28 +359,33 @@ nav ul li a:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* Navbar stilleri */
 .aboutNavbar {
     display: flex;
-    justify-content: center; /* Butonları ortalar */
+    justify-content: center;
+    /* Butonları ortalar */
     margin-bottom: 50px;
     position: relative;
     left: 0;
     right: 0;
     top: 0px;
-    padding: 0 50px; /* En sağdan ve en soldan boşluk bırak */
+    padding: 0 50px;
+    /* En sağdan ve en soldan boşluk bırak */
     animation: fadeInUp 1.2s ease;
-    max-width: 100%; /* Navbar'ın tam genişliğini korur */
+    max-width: 100%;
+    /* Navbar'ın tam genişliğini korur */
 }
 
 .aboutNavbar button {
     padding: 0 20px;
-    margin: 0 5px; /* Butonlar arasındaki boşluğu ayarla */
+    margin: 0 5px;
+    /* Butonlar arasındaki boşluğu ayarla */
     border: none;
     background-color: #fff;
     color: #000;
     font-size: 15px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease;
@@ -370,7 +397,8 @@ nav ul li a:hover {
 }
 
 .aboutNavbar button:not(:last-child) {
-    margin-right: 5px; /* Son buton hariç diğerleri arasında küçük boşluk */
+    margin-right: 5px;
+    /* Son buton hariç diğerleri arasında küçük boşluk */
 }
 
 
@@ -380,13 +408,15 @@ nav ul li a:hover {
     display: block;
     width: 0;
     height: 3px;
-    background-color: #0C4A83; /* Alt çizgi rengi */
+    background-color: #0C4A83;
+    /* Alt çizgi rengi */
     transition: width 0.3s ease;
     margin-top: 5px;
 }
 
 .aboutNavbar button.active::after {
-    width: 100%; /* Aktif butona çizgi */
+    width: 100%;
+    /* Aktif butona çizgi */
 }
 
 .aboutNavbar button:hover::after {
@@ -398,14 +428,14 @@ nav ul li a:hover {
     background-color: #ffffff;
     transform: translateY(-10px);
     transition: width 0.3s ease;
-    color:  #0C4A83;
+    color: #0C4A83;
     font-size: 15px;
-    
+
 }
 
 .aboutNavbar button:hover {
     background-color: #ffffff;
-    
+
     transform: translateY(-10px);
 }
 
@@ -415,18 +445,23 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px; /* Fotoğraflar ve içerik arasında boşluk */
-    animation: fadeIn 1.5s ease; /* İçerik kısmı yavaşça görünme */
+    gap: 50px;
+    /* Fotoğraflar ve içerik arasında boşluk */
+    animation: fadeIn 1.5s ease;
+    /* İçerik kısmı yavaşça görünme */
 }
 
 .text-section {
     margin-right: auto;
     display: none;
-    
-    width: 600px; /* Sabit genişlik */
-    height: 400px; /* Sabit yükseklik */
+
+    width: 600px;
+    /* Sabit genişlik */
+    height: 400px;
+    /* Sabit yükseklik */
     background-color: #fff;
-    padding: 20px; /* İç boşluğu ayarladım */
+    padding: 20px;
+    /* İç boşluğu ayarladım */
     border-radius: 8px;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(20px);
@@ -446,17 +481,20 @@ nav ul li a:hover {
     color: #0C4A83;
     font-size: 20px;
     position: relative;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    animation: fadeInUp 0.8s ease; /* Başlık kayarak görünme */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: fadeInUp 0.8s ease;
+    /* Başlık kayarak görünme */
 }
 
 .text-section p {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style:oblique;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
     opacity: 0;
-    font-size:large;
-    animation: fadeIn 1s ease forwards; /* Metin soluklaşarak görünme */
-    animation-delay: 0.2s; /* Gecikmeli görünme */
+    font-size: large;
+    animation: fadeIn 1s ease forwards;
+    /* Metin soluklaşarak görünme */
+    animation-delay: 0.2s;
+    /* Gecikmeli görünme */
 }
 
 /* hr çizgisi */
@@ -473,13 +511,16 @@ nav ul li a:hover {
 .text-section.active hr {
     opacity: 1;
     transform: scaleX(1);
-    animation: fadeInUp 0.8s ease; /* Çizgi kayarak görünme */
+    animation: fadeInUp 0.8s ease;
+    /* Çizgi kayarak görünme */
 }
 
 /* Resim alanı */
 .aboutImage {
-    width: 600px; /* Sabit genişlik */
-    height: 400px; /* Sabit yükseklik */
+    width: 600px;
+    /* Sabit genişlik */
+    height: 400px;
+    /* Sabit yükseklik */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -488,9 +529,12 @@ nav ul li a:hover {
 }
 
 .aboutImage img {
-    width: 100%; /* Tam genişlik */
-    height: 100%; /* Tam yükseklik */
-    object-fit: cover; /* Resmin taşmasını engelle ve boyuta göre kırp */
+    width: 100%;
+    /* Tam genişlik */
+    height: 100%;
+    /* Tam yükseklik */
+    object-fit: cover;
+    /* Resmin taşmasını engelle ve boyuta göre kırp */
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
@@ -502,17 +546,29 @@ nav ul li a:hover {
 /* Başlangıçta .aboutText görünmez */
 .aboutText {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center; /* İçeriği yatay olarak ortalar */
+    text-align: center;
+   position: relative;
     display: flex;
-    flex-direction: column; /* İçeriği dikey olarak sıralar */
-    justify-content: center; /* Dikey olarak ortalar */
-    align-items: center; /* Yatay olarak ortalar */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 150px;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
+.aboutText::before {
+    content: "ABOUT"; /* Arka plana yazılacak büyük metin */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ortalamak ve biraz yukarı almak için */
+    font-size: 52px; /* Büyük bir font boyutu */
+    color: rgba(0, 0, 0, 0.08); /* Çok açık renk (gölge etkisi) */
+    z-index: -1; /* Arka planda kalmasını sağlar */
+    white-space: nowrap; /* Metnin taşmasını engeller */
+    font-weight: bold; /* Kalın yazı */
+}
 /* Görünür hale gelince yapılacak animasyon */
 .aboutText.show {
     opacity: 1;
@@ -539,6 +595,7 @@ nav ul li a:hover {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -547,11 +604,23 @@ nav ul li a:hover {
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
+.servicesText::before {
+    content: "SERVICES"; /* Arka plana yazılacak büyük metin */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%); /* Ortalamak ve biraz yukarı almak için */
+    font-size: 52px; /* Büyük bir font boyutu */
+    color: rgba(0, 0, 0, 0.08); /* Çok açık renk (gölge etkisi) */
+    z-index: -1; /* Arka planda kalmasını sağlar */
+    white-space: nowrap; /* Metnin taşmasını engeller */
+    font-weight: bold; /* Kalın yazı */
+}
 .servicesText.show {
     opacity: 1;
     transform: translateY(0);
 }
+
 .servicesText h1 {
     font-size: 32px;
     margin-top: 30px;
@@ -564,47 +633,59 @@ nav ul li a:hover {
     opacity: 1;
     transform: translateY(0);
 }
-.servicesText h4{
+
+.servicesText h4 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 30px;
     opacity: 0;
-   
+
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
-.servicesText.show h4{
-opacity: 1;
+
+.servicesText.show h4 {
+    opacity: 1;
     transform: translateY(0);
 }
 
 
 .ServicesNavbar {
-    opacity: 0; /* Başlangıçta görünmez */
-    transform: translateY(20px); /* Hafif yukarıda başlar */
+    opacity: 0;
+    /* Başlangıçta görünmez */
+    transform: translateY(20px);
+    /* Hafif yukarıda başlar */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     display: flex;
-    justify-content: center; /* Butonları sola hizalar */
+    justify-content: center;
+    /* Butonları sola hizalar */
     /* Kartlara yakınlaştırmak için azaltıldı */
-    margin-top: 7rem; /* Üstten biraz boşluk bırakır */
+    margin-top: 7rem;
+    /* Üstten biraz boşluk bırakır */
     position: relative;
     left: 0;
     right: 0;
     top: 0px;
-    padding: 0 50px; /* Sağdan ve soldan boşluk bırak */
-    padding-left: 70px; /* Soldan ekstra boşluk ekler */
+    padding: 0 50px;
+    /* Sağdan ve soldan boşluk bırak */
+    padding-left: 70px;
+    /* Soldan ekstra boşluk ekler */
     animation: fadeInUp 1.2s ease;
-    max-width: 100%; /* Navbar'ın tam genişliğini korur */
+    max-width: 100%;
+    /* Navbar'ın tam genişliğini korur */
 }
 
 
 .ServicesNavbar.show {
-    opacity: 1; /* Görünür hale gelir */
-    transform: translateY(0); /* Orijinal pozisyonuna kayar */
+    opacity: 1;
+    /* Görünür hale gelir */
+    transform: translateY(0);
+    /* Orijinal pozisyonuna kayar */
 }
 
 .ServicesNavbar button {
     padding: 0 20px;
-    margin: 0 5px; /* Butonlar arasındaki boşluğu ayarla */
+    margin: 0 5px;
+    /* Butonlar arasındaki boşluğu ayarla */
     border: none;
     background-color: #fff;
     color: #000;
@@ -621,7 +702,8 @@ opacity: 1;
 }
 
 .ServicesNavbar button:not(:last-child) {
-    margin-right: 5px; /* Son buton hariç diğerleri arasında küçük boşluk */
+    margin-right: 5px;
+    /* Son buton hariç diğerleri arasında küçük boşluk */
 }
 
 .ServicesNavbar button::after {
@@ -629,13 +711,15 @@ opacity: 1;
     display: block;
     width: 0;
     height: 3px;
-    background-color: #0C4A83; /* Alt çizgi rengi */
+    background-color: #0C4A83;
+    /* Alt çizgi rengi */
     transition: width 0.3s ease;
     margin-top: 5px;
 }
 
 .ServicesNavbar button.active::after {
-    width: 100%; /* Aktif butona çizgi */
+    width: 100%;
+    /* Aktif butona çizgi */
 }
 
 .ServicesNavbar button:hover::after {
@@ -667,18 +751,24 @@ opacity: 1;
 }
 
 /* Başlangıçta elemanlar görünmez */
-.wrapper, .aboutContainer, .servicesText, .features, .feature-card {
+.wrapper,
+.aboutContainer,
+.servicesText,
+.features,
+.feature-card {
     opacity: 0;
-    transform: translateY(20px); /* Elemanlar yukarıdan aşağı gelir */
+    transform: translateY(20px);
+    /* Elemanlar yukarıdan aşağı gelir */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .grid {
-   
+
     margin: 100px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Kartlar arası boşluk */
+    gap: 20px;
+    /* Kartlar arası boşluk */
     justify-items: center;
     margin-left: 1.2rem;
     margin-right: 1rem;
@@ -699,17 +789,22 @@ opacity: 1;
 
 .scroll-wrapper {
     display: flex;
-    overflow-x: hidden; /* Scroll barı gizle */
+    overflow-x: hidden;
+    /* Scroll barı gizle */
     scroll-behavior: smooth;
 }
 
-.swiper-button-prev, .swiper-button-next {
-    
+.swiper-button-prev,
+.swiper-button-next {
+
     color: white;
     border: none;
-    width: 40px; /* Scroll butonunun genişliği */
-    height: 40px; /* Scroll butonunun yüksekliği */
-    border-radius: 100%; /* Yuvarlak buton */
+    width: 40px;
+    /* Scroll butonunun genişliği */
+    height: 40px;
+    /* Scroll butonunun yüksekliği */
+    border-radius: 100%;
+    /* Yuvarlak buton */
     cursor: pointer;
     z-index: 10;
     position: absolute;
@@ -719,39 +814,51 @@ opacity: 1;
 }
 
 .swiper-button-prev {
-    left: 10px; /* Sol buton mesafesi */
+    left: 10px;
+    /* Sol buton mesafesi */
 }
 
 .swiper-button-next {
-    right: 10px; /* Sağ buton mesafesi */
+    right: 10px;
+    /* Sağ buton mesafesi */
 }
 
 .active {
-    transform: scale(1.1); /* Aktif kartın büyütülmesi */
+    transform: scale(1.1);
+    /* Aktif kartın büyütülmesi */
     transition: transform 0.5s ease;
 }
 
 .wrapper {
-   
+
     padding: 10px;
     margin: 50px auto;
-    transition: transform 0.5s ease, z-index 0.5s ease; /* Geçiş süresini artırır */
-    height: 350px; /* Kartların daha uzun yapılması */
-    width: 300px; /* Kartların daha geniş yapılması */
+    transition: transform 0.5s ease, z-index 0.5s ease;
+    /* Geçiş süresini artırır */
+    height: 350px;
+    /* Kartların daha uzun yapılması */
+    width: 300px;
+    /* Kartların daha geniş yapılması */
     position: relative;
     display: inline-block;
     transition: transform 0.3s ease, z-index 0.3s ease;
-    flex-shrink: 0; /* Kartların sabit genişlikte kalmasını sağla */
-    border: 2px solid #ddd; /* Kutu border rengi ve kalınlığı */
-    border-radius: 10px; /* Köşeleri yuvarlatma */
+    flex-shrink: 0;
+    /* Kartların sabit genişlikte kalmasını sağla */
+    border: 2px solid #ddd;
+    /* Kutu border rengi ve kalınlığı */
+    border-radius: 10px;
+    /* Köşeleri yuvarlatma */
 }
 
 .wrapper.active {
-    transform: scale(1.2); /* Kart büyüklüğü artırıldı */
-    z-index: 1; /* Aktif kartın diğer kartların üzerinde görünmesini sağlar */
+    transform: scale(1.2);
+    /* Kart büyüklüğü artırıldı */
+    z-index: 1;
+    /* Aktif kartın diğer kartların üzerinde görünmesini sağlar */
 }
 
-.wrapper.show, .feature-card.show {
+.wrapper.show,
+.feature-card.show {
     opacity: 1;
     transform: translateY(0);
 }
@@ -775,7 +882,8 @@ opacity: 1;
 }
 
 .wrapper .card img {
-    height: 200px; /* Kart görsel yüksekliği artırıldı */
+    height: 200px;
+    /* Kart görsel yüksekliği artırıldı */
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -784,7 +892,8 @@ opacity: 1;
 
 /* Hover ile aktif kart öne çıkar */
 .wrapper:hover {
-    transform: scale(1.15); /* Hover ile kart biraz daha büyür */
+    transform: scale(1.15);
+    /* Hover ile kart biraz daha büyür */
     z-index: 2;
 }
 
@@ -795,11 +904,14 @@ opacity: 1;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Hafif koyu overlay */
+    background: rgba(0, 0, 0, 0.2);
+    /* Hafif koyu overlay */
     border-radius: 10px;
     transition: background-color 0.4s ease-in-out;
-    z-index: 1; /* Overlay'ı öne al */
+    z-index: 1;
+    /* Overlay'ı öne al */
 }
+
 .wrapper .card img {
     height: 150px;
     width: 100%;
@@ -811,53 +923,66 @@ opacity: 1;
 .wrapper .card h3 {
     position: absolute;
     left: 10px;
-    bottom: 30px; /* Yazıyı biraz daha yukarı taşıdım */
+    bottom: 30px;
+    /* Yazıyı biraz daha yukarı taşıdım */
     margin: 0;
     font-size: 15px;
-    
+
     padding: 5px 10px;
     border-radius: 5px;
-   
+
     transition: transform 0.4s ease-in-out, color 0.4s;
-    z-index: 2; /* Yazıyı ön plana çıkarmak için */
+    z-index: 2;
+    /* Yazıyı ön plana çıkarmak için */
 }
 
-.wrapper .card .btn {
+.wrapper .card .CardBtn{
     position: absolute;
     left: 10px;
-    bottom: -40px; /* Başlangıçta görünmesin diye altta saklanır */
+    bottom: -40px;
+    /* Başlangıçta görünmesin diye altta saklanır */
     padding: 5px 10px;
-    background-color: transparent; /* Hafif koyu ve transparan arka plan */
+    background-color: transparent;
+    /* Hafif koyu ve transparan arka plan */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: bottom 0.4s ease-in-out, opacity 0.4s, background-color 0.3s;
-    opacity: 0; /* Görünmez başlat */
-    z-index: 2; /* Butonu ön plana çıkarmak için */
+    opacity: 0;
+    /* Görünmez başlat */
+    z-index: 2;
+    /* Butonu ön plana çıkarmak için */
 }
 
 .wrapper .card:hover h3 {
-    transform: translateY(-30px); 
-    color: #fff;/* Hover olunca yazı daha da yukarı kayar */
+    transform: translateY(-30px);
+    color: #fff;
+    /* Hover olunca yazı daha da yukarı kayar */
 }
 
-.wrapper .card:hover .btn {
-    bottom: 10px; /* Hover olunca buton yukarı çıkar */
-    opacity: 1; /* Görünür hale gelir */
-    border:1px solid #fff;
-    background-color: transparent /* Hover olunca daha belirgin bir mavi renk */
+.wrapper .card:hover .CardBtn {
+    bottom: 10px;
+    /* Hover olunca buton yukarı çıkar */
+    opacity: 1;
+    /* Görünür hale gelir */
+    border: 1px solid #fff;
+    background-color: transparent
+        /* Hover olunca daha belirgin bir mavi renk */
 }
-.wrapper .card .btn:hover
-{
-    bottom: 10px; /* Hover olunca buton yukarı çıkar */
-    opacity: 1; /* Görünür hale gelir */
-    border:1px solid black;
+
+.wrapper .card .CardBtn:hover {
+    bottom: 10px;
+    /* Hover olunca buton yukarı çıkar */
+    opacity: 1;
+    /* Görünür hale gelir */
+    border: 1px solid black;
     background-color: #0C4A83
 }
 
 .wrapper .card:hover::before {
-    background: rgba(0, 0, 0, 0.5); /* Hover olunca overlay koyulaşır */
+    background: rgba(0, 0, 0, 0.5);
+    /* Hover olunca overlay koyulaşır */
 }
 
 
@@ -931,16 +1056,21 @@ opacity: 1;
     position: relative;
     height: 75vh;
     z-index: 1;
-    background-image: url('images/forklift.jpg'); /* Contact section arka plan resmi */
+    background-image: url('images/forklift.jpg');
+    /* Contact section arka plan resmi */
     background-size: cover;
     background-position: center;
-    
+
     background-attachment: scroll;
-    padding-top: 10px; /* Fotoğrafın tablodan yukarıda 10px boşluk bırakmasını sağlar */
-    padding-bottom: 10px; /* Fotoğrafın tablodan aşağıda 10px boşluk bırakmasını sağlar */
+    padding-top: 10px;
+    /* Fotoğrafın tablodan yukarıda 10px boşluk bırakmasını sağlar */
+    padding-bottom: 10px;
+    /* Fotoğrafın tablodan aşağıda 10px boşluk bırakmasını sağlar */
     display: flex;
-    justify-content: flex-end; /* Formu sağa hizalamak için */
-    align-items: center; /* Formu dikey olarak ortalamak için */
+    justify-content: flex-end;
+    /* Formu sağa hizalamak için */
+    align-items: center;
+    /* Formu dikey olarak ortalamak için */
 
 }
 
@@ -950,53 +1080,67 @@ opacity: 1;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60vh; /* Fotoğrafın yüksekliğini %60'a düşürdüm */
+    height: 60vh;
+    /* Fotoğrafın yüksekliğini %60'a düşürdüm */
     object-fit: cover;
-    filter: brightness(25%); /* Fotoğrafı daha da karartmak için parlaklığı %25'e düşürdüm */
+    filter: brightness(25%);
+    /* Fotoğrafı daha da karartmak için parlaklığı %25'e düşürdüm */
     z-index: -1;
 
 }
 
 .contact-container {
     opacity: 0;
-    transform: translateY(50px); /* Başlangıçta aşağıda */
+    transform: translateY(50px);
+    /* Başlangıçta aşağıda */
     transition: all 0.6s ease-in-out;
     position: relative;
-    z-index: 2; /* Formun resmin üzerinde görünmesini sağlamak için */
-    background-color: rgba(0, 0, 0, 0.6); /* Daha koyu arka plan rengi (%85 şeffaf) */
+    z-index: 2;
+    /* Formun resmin üzerinde görünmesini sağlamak için */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Daha koyu arka plan rengi (%85 şeffaf) */
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 500px;
-    margin-right: 40px; /* Sağdan biraz boşluk bırakmak için */
-    height: auto; /* İçeriğe göre yüksekliği ayarlar */
-    box-sizing: border-box; /* İçerik ve padding ile uyumlu bir boyutlandırma sağlar */
+    margin-right: 40px;
+    /* Sağdan biraz boşluk bırakmak için */
+    height: auto;
+    /* İçeriğe göre yüksekliği ayarlar */
+    box-sizing: border-box;
+    /* İçerik ve padding ile uyumlu bir boyutlandırma sağlar */
 }
+
 .contact-container.show {
     opacity: 1;
-    transform: translateY(0); /* Scroll sonrası yerine gelir */
+    transform: translateY(0);
+    /* Scroll sonrası yerine gelir */
 }
-.contact-section::before
-{
+
+.contact-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Tüm fotoğrafı karart */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Tüm fotoğrafı karart */
     z-index: -1;
 }
-.contact-container h1, .contact-container p {
+
+.contact-container h1,
+.contact-container p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #fff; /* Koyu arka planda metin rengini beyaz yapar */
+    color: #fff;
+    /* Koyu arka planda metin rengini beyaz yapar */
 }
 
 .contact-container h1 {
     font-weight: bold;
     text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .contact-container p {
@@ -1004,7 +1148,7 @@ opacity: 1;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 30px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .contact-form .form-row {
@@ -1023,10 +1167,11 @@ opacity: 1;
     font-size: 14px;
     margin-bottom: 8px;
     display: block;
-    color: #fff; /* Koyu arka planda etiket rengini beyaz yapar */
+    color: #fff;
+    /* Koyu arka planda etiket rengini beyaz yapar */
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 12px;
@@ -1037,7 +1182,7 @@ opacity: 1;
     color: #333;
 }
 
-.contact-form input:focus, 
+.contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: #6c63ff;
@@ -1070,149 +1215,203 @@ opacity: 1;
 
 
 /* Footer Styles */
+/* Footer Genel Ayarlar */
 .footer {
-    position: relative;
-    width: 100%;
-   
     background: #252129;
-    border-radius: 0;
-    padding: 60px; /* Daha uzun footer için padding'i artırdık */
-    box-sizing: border-box;
-    margin-top: auto; /* Sayfanın en altına itmek için kullanılır */
-}
-
-.footer .footer-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 3.5rem;
-    padding: 0;
-}
-
-.footer-row .footer-col h4 {
+    padding: 50px 20px;
+    position: relative;
     color: #fff;
-    font-size: 1.2rem; /* Font boyutunu küçülttük */
-    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-col .links {
-    margin-top: 30px;
+/* Footer İç Konteyner */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* İçerik yukarı hizalı */
+    width: 100%;
+    max-width: 1200px;
+    /* İçerik genişliğini sınırladık */
+    padding: 0 20px;
+    margin-bottom: 30px;
+    /* Alt çizgiden mesafe */
 }
 
-.footer-col .links li {
+/* Footer Kolonlar */
+.footer-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* İçeriği sola hizala */
+    text-align: left;
+    padding: 0 20px;
+    /* İçerik etrafında eşit boşluk */
+}
+
+/* Başlıklar */
+.footer-col h4 {
+    font-size: 1rem;
+    /* Başlık boyutunu küçülttük */
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* İkon ile başlık arasına boşluk */
+}
+
+/* Metinler */
+.footer-col p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* İkon ile metin arasına boşluk */
+}
+
+.contact-info p {
+    text-align: left;
+}
+
+/* Hızlı Menüler */
+.quick-links .nav-links {
     list-style: none;
-    margin-bottom: 15px;
+    padding: 0;
+    margin: 0;
 }
 
-.footer-col .links li a {
+.quick-links .nav-links li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* İkon ile link arasına boşluk */
+}
+
+.quick-links .nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-size: 0.9rem; /* Font boyutunu küçülttük */
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
 
-.footer-col .links li a:hover {
-    color: #bfbfbf;
+.quick-links .nav-links li a:hover {
+    color: #ffa726;
+    /* Hover sırasında rengi değiştir */
 }
 
-.footer-col p {
-    margin: 30px 0;
-    color: #fff;
-    max-width: 350px;
-    font-size: 0.9rem; /* Font boyutunu küçülttük */
-}
-
-.footer-col form {
+/* Sosyal Medya İkonları */
+.follow-us .icons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
-.footer-col input {
-    height: 50px;
-    border-radius: 6px;
-    background: none;
-    width: 100%;
-    outline: none;
-    border: 1px solid #fff ;
-    caret-color: #fff;
-    color: #fff;
-    padding-left: 15px;
-}
-
-.footer-col input::placeholder {
-    color: #ccc;
-}
-
-.footer-col form button {
-    background: #fff;
-    outline: none;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.2s ease;
-}
-
-.footer-col form button:hover {
-    background: #cecccc;
-}
-
-.footer-col .icons {
-    display: flex;
-    margin-top: 40px;
-    gap: 30px;
-    cursor: pointer;
-}
-
-.footer-col .icons i {
+.follow-us .icons i {
+    font-size: 1.5rem;
     color: #afb6c7;
-    font-size: 1.5rem; /* İkon boyutunu koruduk */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.footer-col .icons i {
-    transition: color 0.3s ease; /* Hover geçişine yumuşak bir animasyon ekler */
-}
-
-.footer-col .icons i:hover {
-    color: #fff; /* Genel hover rengi */
-}
 
 /* Facebook hover rengi */
 .footer-col .icons .fa-facebook-f:hover {
-    color: #3b5998; /* Facebook mavi rengi */
+    color: #3b5998;
+    /* Facebook mavi rengi */
 }
 
 /* Twitter hover rengi */
 .footer-col .icons .fa-twitter:hover {
-    color: #1da1f2; /* Twitter mavi rengi */
+    color: #1da1f2;
+    /* Twitter mavi rengi */
 }
 
 
 /* Instagram hover rengi */
 .footer-col .icons .fa-instagram:hover {
-    color: #e4405f; /* Instagram pembe-kırmızı rengi */
+    color: #e4405f;
+    /* Instagram pembe-kırmızı rengi */
 }
 
 /* WhatsApp hover rengi */
 .footer-col .icons .fa-whatsapp:hover {
-    color: #25d366; /* WhatsApp yeşil rengi */
+    color: #25d366;
+    /* WhatsApp yeşil rengi */
 }
 
+/* Footer Alt Kısım */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 3px;
+    background: #1b1b1b;
+    /* Daha koyu çizgi */
+    border: none;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    position: absolute;
+    left: 20px;
+    bottom: -35px;
+    /* Çizginin altına alır */
+}
+
+.footer-logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.footer-logo h1:hover {
+    color: #ffa726;
+    /* Hover sırasında rengi değiştir */
+}
 
 @media (max-width: 768px) {
-    .footer .footer-row {
-        padding: 20px;
-        gap: 1rem;
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
-    .footer-col form {
-        display: block;
+
+    .footer-col {
+        align-items: center;
+        /* İçeriği ortala */
+        text-align: center;
+        padding: 20px 0;
+        /* Bölümler arasında boşluk */
     }
-    .footer-col form :where(input, button) {
-        width: 100%;
+
+    .follow-us .icons {
+        justify-content: center;
     }
-    .footer-col form button {
-        margin: 10px 0 0 0;
+
+    .footer-logo {
+        position: static;
+        margin-top: 20px;
     }
+
+
 }
 
 
