@@ -1,90 +1,364 @@
-/* Genel ayarlar */
+/* Genel stil */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
-#akuDetails {
+header {
+    position: fixed;
+    /* Header sabit */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 15px 20px;
     display: flex;
-    flex-direction: row-reverse; /* Fotoğrafı sağa alır */
-    max-width: 1200px;
-    margin: 40px auto;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    /* Başlangıçta transparan */
+    transition: background-color 0.5s ease;
+    background-color:#252129 ;
+    
 }
 
-#akuImage {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    display: block;
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Kaydırınca yarı opak renk */
 }
 
-/* Sol taraf (içerik kısmı) */
-.content {
-    padding: 20px;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    /* Menü ortalaması için relative pozisyon */
+}
+
+header .logo {
+    position: absolute;
+    /* Solda sabitlenmiş logo */
+}
+
+header .logo h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Güzel bir font kullan */
+    margin-left: auto;
+    /* Soldan 5px boşluk */
+}
+
+/* Menü ortada yer alacak */
+nav {
     flex-grow: 1;
+    /* Menü ortada olacak şekilde genişlik sağlar */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    /* Menüyü ortalar */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 10px;
+
+}
+
+nav ul li a {
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+
+
+    transition: color 0.4s ease;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav ul li a:hover {
+    color: #ffb703;
+}
+
+
+
+/* İçerik düzeni */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Sol taraftaki metin alanı */
+.content {
+    flex: 2;
+    padding-right: 20px;
 }
 
 #akuTitle {
-    font-size: 32px;
-    color: #333;
+    font-size: 24px;
     margin-bottom: 10px;
-    text-align: left;
+    margin-top: 5rem;
 }
 
-/* Tanıtım paragrafı */
-#akuDescription {
+#akuDescription, #akuExtraInfo {
     font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    max-width: 600px;
+    margin-bottom: 10px;
 }
 
-/* Tablo stili */
+/* Sağ taraftaki resim */
+.image-container {
+    flex: 1;
+    margin-top: 5rem;
+}
+
+#akuImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Tablo stil */
 #akuTable {
-    width: 100%;
+    width: 90%; /* Sağ ve soldan boşluk bırakmak için genişliği ayarla */
+    margin: 40px auto; /* Üstten 40px boşluk ve yatay ortalama */
     border-collapse: collapse;
-    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Köşeleri yuvarla */
+    overflow: hidden; /* Köşelerden taşmaları engelle */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge ekle */
 }
 
 #akuTable th, #akuTable td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center; /* Yazıları ortala */
+    font-weight: normal;
+    font-size: 12px; /* Yazı boyutunu küçült */
 }
 
 #akuTable th {
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
+    font-weight: bold;
 }
 
-#akuTable td {
-    color: #555;
+#akuTable td:first-child {
+    font-weight: bold;
+    background-color: #f2f2f2;
 }
 
-@media screen and (max-width: 768px) {
-    #akuDetails {
+#akuTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+
+.footer {
+    background: #252129;
+    width: 100%;
+    padding: 50px 20px;
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer İç Konteyner */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* İçerik yukarı hizalı */
+    width: 100%;
+    max-width: 1200px;
+    /* İçerik genişliğini sınırladık */
+    padding: 0 20px;
+    margin-bottom: 30px;
+    /* Alt çizgiden mesafe */
+}
+
+/* Footer Kolonlar */
+.footer-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* İçeriği sola hizala */
+    text-align: left;
+    padding: 0 20px;
+    /* İçerik etrafında eşit boşluk */
+}
+
+/* Başlıklar */
+.footer-col h4 {
+    font-size: 1rem;
+    /* Başlık boyutunu küçülttük */
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* İkon ile başlık arasına boşluk */
+}
+
+/* Metinler */
+.footer-col p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* İkon ile metin arasına boşluk */
+}
+
+.contact-info p {
+    text-align: left;
+}
+
+/* Hızlı Menüler */
+.quick-links .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links .nav-links li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* İkon ile link arasına boşluk */
+}
+
+.quick-links .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.quick-links .nav-links li a:hover {
+    color: #ffa726;
+    /* Hover sırasında rengi değiştir */
+}
+
+/* Sosyal Medya İkonları */
+.follow-us .icons {
+    display: flex;
+    gap: 15px;
+}
+
+.follow-us .icons i {
+    font-size: 1.5rem;
+    color: #afb6c7;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Facebook hover rengi */
+.footer-col .icons .fa-facebook-f:hover {
+    color: #3b5998;
+    /* Facebook mavi rengi */
+}
+
+/* Twitter hover rengi */
+.footer-col .icons .fa-twitter:hover {
+    color: #1da1f2;
+    /* Twitter mavi rengi */
+}
+
+
+/* Instagram hover rengi */
+.footer-col .icons .fa-instagram:hover {
+    color: #e4405f;
+    /* Instagram pembe-kırmızı rengi */
+}
+
+/* WhatsApp hover rengi */
+.footer-col .icons .fa-whatsapp:hover {
+    color: #25d366;
+    /* WhatsApp yeşil rengi */
+}
+
+/* Footer Alt Kısım */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 3px;
+    background: #1b1b1b;
+    /* Daha koyu çizgi */
+    border: none;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    position: absolute;
+    left: 20px;
+    bottom: -35px;
+    /* Çizginin altına alır */
+}
+
+.footer-logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.footer-logo h1:hover {
+    color: #ffa726;
+    /* Hover sırasında rengi değiştir */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
         flex-direction: column;
-    }
-    
-    #akuImage {
-        width: 100%;
-    }
-
-    #akuTitle {
-        font-size: 24px;
         text-align: center;
     }
 
-    #akuDescription {
+    .footer-col {
+        align-items: center;
+        /* İçeriği ortala */
         text-align: center;
+        padding: 20px 0;
+        /* Bölümler arasında boşluk */
     }
+
+    .follow-us .icons {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        position: static;
+        margin-top: 20px;
+    }
+
+
 }

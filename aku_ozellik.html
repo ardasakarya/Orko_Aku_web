@@ -7,25 +7,101 @@
     <link rel="stylesheet" href="aku_ozellik_style.css"> <!-- Stil dosyanız -->
 </head>
 <body>
-    <div id="akuDetails">
-        <img id="akuImage" src="" alt="Akü Resmi" />
+    <header>
+
+        <div class="container">
+            <div class="logo">
+                <h1>ORKO AKÜ</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">ANASAYFA</a></li>
+                    <li><a href="#About">HAKKIMIZDA</a></li>
+                    <li><a href="#services">ÜRÜNLERİMİZ</a></li>
+                    <li><a href="#Contact">İLETİŞİM</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="akuDetails" class="flex-container">
+        <!-- Sol tarafta metinler -->
         <div class="content">
             <h1 id="akuTitle">Akü Başlığı</h1>
-            <p id="akuDescription">Bu akü, yüksek performans ve dayanıklılık sunar. Araçlarınızda üstün bir başlatma gücü sağlar ve uzun ömürlüdür. Soğuk hava koşullarında bile mükemmel çalışma performansı gösterir.</p>
-            <table id="akuTable">
-                <thead>
-                    <tr>
-                        <th>Özellik</th>
-                        <th>Değer</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Özellikler burada doldurulacak -->
-                </tbody>
-            </table>
+            <p id="akuDescription">Bu akü, yüksek performans ve dayanıklılık sunar. Araçlarınızda üstün bir başlatma gücü sağlar ve uzun ömürlüdür.</p>
+            <p id="akuExtraInfo">Soğuk hava koşullarında bile mükemmel çalışma performansı gösterir. Güçlü ve verimli çalışma için tasarlanmıştır.</p>
+        </div>
+
+        <!-- Sağ tarafta resim -->
+        <div class="image-container">
+            <img id="akuImage" src="" alt="Akü Resmi" />
         </div>
     </div>
 
+    <!-- Altta tam genişlikte tablo -->
+    <table id="akuTable">
+        <thead>
+            <tr>
+                <th>Art. No.</th>
+                <th>DIN Marking</th>
+                <th>Short Code</th>
+                <th>Ah (C20)</th>
+                <th>Box Type</th>
+                <th>EN (A)</th>
+                <th>LxWxH (mm)</th>
+                <th>BHD</th>
+                <th>Layout</th>
+                <th>Weight (kg)</th>
+                <th>PCS/pallet (EUR/CNT)</th>
+                <th>Remarks*</th>
+                <th>TDS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Özellikler burada doldurulacak -->
+        </tbody>
+    </table>
+    <section class="footer">
+        <div class="footer-container">
+            <!-- Orko Akü - İletişim Bilgileri -->
+            <div class="footer-col contact-info">
+                <h4>Orko Akü</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 1234 Street Name, Neighborhood, City, Postal Code, Country
+                </p>
+                <p><i class="fa-solid fa-phone-alt"></i> +90 123 456 7890</p>
+                <p><i class="fa-solid fa-envelope"></i> info@orkoakuexample.com</p>
+            </div>
+            <!-- Hızlı Menüler -->
+            <div class="footer-col quick-links">
+                <h4>Hızlı Menüler</h4>
+                <ul class="nav-links">
+                    <li><i class="fa-solid fa-caret-right"></i> <a href="#">Anasayfa</a></li>
+                    <li><i class="fa-solid fa-caret-right"></i> <a href="#">Hakkımızda</a></li>
+                    <li><i class="fa-solid fa-caret-right"></i> <a href="#">Ürünler</a></li>
+                    <li><i class="fa-solid fa-caret-right"></i> <a href="#">İletişim</a></li>
+                </ul>
+            </div>
+            <!-- Bizi Takip Edin -->
+            <div class="footer-col follow-us">
+                <h4><i class="fa-solid fa-share-alt"></i> Bizi Takip Edin</h4>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Alt Kısım -->
+        <div class="footer-bottom">
+            <hr class="footer-divider">
+            <div class="footer-logo">
+
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/8e08d8752d.js" crossorigin="anonymous"></script>
     <script src="aku_ozellik_script.js"></script> <!-- JS dosyanız -->
 </body>
 </html>
