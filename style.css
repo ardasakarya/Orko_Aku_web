@@ -1053,6 +1053,13 @@ nav ul li a:hover {
 
 
 .contact-section {
+
+    display: flex;
+    justify-content: space-between;
+   
+    padding: 50px;
+    background-color: #f9f9f9;
+
     position: relative;
     height: 75vh;
     z-index: 1;
@@ -1067,7 +1074,7 @@ nav ul li a:hover {
     padding-bottom: 10px;
     /* Fotoğrafın tablodan aşağıda 10px boşluk bırakmasını sağlar */
     display: flex;
-    justify-content: flex-end;
+   
     /* Formu sağa hizalamak için */
     align-items: center;
     /* Formu dikey olarak ortalamak için */
@@ -1090,6 +1097,9 @@ nav ul li a:hover {
 }
 
 .contact-container {
+
+ 
+    margin-left: 20px;
     opacity: 0;
     transform: translateY(50px);
     /* Başlangıçta aşağıda */
@@ -1103,13 +1113,24 @@ nav ul li a:hover {
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin-right: 40px;
     /* Sağdan biraz boşluk bırakmak için */
     height: auto;
     /* İçeriğe göre yüksekliği ayarlar */
     box-sizing: border-box;
     /* İçerik ve padding ile uyumlu bir boyutlandırma sağlar */
+}
+
+.maps {
+    
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 5px solid #000000; /* Çerçeve rengi */
+    border-radius: 15px; /* Kenarların yuvarlaklığı */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgeli çerçeve */
+    margin-right: 20px; /* Sağdan boşluk */
 }
 
 .contact-container.show {
