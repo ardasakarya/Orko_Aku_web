@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         ups:{
-            type:'stasyoner',
+            type:'stasyoner_alt',
             imgSrc: 'stasyoner_aku_img/ups.png', 
             title: 'UPS',
                 description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -428,6 +428,10 @@ if (akuId && akuData[akuId]) {
         case 'stasyoner':
             tableId = 'stasyoner_table';
             break;
+            case 'stasyoner_alt':
+                tableId = 'stasyoner_table_alt';
+                break;
+            
         default:
             tableId = 'akuTable'; // Default tablo, starter olabilir ya da genel tablo
     }
