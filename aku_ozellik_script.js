@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
                  ]
         },
         tab_bci: {
-            type:'traksiyoner',
+            type:'traksiyoner_bci',
             imgSrc: 'traksiyoner_aku_img/TAB-BCI.png',
             title: 'TAB BCI',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_bs: {
-            type:'traksiyoner',
+            type:'traksiyoner_din',
             imgSrc: 'traksiyoner_aku_img/TAB-BS.png',
             title: 'TAB BS',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_din: {
-            type:'traksiyoner',
+            type:'traksiyoner_din',
             imgSrc: 'traksiyoner_aku_img/TAB-DIN.png',
             title: 'TAB DIN',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_psq: {
-            type:'traksiyoner',
+            type:'traksiyoner_pzrm',
             imgSrc: 'traksiyoner_aku_img/TAB-PSQ.png',
             title: 'TAB PSQ',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_pzrm: {
-            type:'traksiyoner',
+            type:'traksiyoner_pzrm',
             imgSrc: 'traksiyoner_aku_img/TAB-PzRM1.png',
             title: 'TAB PZRM',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_pzv: {
-            type:'traksiyoner',
+            type:'traksiyoner_pzrm',
             imgSrc: 'traksiyoner_aku_img/TAB-PzV.png',
             title: 'TAB PZV',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_pzvb: {
-            type:'traksiyoner',
+            type:'traksiyoner_pzrm',
             imgSrc: 'traksiyoner_aku_img/TAB-PzVB.png',
             title: 'TAB PZVB',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -301,7 +301,18 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
                specs: [
-                //monoblock
+                { feature: 'Art. No.', value: ['1000569', '1000570', '1000572', '1000574', '1000577'] },
+                { feature: 'Short Code', value: ['45 AGM', '55 AGM', '60 AGM', '70 AGM', '90 AGM'] },
+                { feature: 'C100 (Ah)', value: ['65', '75', '85', '100', '115'] },
+                { feature: 'C20 (Ah)', value: ['60', '70', '80', '95', '105'] },
+                { feature: 'C5 (Ah)', value: ['45', '55', '60', '70', '90'] },
+                { feature: 'Box Type', value: ['L2', 'L3', 'L4', 'L5', 'L6'] },
+                { feature: 'Voltage (V)', value: ['12', '12', '12', '12', '12'] },
+                { feature: 'LxWxH (mm)', value: ['242x175x190', '278x175x190', '315x175x190', '353x175x190', '394x175x190'] },
+                { feature: 'BHD', value: ['B13', 'B13', 'B13', 'B13', 'B13'] },
+                { feature: 'Layout', value: ['0', '0', '0', '0', '0'] },
+                { feature: 'PCS/pallet (EUR/CNT)', value: ['63/90', '48/80', '42/60', '36/60', '36/60'] },
+                { feature: 'Weight (kg)', value: ['17.9', '20.5', '23.2', '26.0', '29.2'] }
             ]
         },
         motion_gel: {
@@ -311,7 +322,18 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
                specs: [
-                 //monoblock
+                { feature: 'Art. No.', value: ['1000807', '1000808', '1029094', '1000810', '1000811', '1000813', '1000812'] },
+                { feature: 'Short Code', value: ['50 Gel', '70 Gel', '75 Gel', '105 Gel', '130 Gel', '180 Gel', 'Golf Cart Gel'] },
+                { feature: 'C100 (Ah)', value: ['70', '90', '100', '140', '165', '235', '235'] },
+                { feature: 'C20 (Ah)', value: ['60', '80', '85', '125', '150', '210', '210'] },
+                { feature: 'C5 (Ah)', value: ['50', '70', '75', '105', '130', '180', '180'] },
+                { feature: 'Box Type', value: ['L3', 'L5', '60528', '62512', 'B', 'C', 'Golf Cart'] },
+                { feature: 'Voltage (V)', value: ['12', '12', '12', '12', '12', '12', '6'] },
+                { feature: 'LxWxH (mm)', value: ['278x175x190', '353x175x190', '352x175x211/232', '345x173x264/285', '509x223x195/222', '518x273x214/240', '243x189x252/273'] },
+                { feature: 'BHD', value: ['B13', 'B13', 'B1', 'B0', 'B0', 'B0', 'B0'] },
+                { feature: 'Layout', value: ['0', '0', '1', '0', '3', '3', '0'] },
+                { feature: 'PCS/pallet (EUR/CNT)', value: ['51/80', '36/60', '36/48', '36/48', '21/35', '18/24', '36/48'] },
+                { feature: 'Weight (kg)', value: ['21.2', '25.8', '28.4', '37.9', '50.5', '68.3', '30.0'] }
             ]
         },
         motion_pasted: {
@@ -321,7 +343,18 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
                specs: [
-                 //monoblock
+                { feature: 'Art. No.', value: ['1000782', '1000783', '1000784', '1000769', '1000761', '1000766', '1000763', '1000764', '1000765'] },
+                { feature: 'Short Code', value: ['50P', '60P', '85P', '80P', '105P', '110P', '110P MAC', '150P', '190P'] },
+                { feature: 'C100 (Ah)', value: ['70', '80', '115', '115', '125', '155', '150', '190', '245'] },
+                { feature: 'C20 (Ah)', value: ['60', '75', '105', '105', '120', '140', '140', '180', '225'] },
+                { feature: 'C5 (Ah)', value: ['50', '60', '85', '80', '105', '110', '110', '150', '190'] },
+                { feature: 'Box Type', value: ['L2', 'L3', 'L5', '59518', '60528', '62512', 'MAC110', 'B', 'C'] },
+                { feature: 'Voltage (V)', value: ['12', '12', '12', '12', '12', '12', '12', '12', '12'] },
+                { feature: 'LxWxH (mm)', value: ['242x175x190', '278x175x190', '353x175x190', '312x175x212', '344x172x212/234', '344x172x262/284', '509x175x182/208', '512x223x194/221', '518x273x214/241'] },
+                { feature: 'BHD', value: ['B13', 'B13', 'B13', 'B0', 'B0', 'B0', 'B0', 'B0', 'B0'] },
+                { feature: 'Layout', value: ['0', '0', '0', '0', '0', '0', '3', '3', '3'] },
+                { feature: 'PCS/pallet (EUR/CNT)', value: ['63/90', '51/80', '36/60', '42/70', '36/48', '24/36', '24/40', '21/35', '18/24'] },
+                { feature: 'Weight (kg)', value: ['16.6', '19.2', '24.6', '23.3', '26.5', '31.8', '34.3', '43.3', '56.1'] }
             ]
         },
         motion_tubular: {
@@ -331,7 +364,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
                specs: [
-                 //monoblock
+                { feature: 'Art. No.', value: ['1000253', '1000399', '1000016', '1000014', '1000251', '1000417', '1003148'] },
+                { feature: 'Short Code', value: ['55T', '90T', '95T', '120T', '145T', 'Golf Cart T', 'Golf Cart TS'] },
+                { feature: 'C100 (Ah)', value: ['65', '115', '130', '155', '180', '240', '270'] },
+                { feature: 'C20 (Ah)', value: ['60', '110', '115', '140', '165', '220', '250'] },
+                { feature: 'C5 (Ah)', value: ['55', '90', '95', '120', '145', '180', '210'] },
+                { feature: 'Box Type', value: ['L3', '59518', '60528', '62512', 'B', 'Golf Cart', 'Golf Cart'] },
+                { feature: 'Voltage (V)', value: ['12', '12', '12', '12', '12', '6', '6'] },
+                { feature: 'LxWxH (mm)', value: ['278x175x190', '303x175x208/229', '344x172x212/234', '344x172x262/284', '512x223x194/220', '244x190x270/281', '244x190x270/281'] },
+                { feature: 'BHD', value: ['B13', 'B1', 'B0', 'B0', 'B0', 'B0', 'B0'] },
+                { feature: 'Layout', value: ['0', '0', '0', '0', '3', '0', '0'] },
+                { feature: 'PCS/pallet (EUR/CNT)', value: ['51/80', '42/70', '36/48', '24/36', '21/35', '36/48', '36/54'] },
+                { feature: 'Weight (kg)', value: ['18.9', '28.7', '30.4', '37.5', '47.5', '31.5', '32.4'] }
             ]
         },
         motion_bci: {
@@ -340,9 +384,21 @@ document.addEventListener('DOMContentLoaded', function () {
             title: 'MOTION BCI',
                 description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
-               specs: [
-                 //monoblock
+            specs : [
+                { feature: 'Art. No.', value: ['1026410', '1026445', '1026447', '1026448', '1026449'] },
+                { feature: 'Short Code', value: ['B 225', 'B 330', 'B 420', 'B 170', 'B 150'] },
+                { feature: 'C100 (Ah)', value: ['250', '367', '467', '189', '167'] },
+                { feature: 'C20 (Ah)', value: ['225', '330', '420', '170', '150'] },
+                { feature: 'C5 (Ah)', value: ['185', '271', '344', '145', '120'] },
+                { feature: 'Box Type', value: ['GC2', '902', '903', 'GC8', 'GC12'] },
+                { feature: 'Voltage (V)', value: ['6', '6', '6', '8', '12'] },
+                { feature: 'LxWxH (mm)', value: ['264x183x251/274', '308x174x337/366', '308x174x337/416', '264x183x251/274', '332x183x248/277'] },
+                { feature: 'BHD', value: ['B0', 'B0', 'B0', 'B0', 'B0'] },
+                { feature: 'Layout', value: ['2', '2', '2', '1', '1'] },
+                { feature: 'PCS/pallet (EUR/CNT)', value: ['36/54', '24/36', '24/36', '36/54', '24/36'] },
+                { feature: 'Weight (kg)', value: ['29.1', '42.8', '51', '29.3', '37.0'] }
             ]
+            
         },
         ogi:{
          type:'stasyoner',
@@ -419,19 +475,26 @@ if (akuId && akuData[akuId]) {
         case 'magic_hr':
             tableId = 'magic_hr_table';
             break;
-        case 'traksiyoner':
-            tableId = 'traksiyoner_table';
+        case 'traksiyoner_bci':
+            tableId = 'traksiyoner_table_BCI';
             break;
+            case 'traksiyoner_din':
+                tableId = 'traksiyoner_table_DIN';
+                break;
+                case 'traksiyoner_pzrm':
+                    tableId = 'traksiyoner_table_PZRM';
+                    break;
         case 'monoblock':
             tableId = 'monoblock_table';
             break;
         case 'stasyoner':
             tableId = 'stasyoner_table';
             break;
-            case 'stasyoner_alt':
-                tableId = 'stasyoner_table_alt';
-                break;
+        case 'stasyoner_alt':
+            tableId = 'stasyoner_table_alt';
+            break;
             
+
         default:
             tableId = 'akuTable'; // Default tablo, starter olabilir ya da genel tablo
     }
