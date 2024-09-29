@@ -547,7 +547,7 @@ nav ul li a:hover {
 .aboutText {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
-   position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -557,18 +557,27 @@ nav ul li a:hover {
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 .aboutText::before {
-    content: "ABOUT"; /* Arka plana yazılacak büyük metin */
+    content: "ABOUT";
+    /* Arka plana yazılacak büyük metin */
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -50%); /* Ortalamak ve biraz yukarı almak için */
-    font-size: 52px; /* Büyük bir font boyutu */
-    color: rgba(0, 0, 0, 0.08); /* Çok açık renk (gölge etkisi) */
-    z-index: -1; /* Arka planda kalmasını sağlar */
-    white-space: nowrap; /* Metnin taşmasını engeller */
-    font-weight: bold; /* Kalın yazı */
+    transform: translate(-50%, -50%);
+    /* Ortalamak ve biraz yukarı almak için */
+    font-size: 52px;
+    /* Büyük bir font boyutu */
+    color: rgba(0, 0, 0, 0.08);
+    /* Çok açık renk (gölge etkisi) */
+    z-index: -1;
+    /* Arka planda kalmasını sağlar */
+    white-space: nowrap;
+    /* Metnin taşmasını engeller */
+    font-weight: bold;
+    /* Kalın yazı */
 }
+
 /* Görünür hale gelince yapılacak animasyon */
 .aboutText.show {
     opacity: 1;
@@ -604,18 +613,27 @@ nav ul li a:hover {
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 .servicesText::before {
-    content: "SERVICES"; /* Arka plana yazılacak büyük metin */
+    content: "SERVICES";
+    /* Arka plana yazılacak büyük metin */
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, 0%); /* Ortalamak ve biraz yukarı almak için */
-    font-size: 52px; /* Büyük bir font boyutu */
-    color: rgba(0, 0, 0, 0.08); /* Çok açık renk (gölge etkisi) */
-    z-index: -1; /* Arka planda kalmasını sağlar */
-    white-space: nowrap; /* Metnin taşmasını engeller */
-    font-weight: bold; /* Kalın yazı */
+    transform: translate(-50%, 0%);
+    /* Ortalamak ve biraz yukarı almak için */
+    font-size: 52px;
+    /* Büyük bir font boyutu */
+    color: rgba(0, 0, 0, 0.08);
+    /* Çok açık renk (gölge etkisi) */
+    z-index: -1;
+    /* Arka planda kalmasını sağlar */
+    white-space: nowrap;
+    /* Metnin taşmasını engeller */
+    font-weight: bold;
+    /* Kalın yazı */
 }
+
 .servicesText.show {
     opacity: 1;
     transform: translateY(0);
@@ -936,7 +954,7 @@ nav ul li a:hover {
     /* Yazıyı ön plana çıkarmak için */
 }
 
-.wrapper .card .CardBtn{
+.wrapper .card .CardBtn {
     position: absolute;
     left: 10px;
     bottom: -40px;
@@ -1056,7 +1074,7 @@ nav ul li a:hover {
 
     display: flex;
     justify-content: space-between;
-   
+
     padding: 50px;
     background-color: #f9f9f9;
 
@@ -1074,7 +1092,7 @@ nav ul li a:hover {
     padding-bottom: 10px;
     /* Fotoğrafın tablodan aşağıda 10px boşluk bırakmasını sağlar */
     display: flex;
-   
+
     /* Formu sağa hizalamak için */
     align-items: center;
     /* Formu dikey olarak ortalamak için */
@@ -1098,7 +1116,7 @@ nav ul li a:hover {
 
 .contact-container {
 
- 
+
     margin-left: 20px;
     opacity: 0;
     transform: translateY(50px);
@@ -1123,14 +1141,18 @@ nav ul li a:hover {
 }
 
 .maps {
-    
+
     width: 100%;
     max-width: 600px;
     height: 450px;
-    border: 5px solid #000000; /* Çerçeve rengi */
-    border-radius: 15px; /* Kenarların yuvarlaklığı */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgeli çerçeve */
-    margin-right: 20px; /* Sağdan boşluk */
+    border: 5px solid #000000;
+    /* Çerçeve rengi */
+    border-radius: 15px;
+    /* Kenarların yuvarlaklığı */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Gölgeli çerçeve */
+    margin-right: 20px;
+    /* Sağdan boşluk */
 }
 
 .contact-container.show {

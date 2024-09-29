@@ -20,8 +20,8 @@ header {
     background-color: transparent;
     /* Başlangıçta transparan */
     transition: background-color 0.5s ease;
-    background-color:#252129 ;
-    
+    background-color: #252129;
+
 }
 
 header.scrolled {
@@ -110,7 +110,8 @@ nav ul li a:hover {
     margin-top: 5rem;
 }
 
-#akuDescription, #akuExtraInfo {
+#akuDescription,
+#akuExtraInfo {
     font-size: 16px;
     margin-bottom: 10px;
 }
@@ -129,21 +130,29 @@ nav ul li a:hover {
 
 /* Tablo stil */
 table {
-    width: 90%; /* Sağ ve soldan boşluk bırakmak için genişliği ayarla */
-    margin: 40px auto; /* Üstten 40px boşluk ve yatay ortalama */
+    width: 90%;
+    /* Sağ ve soldan boşluk bırakmak için genişliği ayarla */
+    margin: 40px auto;
+    /* Üstten 40px boşluk ve yatay ortalama */
     border-collapse: collapse;
     background-color: #f9f9f9;
-    border-radius: 8px; /* Köşeleri yuvarla */
-    overflow: hidden; /* Köşelerden taşmaları engelle */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge ekle */
+    border-radius: 8px;
+    /* Köşeleri yuvarla */
+    overflow: hidden;
+    /* Köşelerden taşmaları engelle */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Hafif gölge ekle */
 }
 
-table th, table td {
+table th,
+table td {
     padding: 10px;
     border: 1px solid #ddd;
-    text-align: center; /* Yazıları ortala */
+    text-align: center;
+    /* Yazıları ortala */
     font-weight: normal;
-    font-size: 12px; /* Yazı boyutunu küçült */
+    font-size: 12px;
+    /* Yazı boyutunu küçült */
 }
 
 table th {
@@ -163,7 +172,8 @@ table tbody tr:nth-child(even) {
 
 /* Starter Table */
 #starter_table {
-    width: 100%; /* Genişliği %100 olarak ayarla */
+    width: 100%;
+    /* Genişliği %100 olarak ayarla */
 }
 
 /* Magic HR Table */
@@ -176,7 +186,8 @@ table tbody tr:nth-child(even) {
     width: 100%;
 }
 
-#traksiyoner_table th, #traksiyoner_table td {
+#traksiyoner_table th,
+#traksiyoner_table td {
     padding: 8px;
     border: 1px solid #ddd;
     font-size: 11px;
