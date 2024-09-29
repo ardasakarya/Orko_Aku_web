@@ -214,7 +214,7 @@ table tbody tr:nth-child(even) {
 .footer {
     background: #252129;
     width: 100%;
-    padding: 50px 20px;
+    padding: 50px 0px;
     position: relative;
     color: #fff;
     display: flex;
@@ -231,7 +231,7 @@ table tbody tr:nth-child(even) {
     align-items: flex-start;
     /* İçerik yukarı hizalı */
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     /* İçerik genişliğini sınırladık */
     padding: 0 20px;
     margin-bottom: 30px;
