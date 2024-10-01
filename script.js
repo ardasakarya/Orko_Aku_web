@@ -255,6 +255,15 @@ document.addEventListener('scroll', function () {
     }
   });
 
+  document.addEventListener('scroll', function () {
+    const mapsIframe = document.querySelector('.maps');
+    const containerPosition = mapsIframe.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.5;
+
+    if (containerPosition < screenPosition) {
+        mapsIframe.classList.add('show');
+    }
+});
 
 
 
@@ -481,6 +490,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       }
     ]
+    
   };
 
   // Butonlara tıklanınca ilgili içeriği yükleme

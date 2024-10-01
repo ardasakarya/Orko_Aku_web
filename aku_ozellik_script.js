@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_magic.png',
             title: 'TAB MAGIC',
             type: 'starter',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
+            description: "TAB Magic automotive battery utilises the latest innovations in Ca/Ca manufacturing technology, providing for the highest cold start performance and superior reliable power as demanded by the latest generation of cars with high energy drain.The SMF lid cover provides complete roll over spill protection and is entirely maintenance free throughout the batteries life.",
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
             specs: [
                 { feature: 'Art. No.', value: ['1000694', '1000695', '1000696', '1000697', '1000698', '1000700', '1000701', '1000703', '1000862'] },
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_agm_stop&go.png',
             title: 'TAB AGM STOP&GO',
             type: 'starter',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
+            description: "TAB AGM Stop&Go batteries are  Valve Regulated Lead Acid (VRLA) batteries intended for use in vehicles with enhanced level Start/Stop function with break energy recuperation. VRLA AGM automotive battery is improved lead acid battery to its maximum performance.The battery cells are closed by a pressure relief valve and electrolyte is immobilized in Absorbed Glass Mat (AGM). Plate stacks are kept in the cells under pressure.",
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
             specs: [
                 { feature: 'Art. No.', value: ['1000799', '1000800', '1000801', '1000802', '1000803'] },
@@ -431,6 +431,7 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
             specs: [
+                
                 { feature: 'Type', value: ['12V 1 OPzS 50', '12V 2 OPzS 100', '12V 3 OPzS 150', '6V 4 OPzS 200', '6V 5 OPzS 250', '6V 6 OPzS 300'] },
                 { feature: 'Ah', value: ['51.0', '103.0', '154.0', '204.0', '255.0', '307.0'] },
                 { feature: 'Ah', value: ['40.9', '81.8', '122.6', '167.0', '208.6', '250.5'] },
@@ -446,8 +447,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
 
             /*
-            specs: [
-
+            specs_alt: [
+ type: 'stasyoner_alt',
                 { feature: 'Type', value: ['2 OPzS 100', '3 OPzS 150', '4 OPzS 200', '5 OPzS 250', '6 OPzS 300', '5 OPzS 350', '6 OPzS 420', '7 OPzS 490', '6 OPzS 600', '7 OPzS 700', '8 OPzS 800', '9 OPzS 900', '10 OPzS 1000', '12 OPzS 1200', '12 OPzS 1500', '14 OPzS 1750', '15 OPzS 1875', '16 OPzS 2000', '18 OPzS 2250', '20 OPzS 2500', '22 OPzS 2750', '24 OPzS 3000'] },
                 { feature: 'Ah', value: ['111', '160', '215', '268', '321', '393', '470', '550', '685', '798', '912', '1025', '1140', '1365', '1645', '1910', '2050', '2185', '2455', '2730', '3000', '3270'] },
                 { feature: 'Ah', value: ['97', '142', '187', '232', '277', '336', '403', '470', '582', '681', '778', '875', '972', '1165', '1410', '1640', '1760', '1875', '2105', '2340', '2575', '2805'] },
@@ -510,6 +511,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         ups: {
+            
             type: 'stasyoner_UPS',
             imgSrc: 'stasyoner_aku_img/ups.png',
             title: 'UPS',
@@ -563,6 +565,7 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'traksiyoner_din':
                 tableId = 'traksiyoner_table_DIN';
                 break;
+                
             case 'traksiyoner_pzrm':
                 tableId = 'traksiyoner_table_PZRM';
                 break;

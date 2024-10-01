@@ -25,7 +25,7 @@ header {
 }
 
 header.scrolled {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(129, 125, 125, 0.7);
     /* Kaydırınca yarı opak renk */
 }
 
@@ -43,16 +43,13 @@ header .logo {
     /* Solda sabitlenmiş logo */
 }
 
-header .logo h1 {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 600;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* Güzel bir font kullan */
-    margin-left: auto;
-    /* Soldan 5px boşluk */
+header .logo img {
+    height: 50px; /* Yazıdan biraz daha büyük yap */
+    width: auto;  /* Genişliği orantılı ayarla */
+    display: inline-block; /* İmage’i inline-block yap */
+    vertical-align: middle; /* Üstten ve alttan ortala */
+    margin-left: auto; /* Soldan boşluk için */
 }
-
 /* Menü ortada yer alacak */
 nav {
     flex-grow: 1;
@@ -112,6 +109,7 @@ nav ul li a:hover {
 
 #akuDescription,
 #akuExtraInfo {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     margin-bottom: 10px;
 }
