@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_bs: {
-            type: 'traksiyoner_din',
+            type: 'traksiyoner_bs',
             imgSrc: 'traksiyoner_aku_img/TAB-BS.png',
             title: 'TAB BS',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_psq: {
-            type: 'traksiyoner_pzrm',
+            type: 'traksiyoner_psq',
             imgSrc: 'traksiyoner_aku_img/TAB-PSQ.png',
             title: 'TAB PSQ',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_pzv: {
-            type: 'traksiyoner_pzrm',
+            type: 'traksiyoner_pzv',
             imgSrc: 'traksiyoner_aku_img/TAB-PzV.png',
             title: 'TAB PZV',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         tab_pzvb: {
-            type: 'traksiyoner_pzrm',
+            type: 'traksiyoner_pzvb',
             imgSrc: 'traksiyoner_aku_img/TAB-PzVB.png',
             title: 'TAB PZVB',
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
@@ -431,41 +431,14 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
             specs: [
-                
-                { feature: 'Type', value: ['12V 1 OPzS 50', '12V 2 OPzS 100', '12V 3 OPzS 150', '6V 4 OPzS 200', '6V 5 OPzS 250', '6V 6 OPzS 300'] },
-                { feature: 'Ah', value: ['51.0', '103.0', '154.0', '204.0', '255.0', '307.0'] },
-                { feature: 'Ah', value: ['40.9', '81.8', '122.6', '167.0', '208.6', '250.5'] },
-                { feature: 'Ah', value: ['38.0', '75.7', '113.7', '149.3', '186.6', '223.7'] },
-                { feature: 'Ah', value: ['28.4', '56.7', '85.1', '115.2', '143.6', '172.0'] },
-                { feature: 'Internal Resistance (mΩ)', value: ['20.00', '9.30', '6.90', '2.20', '1.90', '1.60'] },
-                { feature: 'Max Discharge Current (A)', value: ['613', '1290', '1739', '2703', '3175', '3846'] },
-                { feature: 'Dimensions (mm)', value: ['272', '272', '380', '272', '380', '380'] },
-                { feature: 'Dimensions (mm)', value: ['205', '205', '205', '205', '205', '205'] },
-                { feature: 'Dimensions (mm)', value: ['392', '392', '392', '392', '392', '392'] },
-                { feature: 'Weight (kg)', value: ['39', '50', '69', '47', '61', '68'] },
-                { feature: 'Weight (kg)', value: ['26', '38', '53', '36', '44', '52'] }
+
+          
             ]
 
-            /*
-            specs_alt: [
- type: 'stasyoner_alt',
-                { feature: 'Type', value: ['2 OPzS 100', '3 OPzS 150', '4 OPzS 200', '5 OPzS 250', '6 OPzS 300', '5 OPzS 350', '6 OPzS 420', '7 OPzS 490', '6 OPzS 600', '7 OPzS 700', '8 OPzS 800', '9 OPzS 900', '10 OPzS 1000', '12 OPzS 1200', '12 OPzS 1500', '14 OPzS 1750', '15 OPzS 1875', '16 OPzS 2000', '18 OPzS 2250', '20 OPzS 2500', '22 OPzS 2750', '24 OPzS 3000'] },
-                { feature: 'Ah', value: ['111', '160', '215', '268', '321', '393', '470', '550', '685', '798', '912', '1025', '1140', '1365', '1645', '1910', '2050', '2185', '2455', '2730', '3000', '3270'] },
-                { feature: 'Ah', value: ['97', '142', '187', '232', '277', '336', '403', '470', '582', '681', '778', '875', '972', '1165', '1410', '1640', '1760', '1875', '2105', '2340', '2575', '2805'] },
-                { feature: 'Ah', value: ['85', '122', '163', '204', '242', '290', '348', '406', '510', '598', '683', '767', '852', '1020', '1220', '1420', '1520', '1625', '1825', '2030', '2230', '2430'] },
-                { feature: 'Ah', value: ['62', '89', '119', '149', '177', '212', '254', '296', '370', '436', '499', '560', '622', '745', '890', '1035', '1110', '1185', '1335', '1480', '1625', '1775'] },
-                { feature: 'Internal Resistance (mΩ)', value: ['1.48', '1.08', '0.84', '0.69', '0.58', '0.64', '0.55', '0.48', '0.45', '0.38', '0.33', '0.29', '0.26', '0.23', '0.23', '0.19', '0.18', '0.17', '0.15', '0.13', '0.13', '0.12'] },
-                { feature: 'Max Discharge Current (A)', value: ['1350', '1845', '2376', '2887', '3430', '3137', '3641', '4169', '4466', '5280', '6035', '6948', '7720', '8814', '8605', '10536', '11289', '12042', '13506', '15007', '15941', '17390'] },
-                { feature: 'Dimensions (mm)', value: ['103', '103', '103', '124', '145', '124', '145', '166', '145', '210', '210', '210', '210', '210', '212', '212', '212', '212', '212', '212', '212', '212'] },
-                { feature: 'Dimensions (mm)', value: ['206', '206', '206', '206', '206', '206', '206', '206', '206', '191', '191', '233', '233', '275', '275', '397', '397', '397', '487', '487', '576'] },
-                { feature: 'Dimensions (mm)', value: ['420', '420', '420', '420', '420', '536', '536', '536', '711', '700', '711', '711', '711', '711', '837', '837', '837', '837', '837', '837', '837'] },
-                { feature: 'Weight (kg)', value: ['13.0', '15.0', '17.5', '21.5', '25.0', '29.0', '34.0', '38.0', '46.0', '61.0', '64.0', '74.0', '77.0', '91.0', '111.0', '145.0', '150.0', '154.0', '184.0', '192.0', '222.0', '230.0'] },
-                { feature: 'Weight (kg)', value: ['8.0', '10.0', '12.5', '15.5', '17.0', '20.0', '24.0', '27.0', '33.0', '41.0', '45.0', '50.0', '55.0', '64.0', '80.0', '98.0', '104.0', '109.0', '126.0', '137.0', '149.0', '160.0'] },
-                { feature: 'poles', value: ['2', '2', '2', '2', '2', '2', '2', '2', '2', '4', '4', '4', '4', '4', '6', '6', '6', '8', '8', '8', '8'] }
+        
+  
 
-            ]
 
-*/
 
         },
         opzv: {
@@ -511,7 +484,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         ups: {
-            
+
             type: 'stasyoner_UPS',
             imgSrc: 'stasyoner_aku_img/ups.png',
             title: 'UPS',
@@ -565,9 +538,21 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'traksiyoner_din':
                 tableId = 'traksiyoner_table_DIN';
                 break;
-                
+
+            case 'traksiyoner_bs':
+                tableId = 'traksiyoner_table_BS';
+                break;
             case 'traksiyoner_pzrm':
                 tableId = 'traksiyoner_table_PZRM';
+                break;
+            case 'traksiyoner_pzv':
+                tableId = 'traksiyoner_table_PZV';
+                break;
+            case 'traksiyoner_pzvb':
+                tableId = 'traksiyoner_table_PZVB';
+                break;
+            case 'traksiyoner_psq':
+                tableId = 'traksiyoner_table_PSQ';
                 break;
             case 'monoblock':
                 tableId = 'monoblock_table';

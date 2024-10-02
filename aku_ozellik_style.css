@@ -20,7 +20,7 @@ header {
     background-color: transparent;
     /* Başlangıçta transparan */
     transition: background-color 0.5s ease;
-    background-color: #252129;
+    background-color: rgba(129, 125, 125, 0.7);
 
 }
 
@@ -81,9 +81,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffb703;
+    color: #0814c8;
 }
-
 
 
 /* İçerik düzeni */
