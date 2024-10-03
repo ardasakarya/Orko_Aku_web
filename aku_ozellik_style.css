@@ -44,12 +44,18 @@ header .logo {
 }
 
 header .logo img {
-    height: 50px; /* Yazıdan biraz daha büyük yap */
-    width: auto;  /* Genişliği orantılı ayarla */
-    display: inline-block; /* İmage’i inline-block yap */
-    vertical-align: middle; /* Üstten ve alttan ortala */
-    margin-left: auto; /* Soldan boşluk için */
+    height: 50px;
+    /* Yazıdan biraz daha büyük yap */
+    width: auto;
+    /* Genişliği orantılı ayarla */
+    display: inline-block;
+    /* İmage’i inline-block yap */
+    vertical-align: middle;
+    /* Üstten ve alttan ortala */
+    margin-left: auto;
+    /* Soldan boşluk için */
 }
+
 /* Menü ortada yer alacak */
 nav {
     flex-grow: 1;
@@ -108,7 +114,7 @@ nav ul li a:hover {
 
 #akuDescription,
 #akuExtraInfo {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     margin-bottom: 10px;
 }
@@ -153,12 +159,12 @@ table td {
 }
 
 table th {
-    background-color: #4CAF50;
+    background-color: #0C4A83;
     color: white;
     font-weight: bold;
 }
 
-table td:first-child {
+table td:first-child(even) {
     font-weight: bold;
     background-color: #f2f2f2;
 }
@@ -210,8 +216,7 @@ table tbody tr:nth-child(even) {
 
 .footer {
     background: #252129;
-    width: 100%;
-    padding: 50px 0px;
+    padding: 50px 20px;
     position: relative;
     color: #fff;
     display: flex;
@@ -221,30 +226,51 @@ table tbody tr:nth-child(even) {
     border-top: 3px solid rgba(255, 255, 255, 0.1);
 }
 
+.cert-images {
+    display: flex;
+    flex-direction: column;
+    /* Alt alta yerleştirmek için */
+    align-items: center;
+    /* Görselleri ortalamak için */
+    margin-top: 10px;
+}
+
+.cert-images a {
+    margin-bottom: 15px;
+    /* Görseller arasında boşluk */
+}
+
+.cert-images img {
+    width: 100px;
+    /* Görsel genişliği */
+    height: auto;
+    /* Yükseklik otomatik */
+    cursor: pointer;
+}
+
+
 /* Footer İç Konteyner */
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    /* İçerik yukarı hizalı */
+    flex-wrap: wrap; /* Esnek yapıda yan yana dizilsin */
     width: 100%;
-    max-width: 1000px;
-    /* İçerik genişliğini sınırladık */
+    max-width: 1200px;
     padding: 0 20px;
     margin-bottom: 30px;
-    /* Alt çizgiden mesafe */
+    gap: 20px; /* Sütunlar arasında boşluk */
 }
 
 /* Footer Kolonlar */
 .footer-col {
     flex: 1;
+    min-width: 250px; /* Minimum genişlik ayarlayarak taşmayı engelleriz */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* İçeriği sola hizala */
     text-align: left;
     padding: 0 20px;
-    /* İçerik etrafında eşit boşluk */
 }
 
 /* Başlıklar */
@@ -384,25 +410,35 @@ table tbody tr:nth-child(even) {
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .footer-col {
-        align-items: center;
-        /* İçeriği ortala */
-        text-align: center;
-        padding: 20px 0;
-        /* Bölümler arasında boşluk */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
-    .follow-us .icons {
-        justify-content: center;
+    .cert-images img {
+        width: 70px;
     }
 
-    .footer-logo {
-        position: static;
-        margin-top: 20px;
+    .footer-logo h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Daha büyük ekranlarda footer sütunlarının yan yana gelmesi */
+@media (min-width: 769px) {
+    .footer-container {
+        flex-direction: row; /* Sütunları yan yana diz */
+        justify-content: space-between; /* Aralarında boşluk bırak */
+        gap: 40px; /* Sütunlar arasında mesafe */
     }
 
-
+    .footer-col {
+        flex: 1;
+        max-width: calc(33% - 40px); /* Her bir sütuna genişlik verip aralarında boşluk bırak */
+        margin-bottom: 0; /* Yan yana olduğunda alt boşluk kaldır */
+    }
 }

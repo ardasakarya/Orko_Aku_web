@@ -432,11 +432,11 @@ document.addEventListener('DOMContentLoaded', function () {
             extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
             specs: [
 
-          
+
             ]
 
-        
-  
+
+
 
 
 
@@ -559,9 +559,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
             case 'stasyoner':
                 tableId = 'stasyoner_table';
-                break;
-            case 'stasyoner_alt':
-                tableId = 'stasyoner_table_alt';
                 break;
             case 'stasyoner_OGI':
                 tableId = 'stasyoner_table_OGI';

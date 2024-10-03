@@ -261,9 +261,9 @@ document.addEventListener('scroll', function () {
     const screenPosition = window.innerHeight / 1.5;
 
     if (containerPosition < screenPosition) {
-        mapsIframe.classList.add('show');
+      mapsIframe.classList.add('show');
     }
-});
+  });
 
 
 
@@ -490,7 +490,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       }
     ]
-    
+
   };
 
   // Butonlara tıklanınca ilgili içeriği yükleme
