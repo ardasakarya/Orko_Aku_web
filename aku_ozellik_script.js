@@ -1,3 +1,10 @@
+
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('nav ul').classList.toggle('active');
+  });
+
 document.addEventListener('DOMContentLoaded', function () {
     // Akü bilgileri (id'ye göre eşleştirme)
     const akuData = {
