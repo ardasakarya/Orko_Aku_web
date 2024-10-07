@@ -240,7 +240,7 @@ nav ul li a:hover {
         margin-right: 20px; /* Ekran küçüldüğünde sağa yaslanmış olur */
     }
 }
-@media (max-width: 600px) { 
+@media (max-width: 700px) { 
     nav ul {
         display: none;
         flex-direction: column;
