@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         ogi: {
             type: 'stasyoner_OGI',
-            imgSrc: 'stasyoner_aku_img/OGI.png',
+            imgSrc: 'stasyoner_aku_img/OGi.png',
             title: 'OGI',
             description: "TAB OGi blok aküleri, yüksek güvenlik gereksinimleri olan endüstriyel güç kaynakları için tasarlanmış sağlam havalandırmalı kurşun-asit akülerdir. TAB OGi blok aküleri, hem uzun süreli deşarj (10 saat) hem de kısa süreli deşarj (birkaç dakika) için kullanılabilir.",
             extraInfo: "Uygulama alanları: Enerji santrallerindeki DC güç besleme sistemleri, UPS sistemleri, endüstriyel sistemler ve acil güç besleme sistemleri. Ayrıca motor çalıştırma ve PV güç sistemleri için de kullanılabilir.",

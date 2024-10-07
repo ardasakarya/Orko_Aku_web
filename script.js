@@ -465,7 +465,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stationary: [
       {
         id: 'ogi',
-        imgSrc: 'stasyoner_aku_img/OGI.png',
+        imgSrc: 'stasyoner_aku_img/OGi.png',
         title: 'OGI',
 
       },
