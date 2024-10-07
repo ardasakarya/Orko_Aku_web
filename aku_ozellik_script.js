@@ -446,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         opzs: {
             type: 'stasyoner',
-            imgSrc: 'stasyoner_aku_img/opzs.png',
+            imgSrc: 'stasyoner_aku_img/OPzS.png',
             title: 'OPZS',
             description: "Sizi sonsuz enerji dünyasına davet ediyoruz ve konvansiyonel kurşun-asit teknolojisi ile üretilen OPzS sabit bloklar ve hücrelerle tanıştırıyoruz. OPzS tipi sabit aküler, telekomünikasyon tesisleri, bilgisayarlar, acil aydınlatma, alarm, kontrol ve izleme sistemleri gibi alanlarda kullanılır. Son derece düşük öz deşarj oranları sayesinde güneş hücreleri ile beslenen tesislerde de uygundur.",
             extraInfo: "Özellikler: Yüksek kapasiteli, uzun ömürlü, az bakım gerektiren, düşük öz deşaj, hızlı ve basit asit seviyesi kontrolü, ekonomik su tüketimi, uygun boyutlar ve ağırlık, en düşük ve sabit bakım akımı.",
