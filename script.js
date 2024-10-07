@@ -439,7 +439,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       {
         id: 'motion_gel',
-        imgSrc: 'monoblock_aku_img/MotionGel.png',
+        imgSrc: 'monoblock_aku_img/MotionGEL.png',
         title: 'MOTION GEL',
 
       },
