@@ -1,9 +1,9 @@
 
 
-document.querySelector('.hamburger').addEventListener('click', function() {
+document.querySelector('.hamburger').addEventListener('click', function () {
     this.classList.toggle('active');
     document.querySelector('nav ul').classList.toggle('active');
-  });
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     // Akü bilgileri (id'ye göre eşleştirme)
@@ -12,8 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_magic.png',
             title: 'TAB MAGIC',
             type: 'starter',
-            description: "TAB Magic automotive battery utilises the latest innovations in Ca/Ca manufacturing technology, providing for the highest cold start performance and superior reliable power as demanded by the latest generation of cars with high energy drain.The SMF lid cover provides complete roll over spill protection and is entirely maintenance free throughout the batteries life.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Magic otomotiv aküsü, Ca/Ca üretim teknolojisindeki en son yenilikleri kullanarak, en yüksek soğuk çalıştırma performansı ve yüksek enerji tüketimine sahip en yeni nesil araçların ihtiyaç duyduğu üstün güvenilir gücü sağlar. SMF kapak, tam dökülme koruması sunar ve akünün ömrü boyunca tamamen bakım gerektirmez.",
+            extraInfo: "Özellikler: Sızdırmaz kapak yapısı, daha fazla plaka sayısı sayesinde %30 daha iyi çalıştırma kabiliyeti, genişletilmiş metal teknolojisi ile daha iyi korozyon direnci ve daha uzun ömür sağlar. Seviye göstergesi (sihirli göz) anında durum kontrolü sağlar. Patlama koruması, aküye alev girişini engeller. Elektrik donanımı fazla olan araçlar için idealdir ve en yüksek kaliteye sahip bir aküdür.",
+
+
+
             specs: [
                 { feature: 'Art. No.', value: ['1000694', '1000695', '1000696', '1000697', '1000698', '1000700', '1000701', '1000703', '1000862'] },
                 { feature: 'DIN Marking', value: ['55401 SMF', '55510 SMF', '56249 SMF', '56649 SMF', '57510 SMF', '57549 SMF', '58514 SMF', '60044 SMF', '61002 SMF'] },
@@ -36,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_agm_stop&go.png',
             title: 'TAB AGM STOP&GO',
             type: 'starter',
-            description: "TAB AGM Stop&Go batteries are  Valve Regulated Lead Acid (VRLA) batteries intended for use in vehicles with enhanced level Start/Stop function with break energy recuperation. VRLA AGM automotive battery is improved lead acid battery to its maximum performance.The battery cells are closed by a pressure relief valve and electrolyte is immobilized in Absorbed Glass Mat (AGM). Plate stacks are kept in the cells under pressure.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB AGM Stop&Go aküleri, gelişmiş Start/Stop fonksiyonu ve fren enerjisi geri kazanımı olan araçlar için tasarlanmış Valve Regulated Lead Acid (VRLA) akülerdir. VRLA AGM otomotiv aküsü, maksimum performansa ulaşan geliştirilmiş kurşun asit aküsüdür. Akü hücreleri, basınç tahliye valfi ile kapatılmıştır ve elektrolit Absorbed Glass Mat (AGM) ile sabitlenmiştir. Plaka yığınları, hücrelerde basınç altında tutulur.",
+            extraInfo: "Özellikler: İç oksijen geri kazanımı sayesinde çok düşük su tüketimi. Aktif malzeme dökülmesini önleyerek standart akülere göre üç kat daha fazla döngü kabiliyeti sunar ve işlevselliğini kaybetmeden daha fazla deşarj edilebilir. Hücre hacminin %30'dan fazla daha iyi kullanımı sayesinde artırılmış marş gücü. Sürüş sırasında enerjinin daha hızlı geri kazanılması için yüksek hızda şarj kabulü. Plakaların her iki tarafına yapıştırılması daha iyi korozyon direnci sağlayarak daha uzun ömür sunar. Taşan hücrelerde olduğu gibi asit tabakalaşması yoktur. Patlama güvenliği – minimum patlayıcı gaz üretilir. Titreşim direnci. Kaza durumunda asit sızıntısı olmaz.",
             specs: [
                 { feature: 'Art. No.', value: ['1000799', '1000800', '1000801', '1000802', '1000803'] },
                 { feature: 'DIN Marking', value: ['L2 AGM', 'L3 AGM', 'L4 AGM', 'L5 AGM', 'L6 AGM'] },
@@ -59,8 +62,9 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_efb_stop&go.png',
             title: 'TAB EFB STOP&GO',
             type: 'starter',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB EFB Stop&Go otomotiv aküleri, giriş seviyesi Start/Stop fonksiyonuna sahip araçlar için tasarlanmış Geliştirilmiş Taşma Aküleridir. EFB otomotiv aküleri, giriş seviyesi Start/Stop sistemine sahip en yeni nesil araçların talep ettiği üstün güvenilir gücü sağlayan Ca/Ca taşmalı akü üretim teknolojisindeki en son yenilikleri kullanır.",
+            extraInfo: "Özellikler: Pozitif plakalar üzerindeki MFW fleece, aktif malzeme dökülmesini önler ve işlevselliğini kaybetmeden iki kat daha fazla dayanıklılık sağlar. Özel karbonlu genişletici ile sürüş sırasında enerjinin daha hızlı geri kazanılması için geliştirilmiş şarj kabulü. Genişletilmiş metal teknolojisi, daha iyi korozyon direnci sağlayarak daha uzun ömür sunar. Sızdırmaz kapak yapısı, devrilme koruması. Bakım gerektirmez. Seviye göstergesi (Sihirli Göz) anında durum kontrolü sağlar. Alev tutucu ile patlama koruması.",
+
             specs: [
                 { feature: 'Art. No.', value: ['1000798', '1000797', '1000787', '1000788', '1000789', '1000794', '1000795', '1000790', '1000791', '1000792', '1000786', '1000793'] },
                 { feature: 'DIN Marking', value: ['56568 EFB', '56569 EFB', '56088 EFB', '56588 EFB', '57088 EFB', '57029 EFB', '57024 EFB', '58014 EFB', '58088 EFB', '59088 EFB', '60518 EFB', '60519 EFB'] },
@@ -82,8 +86,9 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_efb_stop&go2.png',
             title: 'TAB EFB STOP&GO TRUCK',
             type: 'starter',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "Gelişmiş ticari araç pazarı, elektrik gücüne olan talebi artırmaktadır. Yeni araç konfor ve güvenlik özellikleri daha fazla enerji talep etmektedir. Sık ve düzensiz duraklamalar, yeterli marş gücü rezervine sahip ve çok kısa sürede şarj olabilen bir güç kaynağını gerektirir. EFB Stop & Go kamyon akülerimiz, bu enerjiyi güvenilir bir şekilde sağlamak üzere tasarlanmıştır. Benzersiz hücre tasarımımız, elektrolitin dikey şekilde karıştırılmasını sağlayarak aktif malzemenin genel verimliliğini artırır.",
+            extraInfo: "Özellikler: EMS - Elektrolit Karıştırma Sistemi. Euro 6 kamyonlar için uygun (şasi sonu kurulumlar için uygundur). Artırılmış kapasite. Duraklamalar sırasında artırılmış enerji. Yeni pozitif aktif kütle bileşimi, derin döngülere karşı daha yüksek direnç sağlar. Geliştirilmiş dinamik şarj kabulü. Yeni ayırıcılar. Kısmi şarj durumunda çalışma kabiliyeti. Daha uzun akü ömrü.",
+
             specs: [
                 { feature: 'Art. No.', value: ['1001918', '1001778'] },
                 { feature: 'DIN Marking', value: ['69032 EFB', '74027 EFB'] },
@@ -105,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'magic_hr',
             imgSrc: 'starter_aku_img/tab_magic_hr.png',
             title: 'TAB HR - HOT REGION',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "Yüksek ortam sıcaklıklarının kurşun-asit akülerin düşmanı olduğu bir sır değil. Bu nedenle TAB, en kritik bileşenler ve üretim süreçlerinde bir dizi optimizasyon ile yeni bir akü serisi olan Hot Region akülerini geliştirdi.",
+            extraInfo: "Özellikler: Daha düşük kendi kendine deşarj. Uzatılmış raf ömrü. Artırılmış döngü dayanıklılığı. TAB akülerinin markası haline gelen tanınmış yüksek marş performans özellikleri.",
             specs: [
                 //hr
             ]
@@ -115,8 +120,9 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_magic_truck.png',
             title: 'TAB MAGIC TRUCK',
             type: 'starter',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Magic Truck ticari araç aküleri, Ca/Ca üretim teknolojisindeki en son yenilikleri kullanarak, en yüksek soğuk çalıştırma performansı ve yüksek enerji tüketimine sahip en yeni nesil ticari araçların talep ettiği üstün güvenilir gücü sağlar. SMF kapak, tam dökülme koruması sunar ve akünün ömrü boyunca tamamen bakım gerektirmez.",
+            extraInfo: "Özellikler: Sızdırmaz kapak yapısı. Genişletilmiş metal teknolojisi, daha iyi korozyon direnci sağlayarak daha uzun ömür sunar. Seviye göstergesi (sihirli göz) anında durum kontrolü sağlar. Patlama koruması, aküye alev girişini engeller. Elektrik donanımı fazla olan araçlar için idealdir. En yüksek kaliteye sahip bir aküdür.",
+
             specs: [
                 { feature: 'Art. No.', value: ['1000493', '1001224', '1000497', '1001756', '1001474', '1000249', '1000391'] },
                 { feature: 'DIN Marking', value: ['63544 SMF', '64030 SMF', '65048 SMF', '65018 SMF', '68032 SMF', '70027 SMF', '72527 SMF'] },
@@ -137,8 +143,9 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_oem.png',
             title: 'TAB OEM',
             type: 'starter',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB OEM aküleri, araç üreticilerinin orijinal ekipman standartlarına uygun olarak üretilmiştir. Bu aküler, en son teknolojilerle donatılmış olup, otomobillerin özel ihtiyaçlarına göre tasarlanmış yüksek performans ve güvenilirlik sunan çözümler sağlar.",
+            extraInfo: "Özellikler: Yüksek marş gücü ve güvenilir performans. Araç üreticilerinin orijinal ekipman gereksinimlerine tam uyum sağlar. Uzun ömürlü kullanım ve düşük bakım ihtiyacı. Gelişmiş korozyon direnci ve titreşim dayanıklılığı sunar. Çeşitli iklim koşullarında yüksek verimlilik sağlar.",
+
             specs: [
                 { feature: 'Art. No.', value: ['1001228', '1001229', '1001230', '1001231', '1001227'] },
                 { feature: 'DIN Marking', value: ['55512 SMF', '57012', '57512', '59249', '61038'] },
@@ -159,8 +166,9 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_polar.png',
             title: 'TAB POLAR',
             type: 'starter',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Polar, Ca/Ca genişletilmiş metal teknolojisi kullanılarak üretilen bir aküdür. TAB Polar, mükemmel güç, kapasite, soğuk çalıştırma performansı ve güvenilirlik sunan gerçek bir çok yönlü üründür. Her sınıftan araçlar için yüksek kaliteli bir üründür.",
+            extraInfo: "Özellikler: Daha yüksek çalıştırma kabiliyeti. Aşırı iklim koşullarında güvenilir çalıştırma sağlar.",
+
             specs: [
                 { feature: 'Art. No.', value: ['1000823', '1000825', '1000824', '1000826', '1000861', '1000864', '1000876', '1000865', '1000914', '1000866', '1000881', '1000867', '1000897', '1000868', '1000878', '1000884', '1000872', '1000934', '1000873', '1000890', '1000888', '1000875', '1000901', '1000907', '1000930', '1000942', '1000923', '1000877', '1000905', '1000931', '1000943', '1000932', '1000924', '1000933', '1000944', '1000935', '1000945', '1000936', '1000925', '1000937', '1000926', '1000941', '1000947', '1000920', '1000928', '1000909'] },
                 { feature: 'DIN Marking', value: ['', '', '', '', '54506', '54002 SMF', '54003 SMF', '54502 SMF', '54559 SMF', '55010 SMF', '55001 SMF', '55509 SMF', '55559 SMF', '56008 SMF', '56013 SMF', '56309 SMF', '57309 SMF', '56638 SMF', '57412 SMF', '57413 SMF', '59249 SMF', '59220 SMF', '58822 SMF', '60038 SMF', '53520 SMF', '53522 SMF', '53521 SMF', '54520 SMF', '54522 SMF', '54523/84 SMF', '54524/51 SMF', '55523/84 SMF', '55524/51 SMF', '56068 SMF', '56069 SMF', '56568 SMF', '56569 SMF', '57029 SMF', '57024 SMF', '57529 SMF', '	57524 SMF', '59518 SMF', '59519 SMF', 'BCI 31P SMF', 'BCI 31S SMF', 'BCI 31S SMF-D'] },
@@ -181,8 +189,9 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_polar_truck.png',
             title: 'TAB POLAR TRUCK',
             type: 'starter',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Polar Truck, elektrik donanımı giriş seviyesinde olan ticari araçlar için, ancak üstün çalıştırma, performans ve güvenilirlik talep eden bir akü olarak tasarlanmıştır. TAB Polar Truck, Sb/Ca genişletilmiş metal teknolojisi kullanılarak üretilen bir aküdür.",
+            extraInfo: "Özellikler: Artırılmış çalıştırma kabiliyeti. Düşük su tüketimi ile daha uzun ömür. Geliştirilmiş korozyon direnci. Yüksek performans ve güvenilirlik sağlar. Aşırı iklim koşullarında güvenilir çalıştırma sunar. Bakım gerektirmez.",
+
             specs: [
                 { feature: 'Art. No.', value: ['1000291', '1000293', '1001908', '1000292', '1003036', '1001912', '1003038', '1027929', '1001915', '1000479', '1000480', '1000482', '1000495', '1027877', '1003040', '1003041', '1000013'] },
                 { feature: 'DIN Marking', value: ['61028', '61028', '61044', '62512', '63530', '63544', '63545', '64323', '65048', '67018', '67019', '68032', '69032', '70032', '70027', '72527', '6TN'] },
@@ -203,8 +212,9 @@ document.addEventListener('DOMContentLoaded', function () {
             imgSrc: 'starter_aku_img/tab_polar_blue.png',
             title: 'TAB POLAR BLUE',
             type: 'starter',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Polar Blue, elektrik donanımı giriş seviyesinde olan ancak üstün çalıştırma, performans ve güvenilirlik talep eden araçlar için tasarlanmış bir aküdür. Ca/Ca teknolojisi kullanılarak üretilmiştir.",
+            extraInfo: "Özellikler: Yüksek çalıştırma kabiliyeti. Aşırı iklim koşullarında güvenilir çalıştırma sağlar. Seviye göstergesi (Sihirli Göz), akünün anında durum kontrolünü sağlar. Yüksek çalıştırma kabiliyeti. Aşırı iklim koşullarında güvenilir çalıştırma.",
+
             specs: [
                 { feature: 'Art. No.', value: ['1000339', '1000343', '1000340', '1000345', '1000341', '1000342'] },
                 { feature: 'DIN Marking', value: ['56008 B', '56013 B', '56649 B', '56013 B', '57549 B', '60044 B'] },
@@ -225,8 +235,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'traksiyoner_bci',
             imgSrc: 'traksiyoner_aku_img/TAB-BCI.png',
             title: 'TAB BCI',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB BCI hücreleri, ABD batarya boyutlarıyla uyumluluğu ve Tübüler Teknoloji'nin tüm avantajlarını birleştiren bir çözümdür. TAB BCI Aküleri forkliftler, temizlik makineleri ve diğer elektrikli araçlarda kullanılabilir.",
+            extraInfo: "Özellikler: ABD batarya boyutlarına uyumlu, forkliftler ve elektrikli araçlar için uygun, tübüler plaka teknolojisi.",
             specs: [
                 //traksiyoner
             ]
@@ -235,8 +245,9 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'traksiyoner_bs',
             imgSrc: 'traksiyoner_aku_img/TAB-BS.png',
             title: 'TAB BS',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "Şirketinizin çok önemli üretim bölümlerinden biri dahili lojistiktir. 55 yılı aşkın süredir en zorlu kullanıcıları memnun eden TAB motive güç akülerimizi tanıtıyoruz. Bireysel hücreleri (2V) farklı voltaj, kapasite ve boyutlarda elektrikli makinelerin her türüne uygun olarak aküler haline getiriyoruz. Geniş üretim programımız, EN60254 – 1,2 ve IEC 254 – 1,2'ye göre DIN (PzS) hücreleri kapsamaktadır.",
+            extraInfo: "Özellikler: Yüksek kapasite, uzun ömür, titreşimlere karşı dayanıklılık, kısa şarj süreleri, düşük damıtılmış su tüketimi, kolay bakım. Uygulama alanları: Forkliftler, maden lokomotifleri vb.",
+
             specs: [
                 //traksiyoner
             ]
@@ -245,8 +256,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'traksiyoner_din',
             imgSrc: 'traksiyoner_aku_img/TAB-DIN.png',
             title: 'TAB DIN',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "Şirketinizin çok önemli üretim bölümlerinden biri dahili lojistiktir. 55 yılı aşkın süredir en zorlu kullanıcıları memnun eden TAB motive güç akülerimizi tanıtıyoruz. Bireysel hücreleri (2V) farklı voltaj, kapasite ve boyutlarda elektrikli makinelerin her türüne uygun olarak aküler haline getiriyoruz. Geniş üretim programımız, EN60254 – 1,2 ve IEC 254 – 1,2'ye göre DIN (PzS) hücreleri kapsamaktadır.",
+            extraInfo: "Özellikler: Yüksek kapasite, uzun ömür, titreşimlere karşı dayanıklılık, kısa şarj süreleri, düşük damıtılmış su tüketimi, kolay bakım. Uygulama alanları: Forkliftler, maden lokomotifleri vb.",
             specs: [
                 //traksiyoner
             ]
@@ -255,8 +266,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'traksiyoner',
             imgSrc: 'traksiyoner_aku_img/TAB-EX.png',
             title: 'TABEX',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB-EX, zorlu çalışma koşulları ve yüksek enerji talepleri için özel olarak tasarlanmış bir aküdür. Bu akü, yüksek performans ve dayanıklılık sağlayarak uzun ömürlü kullanım sunar. Endüstriyel uygulamalar için ideal bir seçimdir.",
+            extraInfo: "Özellikler: Yüksek kapasite, titreşimlere karşı dayanıklılık, kısa şarj süreleri, düşük su tüketimi, bakım gerektirmeyen yapı, aşırı sıcaklıklarda güvenilir performans, yüksek çevrim ömrü.",
             specs: [
                 //traksiyoner
             ]
@@ -265,8 +276,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'traksiyoner_psq',
             imgSrc: 'traksiyoner_aku_img/TAB-PSQ.png',
             title: 'TAB PSQ',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB POWER SQUARE aküleri, geleneksel kurşun-asit akülere kıyasla daha fazla güç ve daha uzun çalışma süresi sunmak üzere tasarlanmıştır ve ağır hizmet uygulamalarının ihtiyaçlarını karşılamak için mükemmel bir seçimdir. Kare pozitif tübüler plaka tasarımı, daha fazla aktif malzeme yüzey alanının daha yüksek özgül ağırlıklı elektrolit ile temas etmesini sağlar ve bu, geleneksel kurşun-asit akülerle kıyaslandığında daha fazla güç ve daha uzun çalışma süresi sağlar.",
+            extraInfo: "Özellikler: Ağır hizmet uygulamaları için uygundur. Standart hücre tasarımında artan kapasite. Pozitif plakalar üzerinde daha fazla aktif malzeme. Standart yuvarlak tüp tasarımına kıyasla daha büyük plaka yüzeyi nedeniyle daha fazla güç. Daha yüksek özgül ağırlıklı elektrolitle daha fazla pozitif aktif malzeme yüzey alanı temas eder. Plakalar, deşarj döngüsü boyunca daha yüksek voltaj seviyelerini sürdürebilir. Plakaların daha yüksek dayanıklılığı. Forkliftin bir döngüde daha uzun çalışma süresi - daha az yedek batarya ihtiyacı. Özel şarj cihazları, daha hızlı özelleştirilmiş şarj profilleri ile fırsat şarjına da olanak tanır. Sağlam plaka yapısına dayalı olarak uzatılmış döngü ömrü.",
             specs: [
                 //traksiyoner
             ]
@@ -275,8 +286,9 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'traksiyoner_pzrm',
             imgSrc: 'traksiyoner_aku_img/TAB-PzRM1.png',
             title: 'TAB PZRM',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "PzS teknolojisi ile tübüler plakalar kullanılarak ve ayarlanmış bir şarj rejimiyle tasarlanan hücre yapısı, sulama aralıklarını uzatır. TAB PzRM hücreleri, EN60254-1 ve IEC254-1 standartlarına göre üretilir ve test edilir.",
+            extraInfo: "Özellikler: Su dolum aralığı verimli bir şekilde uzatılır. Azaltılmış su tüketimi. Düşük bakım ve azaltılmış işletme maliyetleri. %50 ila %80 daha az gaz salınımı ve havalandırma gereksinimi. %20 ila %30 daha az şarj süresi. %10 ila %20 daha düşük enerji tüketimi ile maliyet tasarrufu. Düşük işletme sıcaklıkları.",
+
             specs: [
                 //traksiyoner
             ]
@@ -285,8 +297,9 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'traksiyoner_pzv',
             imgSrc: 'traksiyoner_aku_img/TAB-PzV.png',
             title: 'TAB PZV',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "Bakım gerektirmeyen TAB PzV VRLA Jel motive güç aküleri son derece gelişmiş çekiş aküleridir. Sızdırmaz TAB PzV aküleri, EN 60254-2 standardına uygun olarak VRGLA Jel teknolojisiyle üretilmektedir. Bu aküler, forkliftler ve temizlik makineleri gibi elektrikli cihazlarda kullanılabilir.",
+            extraInfo: "Özellikler: Bakım gerektirmez. Egzoz borularına entegre edilmiş valfler, korozif gaz salınımını önler. Son derece düşük kendi kendine deşarj. Çalışma sırasında son derece düşük gaz salınımı. Bakım hataları en aza indirilmiştir. Hücre hasarında elektrolit sızıntısı olmaz. Sızıntı nedeniyle kirlenme veya korozyon meydana gelmez.",
+
             specs: [
                 //traksiyoner
             ]
@@ -295,8 +308,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'traksiyoner_pzvb',
             imgSrc: 'traksiyoner_aku_img/TAB-PzVB.png',
             title: 'TAB PZVB',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "Bakım gerektirmeyen TAB PzVB VRLA Jel motive güç aküleri son derece gelişmiş çekiş aküleridir. Sızdırmaz TAB PzVB aküleri, EN 60254-2 standardına uygun olarak VRGLA Jel teknolojisiyle üretilmektedir. Bu aküler, forkliftler ve temizlik makineleri gibi elektrikli cihazlarda kullanılabilir.",
+            extraInfo: "Özellikler: Bakım gerektirmez. Egzoz borularına entegre edilmiş valfler, korozif gaz salınımını önler. Son derece düşük kendi kendine deşarj. Çalışma sırasında son derece düşük gaz salınımı. Bakım hataları en aza indirilmiştir. Hücre hasarında elektrolit sızıntısı olmaz. Sızıntı nedeniyle kirlenme veya korozyon meydana gelmez.",
             specs: [
                 //traksiyoner
             ]
@@ -305,8 +318,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'monoblock',
             imgSrc: 'monoblock_aku_img/MotionAGM.png',
             title: 'MOTION AGM',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Motion AGM, pozitif macunlu plakalara (yerçekimi ile döküm) sahip, AGM (Absorpsiyon Cam Elyafı) teknolojisiyle üretilen VRLA (Valf Ayarlı Kurşun Asit) aküsüdür.",
+            extraInfo: "Özellikler: Sulu aküye kıyasla %30 daha yüksek enerji yoğunluğu, çok düşük öz deşarj oranı, korozif egzoz yok (gıda ve ilaç endüstrisine uygun), sağlam tasarım, darbe ve titreşim dirençli, düşük şarj faktörü (1.08), elektrolit AGM içinde hapsedilmiş (gövde hasar görse bile sızıntı olmaz), yüksek çalıştırma performansı. Uygulamalar: Karavanlar ve motorlu evler, tekneler, tekerlekli sandalyeler, temizlik makineleri, alarm sistemleri, UPS ve PV sistemleri.",
             specs: [
                 { feature: 'Art. No.', value: ['1000569', '1000570', '1000572', '1000574', '1000577'] },
                 { feature: 'Short Code', value: ['45 AGM', '55 AGM', '60 AGM', '70 AGM', '90 AGM'] },
@@ -326,8 +339,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'monoblock',
             imgSrc: 'monoblock_aku_img/MotionGel.png',
             title: 'MOTION GEL',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Motion Gel, pozitif macunlu plakalara (yerçekimi ile döküm) sahip, elektroliti jel formunda olan VRLA (Valf Ayarlı Kurşun Asit) aküsüdür. Gövdesi güçlendirilmiş PP malzemeden yapılmıştır ve bu da aküyü güvenilir, bakım gerektirmeyen bir genel kullanım çözümü haline getirir.",
+            extraInfo: "Özellikler: Tamamen bakım gerektirmez - kur ve unut, çok düşük öz deşarj oranı, elektrolit jel formundadır (elektrolit tabakalaşmasını önler, dökülmeye karşı korumalı), aylık %2'den az öz deşarj oranı ile taşıma ve depolama sırasında daha az sorun çıkarır, korozif egzoz yok (gıda ve ilaç endüstrisine uygun), sağlam tasarım, darbe ve titreşim dirençli. Uygulamalar: Karavanlar ve motorlu evler, tekneler, temizlik makineleri, elektrikli araçlar, güneş enerjisi sistemleri, UPS sistemleri.",
             specs: [
                 { feature: 'Art. No.', value: ['1000807', '1000808', '1029094', '1000810', '1000811', '1000813', '1000812'] },
                 { feature: 'Short Code', value: ['50 Gel', '70 Gel', '75 Gel', '105 Gel', '130 Gel', '180 Gel', 'Golf Cart Gel'] },
@@ -347,8 +360,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'monoblock',
             imgSrc: 'monoblock_aku_img/MotionPasted.png',
             title: 'MOTION PASTED',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Motion Pasted, pozitif macunlu plakalı (genişletilmiş veya yerçekimi ile döküm) sulu tip küçük çekiş aküsüdür.",
+            extraInfo: "Özellikler: Mükemmel titreşim direnci, yüksek deşarj kapasitesi, zor çalışma koşullarında yüksek performans, ekonomik ve güvenilir. Uygulamalar: Tekerlekli sandalyeler, kamyon uygulamaları, karavanlar ve motorlu evler, akülü arabalar, tekneler, temizlik makineleri, güneş enerjisi sistemleri.",
             specs: [
                 { feature: 'Art. No.', value: ['1000782', '1000783', '1000784', '1000769', '1000761', '1000766', '1000763', '1000764', '1000765'] },
                 { feature: 'Short Code', value: ['50P', '60P', '85P', '80P', '105P', '110P', '110P MAC', '150P', '190P'] },
@@ -368,8 +381,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'monoblock',
             imgSrc: 'monoblock_aku_img/MotionTubular.png',
             title: 'MOTION TUBULAR',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Motion Tubular, pozitif borulu plakalara sahip sulu tip küçük çekiş aküsüdür.",
+            extraInfo: "Özellikler: Serbest elektrolit ile premium borulu plaka yapısı uzun kullanım ömrü sağlar, yüksek deşarj kapasitesi, zor çalışma koşullarında mükemmel çözüm, güvenilir ve dayanıklı - 1200 çevrim ömrü sunar. Uygulamalar: Golf arabaları, temizlik makineleri, tekerlekli sandalyeler, mobil yükseltilmiş çalışma platformları, elektrikli platform kamyonları, güneş enerjisi sistemleri.",
             specs: [
                 { feature: 'Art. No.', value: ['1000253', '1000399', '1000016', '1000014', '1000251', '1000417', '1003148'] },
                 { feature: 'Short Code', value: ['55T', '90T', '95T', '120T', '145T', 'Golf Cart T', 'Golf Cart TS'] },
@@ -389,8 +402,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'monoblock',
             imgSrc: 'monoblock_aku_img/TAB_motion_BCI.png',
             title: 'MOTION BCI',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB Motion BCI aküleri, aşırı çalışma koşullarında artan enerji ihtiyaçlarını karşılamak için tasarlanmış sulu tip derin döngü akülerdir. Kolay taşıma, kurulum ve bakım için özel olarak tasarlanmıştır.",
+            extraInfo: "Özellikler: Premium macunlu plaka yapısı, yüksek deşarj kapasitesi, güvenilir ve dayanıklı. Uygulamalar: Yükseltilmiş çalışma platformları, golf arabaları, temizlik makineleri.",
             specs: [
                 { feature: 'Art. No.', value: ['1026410', '1026445', '1026447', '1026448', '1026449'] },
                 { feature: 'Short Code', value: ['B 225', 'B 330', 'B 420', 'B 170', 'B 150'] },
@@ -411,8 +424,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'stasyoner_OGI',
             imgSrc: 'stasyoner_aku_img/ogi.png',
             title: 'OGI',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB OGi blok aküleri, yüksek güvenlik gereksinimleri olan endüstriyel güç kaynakları için tasarlanmış sağlam havalandırmalı kurşun-asit akülerdir. TAB OGi blok aküleri, hem uzun süreli deşarj (10 saat) hem de kısa süreli deşarj (birkaç dakika) için kullanılabilir.",
+            extraInfo: "Uygulama alanları: Enerji santrallerindeki DC güç besleme sistemleri, UPS sistemleri, endüstriyel sistemler ve acil güç besleme sistemleri. Ayrıca motor çalıştırma ve PV güç sistemleri için de kullanılabilir.",
             specs: [
                 { feature: 'Discharging time (h)', value: ['12V 1 OGi 25', '12V 2 OGi 50', '12V 3 OGi 75', '12V 4 OGi 100', '12V 5 OGi 125', '12V 6 OGi 150', '6V 7 OGi 175', '6V 8 OGi 200', '6V 9 OGi 225', '6V 10 OGi 250', '6V 11 OGi 275', '6V 12 OGi 300', '2V 3 OGi 75', '2V 4 OGi 100', '2V 5 OGi 125', '2V 6 OGi 150', '2V 7 OGi 175', '2V 8 OGi 200', '2V 9 OGi 225', '2V 10 OGi 250', '2V 11 OGi 275', '2V 12 OGi 300', '2V 13 OGi 325', '2V 14 OGi 350', '2V 24 OGi 600'] },
                 { feature: '10', value: ['29.0', '55.0', '80.0', '105.0', '135.0', '165.0', '193.0', '228.0', '254.0', '270.0', '304.0', '320.0', '80.0', '105.0', '135.0', '165.0', '193.0', '228.0', '254.0', '270.0', '304.0', '320.0', '346.7', '373.3', '684.0'] },
@@ -435,25 +448,16 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'stasyoner',
             imgSrc: 'stasyoner_aku_img/opzs.png',
             title: 'OPZS',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
-            specs: [
-
-
-            ]
-
-
-
-
-
-
+            description: "Sizi sonsuz enerji dünyasına davet ediyoruz ve konvansiyonel kurşun-asit teknolojisi ile üretilen OPzS sabit bloklar ve hücrelerle tanıştırıyoruz. OPzS tipi sabit aküler, telekomünikasyon tesisleri, bilgisayarlar, acil aydınlatma, alarm, kontrol ve izleme sistemleri gibi alanlarda kullanılır. Son derece düşük öz deşarj oranları sayesinde güneş hücreleri ile beslenen tesislerde de uygundur.",
+            extraInfo: "Özellikler: Yüksek kapasiteli, uzun ömürlü, az bakım gerektiren, düşük öz deşaj, hızlı ve basit asit seviyesi kontrolü, ekonomik su tüketimi, uygun boyutlar ve ağırlık, en düşük ve sabit bakım akımı.",
+            specs: []
         },
         opzv: {
             type: 'stasyoner_OPZV',
             imgSrc: 'stasyoner_aku_img/opzv.png',
             title: 'OPZV',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB OPzV valf ayarlı kurşun asit aküleri, birçok farklı bekleme uygulaması için ideal enerji kaynağıdır. TAB OPzV serisi valf ayarlı kurşun asit sabit aküleri, çok düşük gaz emisyonları nedeniyle neredeyse bakım gerektirmeyen recombinasyon teknolojisinin avantajlarını, uzun ömür ve mükemmel döngüleme yeteneği ile pozitif borulu plakaların avantajları ile birleştirir.",
+            extraInfo: "Özellikler: Güvenli, çok yönlü, güvenilir, minimum gaz salınımı, derin deşarj direnci.",
             specs: [
                 { feature: 'Type', value: ['4 OPzV 200', '5 OPzV 250', '6 OPzV 300', '5 OPzV 350', '6 OPzV 420', '7 OPzV 490', '6 OPzV 600', '8 OPzV 800', '10 OPzV 1000', '12 OPzV 1200', '12 OPzV 1500', '16 OPzV 2000', '20 OPzV 2500', '24 OPzV 3000'] },
                 { feature: 'Nominal Capacity (Ah)', value: ['200', '250', '300', '350', '420', '490', '600', '800', '1000', '1200', '1500', '2000', '2500', '3000'] },
@@ -474,8 +478,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'stasyoner_TOPZS',
             imgSrc: 'stasyoner_aku_img/topzs.png',
             title: 'TOPZS',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TOPzS tipi sabit aküler, güneş sistemleri için özel olarak tasarlanmıştır. Son derece düşük öz deşarj oranları ve borulu pozitif plakaları sayesinde off-grid güneş sistemleri için uygundur.",
+            extraInfo: "Özellikler: Yüksek kapasiteli, uzun ömürlü, az bakım gerektiren, düşük öz deşarj, hızlı ve basit asit seviyesi kontrolü, ekonomik su tüketimi, uygun boyutlar ve ağırlık, en düşük ve sabit bakım akımı.",
             specs: [
                 { feature: 'Type', value: ['3 TOPzS 265', '4 TOPzS 353', '5 TOPzS 442', '4 TOPzS 500', '5 TOPzS 625', '6 TOPzS 750', '7 TOPzS 875', '8 TOPzS 1000'] },
                 { feature: 'Ah', value: ['265', '353', '442', '499', '624', '749', '874', '999'] },
@@ -495,8 +499,8 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'stasyoner_UPS',
             imgSrc: 'stasyoner_aku_img/ups.png',
             title: 'UPS',
-            description: "TAB AGM aküleri, dur-kalk teknolojisine uygun olarak üretilmiştir. Yüksek enerji verimliliği ve uzun ömür sağlar.",
-            extraInfo: "Özellikle sık dur-kalk yapılan trafikte üstün performans gösterir. Start-stop sistemleri için idealdir.",
+            description: "TAB UPS aküleri, yüksek deşarj performansları için optimize edilmiş sağlam kurşun-asit akülerdir.",
+            extraInfo: "TAB UPS aküleri, 50 ila 250 kVA boyutundaki Kesintisiz Güç Kaynağı (UPS) uygulamaları için mükemmel bir şekilde uygundur. Akü, yardımcı güç kaynağı için dizel motorların çalıştırılmasında da mükemmel bir uyum sağlar.",
             specs: [
                 { feature: 'Type', value: ['12V 1 UPS 100', '12V 2 UPS 200', '12V 3 UPS 300', '12V 4 UPS 400', '12V 5 UPS 500', '12V 6 UPS 600', '6V 7 UPS 700', '6V 8 UPS 800', '6V 9 UPS 900', '6V 10 UPS 1000', '6V 11 UPS 1100', '6V 12 UPS 1200', '2V 24 UPS 2400', '2V 30 UPS 3000', '2V 36 UPS 3600'] },
                 { feature: 'C10 (Ah)', value: ['41', '59', '86', '114', '147', '179', '206', '247', '271', '293', '325', '347', '742', '879', '1041'] },
@@ -529,6 +533,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('akuTitle').textContent = akuDetails.title;
         document.getElementById('akuDescription').textContent = akuDetails.description;
         document.getElementById('akuExtraInfo').textContent = akuDetails.extraInfo;
+
 
         // Akü tipine göre uygun tabloyu seç
         let tableId;
@@ -622,4 +627,5 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('scrolled');
         }
     }
+
 });
