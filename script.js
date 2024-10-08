@@ -598,10 +598,10 @@ const aboutImage = document.getElementById('aboutImage');
 // Her sekmeye özel resimler
 const imageMap = {
   about: 'images/mainContainerBG.jpg',
-  industrial: 'images/mainContainerBG2.jpg',
+  industrial: 'images/aku_cozum.jpeg',
   vehicle: 'images/mainContainerBG3.jpg',
   approach: 'images/AboutImages.jpg',
-  sustainability: 'images/AboutImages2.jpg'
+  sustainability: 'images/sürdürülebilirlik.jpeg'
 };
 
 
