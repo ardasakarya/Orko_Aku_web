@@ -343,12 +343,7 @@ document.addEventListener('DOMContentLoaded', function () {
         title: 'TAB EFB STOP&GO TRUCK',
 
       },
-      {
-        id: 'tab_hr',
-        imgSrc: 'starter_aku_img/tab_magic_hr.png',
-        title: 'TAB HR - HOT REGION',
-
-      },
+    
       {
         id: 'tab_magic_tr',
         imgSrc: 'starter_aku_img/tab_magic_truck.png',
@@ -373,12 +368,7 @@ document.addEventListener('DOMContentLoaded', function () {
         title: 'TAB POLAR TRUCK',
 
       },
-      {
-        id: 'tab_polar_blue',
-        imgSrc: 'starter_aku_img/tab_polar_blue.png',
-        title: 'TAB POLAR BLUE',
-
-      }
+     
     ],
     traction: [
       {
@@ -493,8 +483,49 @@ document.addEventListener('DOMContentLoaded', function () {
         title: 'UPS',
 
       }
-    ]
+    ],
+    /*
+    li_ion:
+    [
+      {
+        id: 'traction_batteries',
+        imgSrc: 'images/car.jpg',
+        title: 'TRACTION BATTERIES',
 
+      },
+      {
+        id: 'traction_batteries',
+        imgSrc: 'images/car.jpg',
+        title: 'TRACTION BATTERIES',
+
+      },
+      {
+        id: 'traction_batteries',
+        imgSrc: 'images/car.jpg',
+        title: 'TRACTION BATTERIES',
+
+      },
+      {
+        id: 'traction_batteries',
+        imgSrc: 'images/car.jpg',
+        title: 'TRACTION BATTERIES',
+
+      },
+      {
+        id: 'traction_batteries',
+        imgSrc: 'images/car.jpg',
+        title: 'TRACTION BATTERIES',
+
+      },
+      {
+        id: 'traction_batteries',
+        imgSrc: 'images/car.jpg',
+        title: 'TRACTION BATTERIES',
+
+      },
+     
+    ],
+*/
   };
 
   // Butonlara tıklanınca ilgili içeriği yükleme

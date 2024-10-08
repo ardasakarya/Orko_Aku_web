@@ -106,16 +106,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
 
         },
-        tab_hr: {
-            type: 'magic_hr',
-            imgSrc: 'starter_aku_img/tab_magic_hr.png',
-            title: 'TAB HR - HOT REGION',
-            description: "Yüksek ortam sıcaklıklarının kurşun-asit akülerin düşmanı olduğu bir sır değil. Bu nedenle TAB, en kritik bileşenler ve üretim süreçlerinde bir dizi optimizasyon ile yeni bir akü serisi olan Hot Region akülerini geliştirdi.",
-            extraInfo: "Özellikler: Daha düşük kendi kendine deşarj. Uzatılmış raf ömrü. Artırılmış döngü dayanıklılığı. TAB akülerinin markası haline gelen tanınmış yüksek marş performans özellikleri.",
-            specs: [
-                //hr
-            ]
-        },
+     
+      
         tab_magic_tr: {
             imgSrc: 'starter_aku_img/tab_magic_truck.png',
             title: 'TAB MAGIC TRUCK',
@@ -208,29 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
             ]
         },
-        tab_polar_blue: {
-            imgSrc: 'starter_aku_img/tab_polar_blue.png',
-            title: 'TAB POLAR BLUE',
-            type: 'starter',
-            description: "TAB Polar Blue, elektrik donanımı giriş seviyesinde olan ancak üstün çalıştırma, performans ve güvenilirlik talep eden araçlar için tasarlanmış bir aküdür. Ca/Ca teknolojisi kullanılarak üretilmiştir.",
-            extraInfo: "Özellikler: Yüksek çalıştırma kabiliyeti. Aşırı iklim koşullarında güvenilir çalıştırma sağlar. Seviye göstergesi (Sihirli Göz), akünün anında durum kontrolünü sağlar. Yüksek çalıştırma kabiliyeti. Aşırı iklim koşullarında güvenilir çalıştırma.",
-
-            specs: [
-                { feature: 'Art. No.', value: ['1000339', '1000343', '1000340', '1000345', '1000341', '1000342'] },
-                { feature: 'DIN Marking', value: ['56008 B', '56013 B', '56649 B', '56013 B', '57549 B', '60044 B'] },
-                { feature: 'Short Code', value: ['B60HV', 'B60HX', 'B66', 'B66HX', 'B75H', 'B10H'] },
-                { feature: 'Ah (C20)', value: ['60', '60', '66', '66', '75', '100'] },
-                { feature: 'Box Type', value: ['L2', 'L2', 'L2', 'L2', 'L3', 'L5'] },
-                { feature: 'EN (A)', value: ['600', '600', '620', '620', '750', '900'] },
-                { feature: 'LxWxH (mm)', value: ['242x175x190', '242x175x190', '242x175x190', '242x175x190', '278x175x190', '353x175x190'] },
-                { feature: 'BHD', value: ['B13', 'B13', 'B13', 'B13', 'B13', 'B13'] },
-                { feature: 'Layout', value: ['0', '1', '0', '1', '0', '0'] },
-                { feature: 'Weight (kg)', value: ['14.4', '14.4', '15.0', '14.4', '17.2', '22.4'] },
-                { feature: 'PCS/pallet (EUR/CNT)', value: ['63/90', '63/90', '63/90', '63/90', '51/80', '36/60'] },
-                { feature: 'Remarks*', value: ['KH, ME', 'KH, ME', 'KH, ME', 'KH, ME', 'KH, HD, ME', 'KH, HD, ME'] },
-                { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
-            ]
-        },
+      
         tab_bci: {
             type: 'traksiyoner_bci',
             imgSrc: 'traksiyoner_aku_img/TAB-BCI.png',
@@ -517,7 +487,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'kg', value: ['35.4', '41.6', '47.3', '54.5', '69.4', '75.8', '47.0', '50.2', '63.8', '66.7', '68.8', '71.5', '50.2', '66.7', '71.5'] },
                 { feature: 'kg', value: ['23.4', '30.3', '36.6', '44.1', '55.0', '61.8', '35.9', '39.4', '48.0', '51.2', '53.5', '56.4', '39.4', '51.2', '55.4'] }
             ]
-        }
+        },
+        traction_batteries: {
+            imgSrc: 'stasyoner_aku_img/ups.png',
+            title: 'UPS',
+        },
     };
 
     // URL'den ID'yi almak

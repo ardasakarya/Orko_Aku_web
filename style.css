@@ -49,18 +49,19 @@ header {
     left: 0;
     right: 0;
     z-index: 10;
-    padding: 15px 20px;
+    padding:  5px 20px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 6vw;
     background-color: transparent;
     /* Başlangıçta transparan */
     transition: background-color 0.5s ease;
 }
 
 header.scrolled {
-    background-color: rgba(129, 125, 125, 0.7);
+    background-color: rgba(98, 94, 94, 0.7);
 
     /* Kaydırınca yarı opak renk */
 }
@@ -80,7 +81,8 @@ header .logo {
 }
 
 header .logo img {
-    height: 50px;
+    margin-top: 1rem;
+    height: 70px;
     /* Yazıdan biraz daha büyük yap */
     width: auto;
     /* Genişliği orantılı ayarla */
@@ -178,7 +180,13 @@ nav ul li a:hover {
     transform: translateY(-9px) rotate(-45deg);
 }
 @media (max-width: 1024px) { /* Mobil ve küçük tabletler için genişletildi */
+   header
+   {
+   padding: 50px;
+    height: 15vw;
+   }
     nav ul {
+        
         display: none;
         flex-direction: column;
         text-align: center;
@@ -207,6 +215,11 @@ nav ul li a:hover {
 
 /* Küçük ekranlar için menü ve hamburger stilleri */
 @media (max-width: 768px) {
+    header
+    {
+    padding: 50px;
+     height: 20vw;
+    }
     nav ul {
         display: none;
         /* Menü başlangıçta gizli */
@@ -241,6 +254,11 @@ nav ul li a:hover {
     }
 }
 @media (max-width: 600px) { 
+    header
+    {
+    padding: 50px;
+     height: 20vw;
+    }
     nav ul {
         display: none;
         flex-direction: column;
@@ -274,7 +292,7 @@ nav ul li a:hover {
 
 
 .hero-slide-1 {
-    background-image: url('images/mainContainerBG.jpg');
+    background-image: url('images/starter.jpg');
     height: 100vh;
     width: 100%;
     position: relative;
@@ -285,7 +303,7 @@ nav ul li a:hover {
 }
 
 .hero-slide-2 {
-    background-image: url('images/mainContainerBG2.jpg');
+    background-image: url('images/slide-forklift.jpg');
     height: 100vh;
     width: 100%;
     position: relative;
@@ -296,7 +314,7 @@ nav ul li a:hover {
 }
 
 .hero-slide-3 {
-    background-image: url('images/mainContainerBG3.jpg');
+    background-image: url('images/slide-golf.jpg');
     height: 100vh;
     width: 100%;
     position: relative;
@@ -306,7 +324,26 @@ nav ul li a:hover {
     z-index: -1;
 }
 
-
+.hero-slide-4 {
+    background-image: url('images/slide-sabit.jpg');
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+.hero-slide-5 {
+    background-image: url('images/slide-tekne-3.jpg');
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
 
 .hero-slide-1::before {
     content: '';
@@ -315,7 +352,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     /* Tüm fotoğrafı karart */
     z-index: -1;
 }
@@ -327,7 +364,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     /* Tüm fotoğrafı karart */
     z-index: -1;
 }
@@ -339,11 +376,32 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     /* Tüm fotoğrafı karart */
     z-index: -1;
 }
-
+.hero-slide-4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Tüm fotoğrafı karart */
+    z-index: -1;
+}
+.hero-slide-5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Tüm fotoğrafı karart */
+    z-index: -1;
+}
 
 /* Swiper ve slide ayarları */
 .hero .swiper-container {
@@ -413,18 +471,21 @@ nav ul li a:hover {
 
 .btn {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #0C4A83;
+  
     color: #fff;
+    background-color: transparent; /* Butonu transparan yapar */
+    border: 2px solid navy;
+    border-radius: 10px;
     padding: 10px 20px;
     font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 600;
-    border: none;
     cursor: pointer;
     transition: background-color 0.4s ease;
     text-decoration: none;
     animation: fadeIn 1.5s ease forwards;
 }
+
 
 .btn:hover {
     background-color: #2e78d3;
@@ -471,51 +532,7 @@ nav ul li a:hover {
 }
 
 
-.hero-slide-1 {
-    background-image: url('images/mainContainerBG.jpg');
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    background-position: center 65%;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-}
 
-.hero-slide-2 {
-    background-image: url('images/mainContainerBG2.jpg');
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    background-position: center 65%;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-}
-
-.hero-slide-3 {
-    background-image: url('images/mainContainerBG3.jpg');
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    background-position: center 65%;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-}
-
-.hero-slide-1::before,
-.hero-slide-2::before,
-.hero-slide-3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
 
 /* Swiper ve slide ayarları */
 .hero .swiper-container {
@@ -577,20 +594,7 @@ nav ul li a:hover {
     animation: fadeIn 1s ease forwards;
 }
 
-.btn {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #0C4A83;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.4s ease;
-    text-decoration: none;
-    animation: fadeIn 1.5s ease forwards;
-}
+
 
 .btn:hover {
     background-color: #2e78d3;
@@ -671,8 +675,10 @@ nav ul li a:hover {
 @media (max-width: 767px) {
     .hero-slide-1,
     .hero-slide-2,
-    .hero-slide-3 {
-        background-position: center;
+    .hero-slide-3,
+    .hero-slide-4,
+    .hero-slide-5 {
+    background-position: center;
         background-size: cover;
         background-attachment: scroll;
     }
