@@ -1,5 +1,6 @@
+/* indirme merkezi fonkisyonu
 indirmeBtnHtml()
-
+*/
 document.querySelector('.hamburger').addEventListener('click', function() {
   this.classList.toggle('active');
   document.querySelector('nav ul').classList.toggle('active');
@@ -648,11 +649,8 @@ nextButton.addEventListener('click', () => {
   scrollWrapper.scrollBy({ left: cardWidth, behavior: 'smooth' });
 });
 
-// Otomatik kaydırma işlevini durdur
 
-
-// Daha fazla kart yüklendiğinde veya kaydırma yapıldığında aktif kartı kontrol et
-
+/* canlıda indirme merkezine gider
 function indirmeBtnHtml()
 {
 const indirmeButton = document.getElementById('indirmeBtn');
@@ -663,4 +661,5 @@ indirmeButton.addEventListener('click', function (event) {
   window.location.href = '/Orko_Aku_web/indirme_merkezi.html';
 });
 }
+*/
 
