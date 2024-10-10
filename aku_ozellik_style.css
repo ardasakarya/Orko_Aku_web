@@ -304,7 +304,7 @@ nav ul li a:hover {
 /* Tablo stil */
 table {
     width: 100%; /* Header genişliğine uyum sağlar */
-    max-width: 1000px; /* Daha küçük bir maksimum genişlik belirle */
+    max-width: 1500px; /* Daha küçük bir maksimum genişlik belirle */
     height: auto; /* Yükseklik, içeriğe göre otomatik ayarlanır */
     margin: 20px auto; /* Üstten daha az boşluk */
     border-collapse: collapse;
@@ -377,7 +377,19 @@ table tbody tr:nth-child(even) {
 }
 
 
+@media(max-width:600px)
+{
+    table {
+        width: 150%; /* Mobil ekranlarda tam genişlik */
+        overflow-x: auto; /* Yatay kaydırma ekleyelim */
+    }
 
+    table th,
+    table td {
+        padding: 5px; /* En küçük ekranlar için daha kompakt padding */
+        font-size: 5px; /* Yazı boyutu en küçük */
+    }
+}
 
 .footer {
     background: #252129;
