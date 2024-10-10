@@ -1,5 +1,4 @@
 
-indirmeBtn();
 
 document.querySelector('.hamburger').addEventListener('click', function() {
   this.classList.toggle('active');
@@ -661,7 +660,7 @@ const indirmeButton = document.getElementById('indirmeBtn');
 // Butona click event listener ekle
 indirmeButton.addEventListener('click', function (event) {
 
-  window.location.href = 'indirme_merkezi.html?';
+  window.location.href = 'https://ardasakarya.github.io/Orko_Aku_web/indirme_merkezi.html';
 });
 }
 
