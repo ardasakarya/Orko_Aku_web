@@ -1,4 +1,4 @@
-
+indirmeBtnHtml()
 
 document.querySelector('.hamburger').addEventListener('click', function() {
   this.classList.toggle('active');
@@ -653,7 +653,7 @@ nextButton.addEventListener('click', () => {
 
 // Daha fazla kart yüklendiğinde veya kaydırma yapıldığında aktif kartı kontrol et
 
-function indirmeBtn()
+function indirmeBtnHtml()
 {
 const indirmeButton = document.getElementById('indirmeBtn');
 
