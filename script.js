@@ -484,48 +484,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
       }
     ],
-    /*
+ 
     li_ion:
     [
       {
         id: 'traction_batteries',
-        imgSrc: 'images/car.jpg',
+        imgSrc: 'Li_Ion_img/emotive.png',
         title: 'TRACTION BATTERIES',
 
       },
       {
-        id: 'traction_batteries',
-        imgSrc: 'images/car.jpg',
-        title: 'TRACTION BATTERIES',
+        id: 'storage_clever',
+        imgSrc: 'Li_Ion_img/C2-4K-12.png',
+        title: 'TAB e.storage CLEVER',
 
       },
       {
-        id: 'traction_batteries',
-        imgSrc: 'images/car.jpg',
-        title: 'TRACTION BATTERIES',
+        id: 'storage_family',
+        imgSrc: 'Li_Ion_img/TAB_Family3.png',
+        title: 'TAB e.storage FAMILY',
 
       },
       {
-        id: 'traction_batteries',
-        imgSrc: 'images/car.jpg',
-        title: 'TRACTION BATTERIES',
+        id: 'module_l51',
+        imgSrc: 'Li_Ion_img/modul_l51.png',
+        title: 'TAB e.module L5.1',
 
       },
       {
-        id: 'traction_batteries',
-        imgSrc: 'images/car.jpg',
-        title: 'TRACTION BATTERIES',
+        id: 'inverter_1p',
+        imgSrc: 'Li_Ion_img/1P.png',
+        title: 'TAB HYBRID INVERTER 1P',
 
       },
       {
-        id: 'traction_batteries',
-        imgSrc: 'images/car.jpg',
-        title: 'TRACTION BATTERIES',
+        id: 'inverter_3p',
+        imgSrc: 'Li_Ion_img/3P.png',
+        title: 'TAB HYBRID INVERTER 3P',
 
       },
      
     ],
-*/
+
   };
 
   // Butonlara tıklanınca ilgili içeriği yükleme
