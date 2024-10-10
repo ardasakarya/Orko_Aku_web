@@ -661,7 +661,7 @@ const indirmeButton = document.getElementById('indirmeBtn');
 // Butona click event listener ekle
 indirmeButton.addEventListener('click', function (event) {
 
-  window.location.href = 'indirme_merkezi.html';
+  window.location.href = 'indirme_merkezi.html?';
 });
 }
 
