@@ -654,15 +654,14 @@ nextButton.addEventListener('click', () => {
 
 // Daha fazla kart yüklendiğinde veya kaydırma yapıldığında aktif kartı kontrol et
 
-
+function indirmeBtn()
+{
 const indirmeButton = document.getElementById('indirmeBtn');
 
 // Butona click event listener ekle
 indirmeButton.addEventListener('click', function (event) {
-  // Default link davranışını engelle
-  
-  // Sayfaya yönlendirme yap
+
   window.location.href = 'indirme_merkezi.html';
 });
-
+}
 
