@@ -1,3 +1,14 @@
+// Butonun id'si ile butonu seç
+const indirmeButton = document.getElementById('indirmeBtn');
+
+// Butona click event listener ekle
+indirmeButton.addEventListener('click', function (event) {
+  event.preventDefault(); // Default link davranışını engelle
+  
+  // Sayfaya yönlendirme yap
+  window.location.href = 'indirme_merkezi.html';
+});
+
 
 document.querySelector('.hamburger').addEventListener('click', function() {
   this.classList.toggle('active');
