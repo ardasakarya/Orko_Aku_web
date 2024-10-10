@@ -292,7 +292,7 @@ nav ul li a:hover {
 
 
 .hero-slide-1 {
-    background-image: url('images/starter.jpg');
+    background-image: url('images/starter.jpeg');
     height: 100vh;
     width: 100%;
     position: relative;
@@ -352,7 +352,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     /* Tüm fotoğrafı karart */
     z-index: -1;
 }
@@ -364,7 +364,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     /* Tüm fotoğrafı karart */
     z-index: -1;
 }
@@ -376,7 +376,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     /* Tüm fotoğrafı karart */
     z-index: -1;
 }
@@ -387,7 +387,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     /* Tüm fotoğrafı karart */
     z-index: -1;
 }
@@ -398,7 +398,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     /* Tüm fotoğrafı karart */
     z-index: -1;
 }
