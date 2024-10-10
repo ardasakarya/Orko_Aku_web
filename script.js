@@ -660,7 +660,7 @@ const indirmeButton = document.getElementById('indirmeBtn');
 // Butona click event listener ekle
 indirmeButton.addEventListener('click', function (event) {
 
-  window.location.href = 'https://ardasakarya.github.io/Orko_Aku_web/indirme_merkezi.html';
+  window.location.href = 'Orko_Aku_web/indirme_merkezi.html';
 });
 }
 
