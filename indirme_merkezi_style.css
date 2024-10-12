@@ -228,7 +228,6 @@ nav ul li a:hover {
 
 /* Altındaki çizgiyi başlangıçta gizli tutar */
 .button-container button::after {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     content: "";
     display: block;
     width: 0;
@@ -241,16 +240,15 @@ nav ul li a:hover {
 /* Aktif butonun yazısı büyüsün ve alt çizgisi gözüksün */
 .button-container button.active {
     font-size: 18px;  /* Yazı büyüklüğü */
-    transform: translateY(-10px);  /* Buton biraz yukarı çıkacak */
+    transform: translateY(-15px);  /* Buton biraz yukarı çıkacak */
     color: #0C4A83;
     background-color: #fff;
 }
 
+/* Altındaki çizgi tam genişlikte görünsün */
 .button-container button.active::after {
     width: 100%;
-    background-color: #0C4A83;
 }
-
 
 /* Üzerine gelindiğinde alt çizgi tam genişlikte gözüksün */
 .button-container button:hover::after {
