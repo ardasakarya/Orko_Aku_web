@@ -8,43 +8,41 @@
 </head>
 <body>
     <header>
-
         <div class="container">
             <div class="logo">
                 <a href="/index.html">  <img src="images/logo.png" alt="logo"></a>
             </div>
-
-
-           
             <nav>
- <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul>
-
                     <li><a href="#home">ANASAYFA</a></li>
                     <li><a href="#About">HAKKIMIZDA</a></li>
                     <li><a href="#services">ÜRÜNLERİMİZ</a></li>
                     <li><a href="#">İNDİRME MERKEZİ</a></li>
                     <li><a href="#Contact">İLETİŞİM</a></li>
-
                 </ul>
-                
             </nav>
         </div>
     </header>
-  
-<div class="backImg">
-</div>
 
-    <div class="certsBlock">
-        
+    <div class="backImg"></div>
+
+    <div class="button-container">
+       
+        <button class="tab-btn active" data-target="battery" onclick="showContent('battery')">BATTERY REPLACEMENT TOOL</button>
+        <button class="tab-btn" data-target="catalogues" onclick="showContent('catalogues')">CATALOGUES</button>
+        <button class="tab-btn" data-target="certificates" onmouseover="hoverEffect('certificates')" onmouseout="hideEffect('certificates')" onclick="showContent('certificates')">CERTIFICATES</button>
+        <button class="tab-btn" data-target="presentation" onclick="showContent('presentation')">PRESENTATION</button>
     </div>
- 
+    
 
+    <div id="content-area">
+        <!-- İçerik buraya dinamik olarak yüklenecek -->
+    </div>
 
     <script src="indirme_merkezi_script.js"></script>
 </body>

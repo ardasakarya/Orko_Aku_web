@@ -650,7 +650,7 @@ nextButton.addEventListener('click', () => {
 });
 
 
-/* canlıda indirme merkezine gider
+
 function indirmeBtnHtml()
 {
 const indirmeButton = document.getElementById('indirmeBtn');
@@ -661,5 +661,5 @@ indirmeButton.addEventListener('click', function (event) {
   window.location.href = '/Orko_Aku_web/indirme_merkezi.html';
 });
 }
-*/
+
 

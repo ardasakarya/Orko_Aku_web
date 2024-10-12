@@ -191,4 +191,199 @@ nav ul li a:hover {
     margin-top: 4vw; /* Header'ın yüksekliği kadar boşluk bırakıyoruz */
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0px;
+    padding: 0 50px;
+    animation: fadeInUp 1.2s ease;
+    max-width: 100%;
+}
 
+.button-container button {
+    padding: 0 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease, font-size 0.3s;
+    position: relative;
+    flex: 1;
+    max-width: 150px;
+    text-align: center;
+}
+
+.button-container button:not(:last-child) {
+    margin-right: 5px;
+}
+
+/* Altındaki çizgiyi başlangıçta gizli tutar */
+.button-container button::after {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #0C4A83;
+    transition: width 0.3s ease;
+    margin-top: 5px;
+}
+
+/* Aktif butonun yazısı büyüsün ve alt çizgisi gözüksün */
+.button-container button.active {
+    font-size: 18px;  /* Yazı büyüklüğü */
+    transform: translateY(-10px);  /* Buton biraz yukarı çıkacak */
+    color: #0C4A83;
+    background-color: #fff;
+}
+
+.button-container button.active::after {
+    width: 100%;
+    background-color: #0C4A83;
+}
+
+
+/* Üzerine gelindiğinde alt çizgi tam genişlikte gözüksün */
+.button-container button:hover::after {
+    width: 100%;
+    background-color: #0C4A83;
+}
+
+/* Buton hover durumunda biraz yukarı çıkacak */
+.button-container button:hover {
+    background-color: #ffffff;
+    transform: translateY(-5px);
+}
+
+
+#content-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hover-effect {
+    border: 2px solid #555;
+}
+.catalogues_item {
+    text-align: center; /* Ortalar */
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.catalogues_item img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto; /* Ortalar ve altta boşluk bırakır */
+}
+
+.catalogues_item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.product-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent; 
+    border: 1px solid navy;/* Mavi bir buton rengi */
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product-btn:hover {
+    background-color: #0056b3; /* Hover rengini koyulaştırır */
+}
+
+.catalogues_item hr {
+    width: 60px;  /* Çizginin genişliği */
+    border: 0;   /* Kenarlık kaldırılır */
+    height: 2px; /* Yüksekliği belirlenir */
+    background-color: #007bff; /* Mavi çizgi rengi */
+    margin: 10px auto; /* Ortaya hizalama */
+}
+
+.certificates_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun oluşturur */
+    gap: 20px; /* Elemanlar arasına boşluk bırak */
+    margin: 20px 0;
+}
+
+.certificates_item {
+    position: relative;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.certificates_item img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Hover'da beyazımsı efekt için filter ekledik */
+}
+
+.certificates_item h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.certificates_item .product-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(244, 226, 226, 0.2); /* İlk durumda transparan buton */
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* İlk durumda beyaz yarı transparan border */
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.certificates_item:hover .product-btn {
+    opacity: 1;
+    background-color: transparent;/* Hover sırasında mavi arka plan */
+    border: 2px solid navy; 
+    color: black;
+    transform: translate(-50%, -50%) scale(1.1); /* Hafif büyüme efekti */
+}
+.certificates_item .product-btn:hover
+{
+    opacity: 1;
+    background-color:navy;/* Hover sırasında mavi arka plan */
+    color: white;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.certificates_item:hover img {
+    filter: brightness(0.5) grayscale(50%); /* Resim hover'da beyazımsı-gri efekt alır */
+    transform: scale(1.05);
+}
+
+.certificates_item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover sırasında gölge efekti */
+}
