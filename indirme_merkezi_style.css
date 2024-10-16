@@ -1,7 +1,11 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html, body {
+    overflow-x: hidden;
 }
 
 header {
@@ -11,20 +15,20 @@ header {
     left: 0;
     right: 0;
     z-index: 10;
-    padding: 15px 20px;
+    padding:  5px 20px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 6vw;
     background-color: transparent;
-   border: 1px solid black;
-   background-color: #134b6d;
+    background-color: #134b6d;
     transition: background-color 0.5s ease;
 }
 
 header.scrolled {
-    background-color: rgba(17, 46, 107, 0.7);
-
+   
+ background-color: rgba(17, 46, 107, 0.7);
     /* Kaydırınca yarı opak renk */
 }
 
@@ -43,7 +47,8 @@ header .logo {
 }
 
 header .logo img {
-    height: 50px;
+    margin-top: 1rem;
+    height: 70px;
     /* Yazıdan biraz daha büyük yap */
     width: auto;
     /* Genişliği orantılı ayarla */
@@ -77,7 +82,7 @@ nav ul {
 
 nav ul li a {
 
-    color: #fff6f6;
+    color: #fff;
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
@@ -88,7 +93,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #b61515;
+    color: #0814c8;
 }
 
 /* Ana içerik tam ortada yer alacak */
@@ -123,7 +128,7 @@ nav ul li a:hover {
 .hamburger span {
     width: 100%;
     height: 4px;
-    background-color:#0814c8;
+    background-color: #fff;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
@@ -140,9 +145,47 @@ nav ul li a:hover {
 .hamburger.active span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
 }
+@media (max-width: 1024px) { /* Mobil ve küçük tabletler için genişletildi */
+   header
+   {
+   padding: 50px;
+    height: 15vw;
+   }
+    nav ul {
+        
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: rgba(129, 125, 125, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 10;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    header .container {
+        justify-content: space-around;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 20;
+        margin-right: 20px;
+    }
+}
 
 /* Küçük ekranlar için menü ve hamburger stilleri */
 @media (max-width: 768px) {
+    header
+    {
+    padding: 50px;
+     height: 20vw;
+    }
     nav ul {
         display: none;
         /* Menü başlangıçta gizli */
@@ -176,6 +219,40 @@ nav ul li a:hover {
         margin-right: 20px; /* Ekran küçüldüğünde sağa yaslanmış olur */
     }
 }
+@media (max-width: 600px) { 
+    header
+    {
+    padding: 50px;
+     height: 10vw;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: rgba(129, 125, 125, 0.9);
+        position: absolute;
+        top: 50px; /* Daha küçük ekranlarda konumu biraz aşağıya çek */
+        right: 0;
+        z-index: 10;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 20;
+        width: 25px; /* Daha küçük ikon boyutu */
+        height: 20px; /* Küçük ekranlar için boyut ayarlaması */
+        margin-right: 15px; /* Sağdan biraz daha fazla boşluk bırak */
+    }
+
+    .hamburger span {
+        height: 3px; /* Çubukların kalınlığı daha ince */
+    }
+}
 
 .backImg {
     background-image: url('images/TAB_stavbe1.jpg');
@@ -194,6 +271,7 @@ nav ul li a:hover {
 .button-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allows buttons to wrap into rows */
     margin-bottom: 50px;
     margin-top: 50px;
     position: relative;
@@ -207,7 +285,7 @@ nav ul li a:hover {
 
 .button-container button {
     padding: 0 20px;
-    margin: 0 5px;
+    margin: 10px 5px; /* Add margin for better spacing in wrap */
     border: none;
     background-color: #fff;
     color: #000;
@@ -262,11 +340,32 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 
-
 #content-area {
     margin-top: 20px;
     text-align: center;
 }
+
+/* Responsive Design for button grouping */
+/* When the screen is less than or equal to 768px, create two columns of buttons */
+@media (max-width: 768px) {
+    .button-container {
+        justify-content: space-between;
+    }
+
+    .button-container button {
+        flex: 0 1 calc(50% - 10px); /* Each button will take 50% of the container width minus margin */
+        max-width: 100%;
+    }
+}
+
+/* For smaller screens (mobile) 480px or less, buttons will take full width */
+@media (max-width: 480px) {
+    .button-container button {
+        flex: 0 1 100%; /* Full width for each button */
+        margin: 10px 0;
+    }
+}
+
 
 .hover-effect {
     border: 2px solid #555;
@@ -326,10 +425,8 @@ nav ul li a:hover {
 .certificates_item {
     position: relative;
     text-align: center;
-    background-color: #f9f9f9;
     padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+
     overflow: hidden;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -384,4 +481,280 @@ nav ul li a:hover {
 
 .certificates_item:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover sırasında gölge efekti */
+}
+.presentation_item,
+.battery_item {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.presentation_item img,
+.battery_item img {
+  width: 100%; /* Makes image responsive */
+  max-width: 400px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Adds a hover effect */
+}
+
+.presentation_item h3,
+.battery_item h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.presentation_item .product-btn,
+.battery_item .product-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: black;
+  border:2px solid navy;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  top: -10px; /* Moves the button slightly upward */
+}
+
+.presentation_item .product-btn:hover,
+.battery_item .product-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Move the image up slightly */
+.presentation_item img,
+.battery_item img {
+  position: relative;
+  top: -15px; /* Moves the image slightly upward */
+}
+
+.footer {
+    background: #252129;
+    padding: 50px 20px;
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.cert-images {
+    display: flex;
+    flex-direction: column;
+    /* Alt alta yerleştirmek için */
+    align-items: center;
+    /* Görselleri ortalamak için */
+    margin-top: 10px;
+}
+
+.cert-images a {
+    margin-bottom: 15px;
+    /* Görseller arasında boşluk */
+}
+
+.cert-images img {
+    width: 100px;
+    /* Görsel genişliği */
+    height: auto;
+    /* Yükseklik otomatik */
+    cursor: pointer;
+}
+
+
+/* Footer İç Konteyner */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Esnek yapıda yan yana dizilsin */
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    gap: 20px; /* Sütunlar arasında boşluk */
+}
+
+/* Footer Kolonlar */
+.footer-col {
+    flex: 1;
+    min-width: 250px; /* Minimum genişlik ayarlayarak taşmayı engelleriz */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Başlıklar */
+.footer-col h4 {
+    font-size: 1rem;
+    /* Başlık boyutunu küçülttük */
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* İkon ile başlık arasına boşluk */
+}
+
+/* Metinler */
+.footer-col p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* İkon ile metin arasına boşluk */
+}
+
+.contact-info p {
+    text-align: left;
+}
+
+/* Hızlı Menüler */
+.quick-links .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links .nav-links li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* İkon ile link arasına boşluk */
+}
+
+.quick-links .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.quick-links .nav-links li a:hover {
+    color: #ffa726;
+    /* Hover sırasında rengi değiştir */
+}
+
+/* Sosyal Medya İkonları */
+.follow-us .icons {
+    display: flex;
+    gap: 15px;
+}
+
+.follow-us .icons i {
+    font-size: 1.5rem;
+    color: #afb6c7;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Facebook hover rengi */
+.footer-col .icons .fa-facebook-f:hover {
+    color: #3b5998;
+    /* Facebook mavi rengi */
+}
+
+/* Twitter hover rengi */
+.footer-col .icons .fa-twitter:hover {
+    color: #1da1f2;
+    /* Twitter mavi rengi */
+}
+
+
+/* Instagram hover rengi */
+.footer-col .icons .fa-instagram:hover {
+    color: #e4405f;
+    /* Instagram pembe-kırmızı rengi */
+}
+
+/* WhatsApp hover rengi */
+.footer-col .icons .fa-whatsapp:hover {
+    color: #25d366;
+    /* WhatsApp yeşil rengi */
+}
+
+/* Footer Alt Kısım */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 3px;
+    background: #1b1b1b;
+    /* Daha koyu çizgi */
+    border: none;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    position: absolute;
+    left: 20px;
+    bottom: -35px;
+    /* Çizginin altına alır */
+}
+
+.footer-logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.footer-logo h1:hover {
+    color: #ffa726;
+    /* Hover sırasında rengi değiştir */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cert-images img {
+        width: 70px;
+    }
+
+    .footer-logo h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Daha büyük ekranlarda footer sütunlarının yan yana gelmesi */
+@media (min-width: 769px) {
+    .footer-container {
+        flex-direction: row; /* Sütunları yan yana diz */
+        justify-content: space-between; /* Aralarında boşluk bırak */
+        gap: 40px; /* Sütunlar arasında mesafe */
+    }
+
+    .footer-col {
+        flex: 1;
+        max-width: calc(33% - 40px); /* Her bir sütuna genişlik verip aralarında boşluk bırak */
+        margin-bottom: 0; /* Yan yana olduğunda alt boşluk kaldır */
+    }
 }

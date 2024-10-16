@@ -39,7 +39,7 @@ function showContent(type) {
             <div class="battery_item">
                 <img src="images/battery_tool.jpg" alt="Battery Replacement Tool">
                 <h3>Battery Replacement Tool</h3>
-                <a href="downloads/battery_tool.pdf" class="product-btn">Download Battery Tool</a>
+                <a href="downloads/battery_tool.pdf" class="product-btn">View</a>
             </div>
         `;
   }else if (type === 'catalogues') {
@@ -87,51 +87,51 @@ function showContent(type) {
   else if (type === 'certificates') {
     contentArea.innerHTML = `
             <div class="certificates_item">
-                <img src="certs/cert_9001.png" alt="Certificate 1">
-                <h3>Certificate 1</h3>
-                <a href="downloads/certificate_1.pdf" class="product-btn">Download Certificate 1</a>
+                <img src="certs/cert_9001.png" alt="TAB-9001">
+                <h3>ISO 9001</h3>
+                <a href="certs/TAB-9001-RECERT9-Certificate- ENG-22092021.pdf" target="_blank"  class="product-btn">view<alt="TAB 9001"></a>
             </div>
             <div class="certificates_item">
-                <img src="certs/bisnode.png" alt="Certificate 2">
-                <h3>Certificate 2</h3>
-                <a href="downloads/certificate_2.pdf" class="product-btn">Download Certificate 2</a>
+                <img src="certs/bisnode.png" alt="BONITETA">
+                <h3>BONITETA ODLIČNOSTI</h3>
+                
             </div>
             <div class="certificates_item">
-                <img src="certs/cert_14001.png" alt="Certificate 3">
-                <h3>Certificate 3</h3>
-                <a href="downloads/certificate_3.pdf" class="product-btn">Download Certificate 3</a>
+                <img src="certs/cert_14001.png" alt="TAB-14001">
+                <h3>ISO 14001</h3>
+                <a href="certs/TAB-14001-RECERT8-Certificate -ENG-22092021.pdf" target="_blank"  class="product-btn">view<alt="TAB-14001"></a>
             </div>
 
              <div class="certificates_item">
-                <img src="certs/SIRA2.png" alt="Certificate 4">
-                <h3>Certificate 1</h3>
-                <a href="downloads/certificate_1.pdf" class="product-btn">Download Certificate 1</a>
+                <img src="certs/SIRA2.png" alt="SIRA-CSA">
+                <h3>ATEX CELLS</h3>
+                 <a href="certs/ATEX_CELLS.pdf" target="_blank"  class="product-btn">view<alt="SIRA-CSA"></a>
             </div>
             <div class="certificates_item">
-                <img src="certs/SIQ-1.png" alt="Certificate 5">
-                <h3>Certificate 2</h3>
-                <a href="downloads/certificate_2.pdf" class="product-btn">Download Certificate 2</a>
+                <img src="certs/SIQ-1.png" alt="SIQ">
+                <h3>ATEX Production Quality Assurance Notification</h3>
+               <a href="certs/ATEX_Production_Quality_Assurance_Notification.pdf" target="_blank"  class="product-btn">view<alt="SIQ"></a>
             </div>
             <div class="certificates_item">
-                <img src="certs/iecex.png" alt="Certificate 6">
-                <h3>Certificate 3</h3>
-                <a href="downloads/certificate_3.pdf" class="product-btn">Download Certificate 3</a>
+                <img src="certs/iecex.png" alt="IECEx-BATTERIES">
+                <h3>IECEx BATTERIES</h3>
+                 <a href="certs/IECEx_BATTERIES.pdf" target="_blank"  class="product-btn">view<alt="IECEx BATTERIES"></a>
             </div>
  <div class="certificates_item">
-                <img src="certs/iecex.png" alt="Certificate 7">
-                <h3>Certificate 2</h3>
-                <a href="downloads/certificate_2.pdf" class="product-btn">Download Certificate 2</a>
+                <img src="certs/iecex.png" alt="IECEx-CELLS">
+                <h3>IECEx CELLS</h3>
+                 <a href="certs/IECEx_CELLS.pdf" target="_blank"  class="product-btn">view<alt="IECEx-CELLS"></a>
             </div>
              <div class="certificates_item">
-                <img src="certs/ineris_new.png" alt="Certificate 8">
-                <h3>Certificate 1</h3>
-                <a href="downloads/certificate_1.pdf" class="product-btn">Download Certificate 1</a>
+                <img src="certs/ineris_new.png" alt="ineris">
+                <h3>ATEX BATTERIES</h3>
+                <a href="certs/ATEX_BATTERIES.pdf" target="_blank"  class="product-btn">view<alt="ineris"></a>
             </div>
            
           <div class="certificates_item">
-                <img src="certs/smiatf.png" alt="Certificate 9">
-                <h3>Certificate 1</h3>
-                <a href="downloads/certificate_1.pdf" class="product-btn">Download Certificate 1</a>
+                <img src="certs/smiatf.png" alt="IATF_16949">
+                <h3>IATF 16949</h3>
+                <a href="certs/IATF_16949.pdf.pdf" target="_blank"  class="product-btn">view<alt="IATF_16949"></a>
             </div>
 
         `;
@@ -140,7 +140,7 @@ function showContent(type) {
             <div class="presentation_item">
                 <img src="images/presentation.jpg" alt="Presentation">
                 <h3>Presentation</h3>
-                <a href="downloads/presentation.pdf" class="product-btn">Download Presentation</a>
+                <a href="https://online.fliphtml5.com/vvbpc/uuyb/" class="product-btn">View</a>
             </div>
         `;
   }
