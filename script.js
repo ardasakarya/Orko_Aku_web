@@ -503,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       {
         id: 'storage_family',
-        imgSrc: 'Li_Ion_img/TAB_Family3.png',
+        imgSrc: 'Li_Ion_img/C2-4K-12.png',
         title: 'TAB e.storage FAMILY',
 
       },

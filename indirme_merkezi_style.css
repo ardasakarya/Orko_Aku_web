@@ -15,16 +15,17 @@ header {
     left: 0;
     right: 0;
     z-index: 10;
-    padding:  5px 20px 15px;
+    padding: 20px 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 6vw;
     background-color: transparent;
-    background-color: #134b6d;
+   border: 1px solid black;
+   background-color: #134b6d;
     transition: background-color 0.5s ease;
 }
+
 
 header.scrolled {
    
@@ -47,8 +48,7 @@ header .logo {
 }
 
 header .logo img {
-    margin-top: 1rem;
-    height: 70px;
+    height: 50px;
     /* Yazıdan biraz daha büyük yap */
     width: auto;
     /* Genişliği orantılı ayarla */

@@ -106,8 +106,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
 
         },
-     
-      
+
+
         tab_magic_tr: {
             imgSrc: 'starter_aku_img/tab_magic_truck.png',
             title: 'TAB MAGIC TRUCK',
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
             ]
         },
-      
+
         tab_bci: {
             type: 'traksiyoner_bci',
             imgSrc: 'traksiyoner_aku_img/TAB-BCI.png',
@@ -489,8 +489,46 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         traction_batteries: {
-            imgSrc: 'stasyoner_aku_img/ups.png',
-            title: 'UPS',
+            imgSrc: 'Li_Ion_img/emotive.png',
+            title: 'TRACTION BATTERIES',
+            description: "TAB e.motive aküler, gezegenimizin sürdürülebilir geleceği için tasarlanmıştır. Kazalar durumunda sıvı asit bulunmaz, daha küçük CO2 ayak izi ve daha düşük şarj kayıpları sayesinde daha iyi enerji verimliliği sağlar.",
+  extraInfo: "TAB e.motive aküler, merkezi bir şarj istasyonuna ihtiyaç duymadan daha fazla esneklik sağlar, yerel şarj istasyonlarıyla kullanılabilir (onboard şarj cihazıyla birlikte). Gaz çıkışı olmaması nedeniyle patlama tehlikesi ve koku oluşmaz. Hızlı ve fırsat şarjı sayesinde daha uzun çalışma süresi ve daha yüksek verimlilik sağlar. TAB Li-ion akü sistemi tamamen bakım gerektirmez. Şarj tesislerine güvenlik mesafesi gerektirmez – bu da alan düzenlemesi planlamasında yeni imkanlar açar.",
+
+        },
+        storage_clever: {
+            imgSrc: 'Li_Ion_img/C2-4K-12.png',
+            title: 'TAB e.storage CLEVER',
+            description: "TAB aküleri, kendi kendine tüketim, yedek güç kaynağı ve yenilenebilir enerji ile işbirliği içinde şebekeden bağımsız sistemler için optimize edilmiştir. Esnek ve modüler tasarımı sayesinde ihtiyaçlarınıza göre özelleştirilebilir ve temiz enerji sağlar.",
+  extraInfo: "TAB aküleri, elektrik faturasında tasarruf sağlar, düşük tarifelerde şarj olup yüksek tarifelerde deşarj edilebilir. Elektrik kesintisi sırasında yedek güç kaynağı olarak kullanılabilir ve fotovoltaik panellerden üretilen güneş enerjisini depolayarak gelecekte kullanım için saklar. 1'den 6 modüle kadar (30kWh kapasiteye kadar) modüler tasarım, güneş panelleriyle temiz enerji geri kazanımı, ihtiyaca göre özelleştirilebilen sistem, elektrik faturasında tasarruf, AB tasarımı, Tier 1 invertör markalarıyla uyumluluk sağlar. Deye, Victron Energy ve SMA Suny Island gibi şarj/invertör ekipmanları desteklenir; diğer markalar talep üzerine desteklenebilir.",
+
+        },
+        storage_family: {
+            imgSrc: 'Li_Ion_img/C2-4K-12.png',
+            title: 'TAB e.storage FAMILY',
+             description: "TAB aküleri, kendi kendine tüketim, yedek güç kaynağı ve yenilenebilir enerji ile işbirliği içinde şebekeden bağımsız sistemler için optimize edilmiştir. Esnek ve modüler tasarımıyla, kompakt ve sağlam bir çözüm sunar, ihtiyaçlarınıza göre özelleştirilebilir ve temiz enerji sağlar.",
+  extraInfo: "TAB aküleri, elektrik faturasında tasarruf sağlar, düşük tarifelerde şarj olup yüksek tarifelerde deşarj edilebilir. Elektrik kesintisi sırasında yedek güç kaynağı olarak kullanılabilir ve fotovoltaik panellerden üretilen güneş enerjisini depolayarak gelecekte kullanım için saklar. 1'den 8 modüle kadar (40kWh kapasiteye kadar) modüler tasarım, entegre sigortalar, güneş panelleriyle temiz enerji geri kazanımı, ihtiyaca göre özelleştirilebilen sistem, AB tasarımı ve Tier 1 invertör markalarıyla uyumluluk sağlar. Deye, Victron Energy ve SMA Suny Island gibi şarj/invertör ekipmanları desteklenir; diğer markalar talep üzerine desteklenebilir.",
+
+        },
+        module_l51: {
+            imgSrc: 'Li_Ion_img/modul_l51.png',
+            title: 'TAB e.module L5.1',
+            description: "TAB e.module L5.1, modüler tasarım konsepti ve kolay kurulumu ile konut depolama uygulamaları için ideal bir çözümdür.",
+  extraInfo: "TAB e.module L5.1, LFP (lityum demir fosfat) hücreleri sayesinde en yüksek güvenliği sağlar. BMS, hücreleri tüm açılardan korur (anormal sıcaklık, akım, voltaj, SoC, SoH vb.). Uzun döngü ömrü ve üstün performansı ile optimal elektrik maliyeti sunar. Modüler tasarım, en yüksek esnekliği sağlar, hızlı kurulum imkanı tanır ve son kullanıcıya kapasite seçme özgürlüğü sunar. Tier 1 invertör markalarıyla uyumludur.",
+
+        }, 
+        inverter_1p: {
+            imgSrc: 'Li_Ion_img/1P.png',
+            title: 'TAB HYBRID INVERTER 1P',
+            description: "TAB Tek Fazlı hibrit invertör, konut ve hafif ticari kullanımlar için uygundur, güneş enerjisinin kendi kendine tüketim oranını maksimize eder ve enerji bağımsızlığınızı artırır. Gün boyunca, PV sistemi elektrik üretir ve öncelikle yükler için enerji sağlar. Fazla enerji, inverter aracılığıyla aküyü şarj eder ve ihtiyaç duyulduğunda depolanan enerji serbest bırakılır.",
+  extraInfo: "TAB Tek Fazlı hibrit invertör, RS485/CAN portu ile akü iletişimini destekler. Ana özellikler: kendi kendine tüketim ve şebekeye enerji verme, AC geri geldiğinde otomatik yeniden başlatma, akü veya şebeke için programlanabilir öncelik, şebekede, şebeke dışında ve UPS modlarında çalışabilme, LCD ayarlarıyla akü şarj akımı/voltajını uygulamalara göre ayarlayabilme, AC/güneş enerjisi/jeneratör önceliğini ayarlayabilme, şebeke veya jeneratör gücüyle uyumluluk, aşırı yük/aşırı sıcaklık/kısa devre koruması, optimize edilmiş akü performansı için akıllı akü şarj tasarımı, aşırı gücün şebekeye akmasını önleme, WIFI izleme desteği ve iki MPP izleyici, optimize edilmiş akü performansı için üç aşamalı MPPT şarjı, zaman dilimi kullanımı işlevi ve akıllı yük fonksiyonu.",
+
+        },
+        inverter_3p: {
+            imgSrc: 'Li_Ion_img/3P.png',
+            title: 'TAB HYBRID INVERTER 3P',
+             description: "TAB Üç Fazlı Hibrit İnvertör, üç fazlı dengesiz çıkışı destekleyen yeni bir hibrit invertördür, bu da uygulama senaryolarını genişletir. Sistem, x2 CAN portu (BMS ve paralel bağlantı için), x1 RS485 portu (BMS için), x1 RS232 portu (uzaktan kontrol için) ve x1 DRM portu ile donatılmıştır, bu da sistemi akıllı ve esnek hale getirir.",
+  extraInfo: "Ana özellikler: 230/400V Üç Faz Saf sinüs dalga invertörü, kendi kendine tüketim ve şebekeye enerji verme, AC geri geldiğinde otomatik yeniden başlatma, akü veya şebeke için programlanabilir öncelik, şebekede, şebeke dışında ve UPS modlarında çalışabilme, LCD ayarlarıyla akü şarj akımı/voltajını uygulamalara göre ayarlayabilme, AC/güneş enerjisi/jeneratör önceliğini ayarlayabilme, şebeke veya jeneratör gücüyle uyumluluk, aşırı yük/aşırı sıcaklık/kısa devre koruması, optimize edilmiş akü performansı için akıllı akü şarj tasarımı, aşırı gücün şebekeye akmasını önleme, WIFI izleme desteği ve iki MPP izleyici için 1 dizi, 1 MPP izleyici için 1 dizi, optimize edilmiş akü performansı için üç aşamalı MPPT şarjı, zaman dilimi kullanımı işlevi ve akıllı yük fonksiyonu.",
+
         },
     };
 
