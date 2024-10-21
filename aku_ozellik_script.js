@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         ogi: {
             type: 'stasyoner_OGI',
-            imgSrc: 'stasyoner_aku_img/OGi.png',
+            imgSrc:'stasyoner_aku_img/OGi.png',
             title: 'OGI',
             description: "TAB OGi blok aküleri, yüksek güvenlik gereksinimleri olan endüstriyel güç kaynakları için tasarlanmış sağlam havalandırmalı kurşun-asit akülerdir. TAB OGi blok aküleri, hem uzun süreli deşarj (10 saat) hem de kısa süreli deşarj (birkaç dakika) için kullanılabilir.",
             extraInfo: "Uygulama alanları: Enerji santrallerindeki DC güç besleme sistemleri, UPS sistemleri, endüstriyel sistemler ve acil güç besleme sistemleri. Ayrıca motor çalıştırma ve PV güç sistemleri için de kullanılabilir.",
@@ -416,14 +416,14 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         opzs: {
             type: 'stasyoner',
-            imgSrc:'stasyoner_aku_img/OPZS.png',
+            imgSrc:'stasyoner_aku_img/OPzS.png',
             title: 'OPZS',
             description: "Sizi sonsuz enerji dünyasına davet ediyoruz ve konvansiyonel kurşun-asit teknolojisi ile üretilen OPzS sabit bloklar ve hücrelerle tanıştırıyoruz. OPzS tipi sabit aküler, telekomünikasyon tesisleri, bilgisayarlar, acil aydınlatma, alarm, kontrol ve izleme sistemleri gibi alanlarda kullanılır. Son derece düşük öz deşarj oranları sayesinde güneş hücreleri ile beslenen tesislerde de uygundur.",
             extraInfo: "Özellikler: Yüksek kapasiteli, uzun ömürlü, az bakım gerektiren, düşük öz deşaj, hızlı ve basit asit seviyesi kontrolü, ekonomik su tüketimi, uygun boyutlar ve ağırlık, en düşük ve sabit bakım akımı.",
             specs: []
         },
         opzv: {
-            type: 'stasyoner_OPZV',
+            type: 'stasyoner_OPzV',
             imgSrc:'stasyoner_aku_img/OPZV.png',
             title: 'OPZV',
             description: "TAB OPzV valf ayarlı kurşun asit aküleri, birçok farklı bekleme uygulaması için ideal enerji kaynağıdır. TAB OPzV serisi valf ayarlı kurşun asit sabit aküleri, çok düşük gaz emisyonları nedeniyle neredeyse bakım gerektirmeyen recombinasyon teknolojisinin avantajlarını, uzun ömür ve mükemmel döngüleme yeteneği ile pozitif borulu plakaların avantajları ile birleştirir.",
@@ -446,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         topzs: {
             type:'stasyoner_TOPZS',
-            imgSrc:'stasyoner_aku_img/TOPZS.png',
+            imgSrc:'stasyoner_aku_img/TOPzS.png',
             title: 'TOPZS',
             description: "TOPzS tipi sabit aküler, güneş sistemleri için özel olarak tasarlanmıştır. Son derece düşük öz deşarj oranları ve borulu pozitif plakaları sayesinde off-grid güneş sistemleri için uygundur.",
             extraInfo: "Özellikler: Yüksek kapasiteli, uzun ömürlü, az bakım gerektiren, düşük öz deşarj, hızlı ve basit asit seviyesi kontrolü, ekonomik su tüketimi, uygun boyutlar ve ağırlık, en düşük ve sabit bakım akımı.",
