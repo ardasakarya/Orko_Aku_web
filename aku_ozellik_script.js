@@ -489,6 +489,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         traction_batteries: {
+            type:'emotive',
             imgSrc: 'Li_Ion_img/emotive.png',
             title: 'TRACTION BATTERIES',
             description: "TAB e.motive aküler, gezegenimizin sürdürülebilir geleceği için tasarlanmıştır. Kazalar durumunda sıvı asit bulunmaz, daha küçük CO2 ayak izi ve daha düşük şarj kayıpları sayesinde daha iyi enerji verimliliği sağlar.",
@@ -496,6 +497,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         },
         storage_clever: {
+            type:'estorage_clever',
             imgSrc: 'Li_Ion_img/C2-4K-12.png',
             title: 'TAB e.storage CLEVER',
             description: "TAB aküleri, kendi kendine tüketim, yedek güç kaynağı ve yenilenebilir enerji ile işbirliği içinde şebekeden bağımsız sistemler için optimize edilmiştir. Esnek ve modüler tasarımı sayesinde ihtiyaçlarınıza göre özelleştirilebilir ve temiz enerji sağlar.",
@@ -503,6 +505,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         },
         storage_family: {
+            type:'estorage_family',
             imgSrc: 'Li_Ion_img/C2-4K-12.png',
             title: 'TAB e.storage FAMILY',
              description: "TAB aküleri, kendi kendine tüketim, yedek güç kaynağı ve yenilenebilir enerji ile işbirliği içinde şebekeden bağımsız sistemler için optimize edilmiştir. Esnek ve modüler tasarımıyla, kompakt ve sağlam bir çözüm sunar, ihtiyaçlarınıza göre özelleştirilebilir ve temiz enerji sağlar.",
@@ -510,6 +513,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         },
         module_l51: {
+            type:'emodule',
             imgSrc: 'Li_Ion_img/modul_l51.png',
             title: 'TAB e.module L5.1',
             description: "TAB e.module L5.1, modüler tasarım konsepti ve kolay kurulumu ile konut depolama uygulamaları için ideal bir çözümdür.",
@@ -517,6 +521,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }, 
         inverter_1p: {
+            type:'inventer_1p',
             imgSrc: 'Li_Ion_img/1P.png',
             title: 'TAB HYBRID INVERTER 1P',
             description: "TAB Tek Fazlı hibrit invertör, konut ve hafif ticari kullanımlar için uygundur, güneş enerjisinin kendi kendine tüketim oranını maksimize eder ve enerji bağımsızlığınızı artırır. Gün boyunca, PV sistemi elektrik üretir ve öncelikle yükler için enerji sağlar. Fazla enerji, inverter aracılığıyla aküyü şarj eder ve ihtiyaç duyulduğunda depolanan enerji serbest bırakılır.",
@@ -524,6 +529,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         },
         inverter_3p: {
+            type:'inventer_3p',
             imgSrc: 'Li_Ion_img/3P.png',
             title: 'TAB HYBRID INVERTER 3P',
              description: "TAB Üç Fazlı Hibrit İnvertör, üç fazlı dengesiz çıkışı destekleyen yeni bir hibrit invertördür, bu da uygulama senaryolarını genişletir. Sistem, x2 CAN portu (BMS ve paralel bağlantı için), x1 RS485 portu (BMS için), x1 RS232 portu (uzaktan kontrol için) ve x1 DRM portu ile donatılmıştır, bu da sistemi akıllı ve esnek hale getirir.",
@@ -596,10 +602,29 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'stasyoner_OPZV':
                 tableId = 'stasyoner_table_OPZV';
                 break;
+                case 'emotive':
+                tableId = 'emotive_table';
+                break;
+                case 'estorage_clever':
+                    tableId = 'estorage_clever_table';
+                    break;
+                    case 'estorage_family':
+                        tableId = 'estorage_family_table';
+                        break;
+                        case 'emodule':
+                            tableId = 'emodule_table';
+                            break;
+                            case 'inventer_1p':
+                                tableId = 'inventer_1p_table';
+                                break;
+                                case 'inventer_3p':
+                                    tableId = 'inventer_3p_table';
+                                    break;
+                              
             default:
                 tableId = 'akuTable'; // Default tablo, starter olabilir ya da genel tablo
         }
-
+       
         // Seçilen tabloyu göster, diğerlerini gizle
         document.querySelectorAll('table').forEach(table => {
             table.style.display = 'none'; // Tüm tabloları gizle
