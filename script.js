@@ -666,33 +666,3 @@ indirmeButton.addEventListener('click', function (event) {
 }
 
 
-// server.js
-require('dotenv').config();
-const express = require('express');
-const axios = require('axios');
-const app = express();
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.post('/submit-form', async (req, res) => {
-    const { name, email, message } = req.body;
-    
-    try {
-        // Web3Forms API'ye istek gönderme
-        const response = await axios.post('https://api.web3forms.com/submit', {
-            access_key: process.env.API_KEY,  // .env dosyasındaki API anahtarı
-            name,
-            email,
-            message
-        });
-
-        res.status(200).send(response.data);
-    } catch (error) {
-        res.status(500).send({ error: 'Form submission failed' });
-    }
-});
-
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
-});
