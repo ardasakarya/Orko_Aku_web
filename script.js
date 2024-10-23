@@ -3,9 +3,27 @@ indirmeBtnHtml()
 */
 
 
-document.querySelector('.hamburger').addEventListener('click', function() {
-  this.classList.toggle('active');
-  document.querySelector('nav ul').classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav ul');
+  const menuLinks = document.querySelectorAll('nav ul li a'); // Menüdeki linkleri seç
+
+  // Hamburger menüsüne tıklandığında menü açılıp kapanacak
+  hamburger.addEventListener('click', function () {
+    this.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Menüdeki herhangi bir butona/bağlantıya tıklandığında menü kapanacak
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      // Eğer menü aktifse onu kapat
+      if (navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active'); // Menüyü kapat
+        hamburger.classList.remove('active'); // Hamburger ikonunu da kapat
+      }
+    });
+  });
 });
 
 
@@ -687,5 +705,22 @@ indirmeButton.addEventListener('click', function (event) {
   window.location.href = '/Orko_Aku_web/';
 });
 }
+
+
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
+const menuLinks = document.querySelectorAll('nav ul li a'); // Menüdeki linkleri seç
+
+// Hamburger menüsüne tıklayınca açılıp kapanma işlemi
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Menüdeki herhangi bir bağlantıya tıklandığında menüyü kapatma işlemi
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active'); // Menü kapatılır
+  });
+});
 
 
