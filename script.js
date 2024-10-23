@@ -324,15 +324,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const contentData = {
     starter: [
       {
-        id: 'tab_magic',
-        imgSrc: 'starter_aku_img/tab_magic.png',
-        title: 'TAB MAGIC',
+        id: 'tab_polar',
+        imgSrc: 'starter_aku_img/tab_polar.png',
+        title: 'TAB POLAR',
 
       },
       {
-        id: 'tab_agm',
-        imgSrc: 'starter_aku_img/tab_agm_stop&go.png',
-        title: 'TAB AGM STOP&GO',
+        id: 'tab_magic',
+        imgSrc: 'starter_aku_img/tab_magic.png',
+        title: 'TAB MAGIC',
 
       },
       {
@@ -342,28 +342,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
       },
       {
-        id: 'tab_efb_tr',
-        imgSrc: 'starter_aku_img/tab_efb_stop&go2.png',
-        title: 'TAB EFB STOP&GO TRUCK',
+        id: 'tab_agm',
+        imgSrc: 'starter_aku_img/tab_agm_stop&go.png',
+        title: 'TAB AGM STOP&GO',
 
       },
-    
-      {
-        id: 'tab_magic_tr',
-        imgSrc: 'starter_aku_img/tab_magic_truck.png',
-        title: 'TAB MAGIC TRUCK',
-
-      },
-      {
+     {
         id: 'tab_oem',
         imgSrc: 'starter_aku_img/tab_oem.png',
         title: 'TAB OEM',
 
       },
       {
-        id: 'tab_polar',
-        imgSrc: 'starter_aku_img/tab_polar.png',
-        title: 'TAB POLAR',
+        id: 'tab_magic_tr',
+        imgSrc: 'starter_aku_img/tab_magic_truck.png',
+        title: 'TAB MAGIC TRUCK',
 
       },
       {
@@ -372,13 +365,20 @@ document.addEventListener('DOMContentLoaded', function () {
         title: 'TAB POLAR TRUCK',
 
       },
+      {
+        id: 'tab_efb_tr',
+        imgSrc: 'starter_aku_img/tab_efb_stop&go2.png',
+        title: 'TAB EFB STOP&GO TRUCK',
+
+      },
+    
      
     ],
     traction: [
       {
-        id: 'tab_bci',
-        imgSrc: 'traksiyoner_aku_img/TAB-BCI.png',
-        title: 'TAB BCI',
+        id: 'tab_din',
+        imgSrc: 'traksiyoner_aku_img/TAB-DIN.png',
+        title: 'TAB DIN',
 
       },
       {
@@ -388,27 +388,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       },
       {
-        id: 'tab_din',
-        imgSrc: 'traksiyoner_aku_img/TAB-DIN.png',
-        title: 'TAB DIN',
-
-      },
-      {
-        id: 'tab_ex',
-        imgSrc: 'traksiyoner_aku_img/TAB-EX.png',
-        title: 'TABEX',
-
-      },
-      {
-        id: 'tab_psq',
-        imgSrc: 'traksiyoner_aku_img/TAB-PSQ.png',
-        title: 'TAB PSQ',
-
-      },
-      {
-        id: 'tab_pzrm',
-        imgSrc: 'traksiyoner_aku_img/TAB-PzRM1.png',
-        title: 'TAB PZRM',
+        id: 'tab_bci',
+        imgSrc: 'traksiyoner_aku_img/TAB-BCI.png',
+        title: 'TAB BCI',
 
       },
       {
@@ -422,19 +404,39 @@ document.addEventListener('DOMContentLoaded', function () {
         imgSrc: 'traksiyoner_aku_img/TAB-PzVB.png',
         title: 'TAB PZVB',
 
+      },
+     
+      {
+        id: 'tab_psq',
+        imgSrc: 'traksiyoner_aku_img/TAB-PSQ.png',
+        title: 'TAB PSQ',
+
+      },
+      {
+        id: 'tab_pzvb',
+        imgSrc: 'traksiyoner_aku_img/TAB-PzVB.png',
+        title: 'TAB PZVB',
+
+      },
+      {
+        id: 'tab_pzrm',
+        imgSrc: 'traksiyoner_aku_img/TAB-PzRM1.png',
+        title: 'TAB PZRM',
+
+      },
+      
+      {
+        id: 'tab_ex',
+        imgSrc: 'traksiyoner_aku_img/TAB-EX.png',
+        title: 'TABEX',
+
       }
     ],
     monoblock: [
       {
-        id: 'motion_agm',
-        imgSrc: 'monoblock_aku_img/MotionAGM.png',
-        title: 'MOTION AGM',
-
-      },
-      {
-        id: 'motion_gel',
-        imgSrc: 'monoblock_aku_img/MotionGEL.png',
-        title: 'MOTION GEL',
+        id: 'motion_bci',
+        imgSrc: 'monoblock_aku_img/TAB_motion_BCI.png',
+        title: 'MOTION BCI',
 
       },
       {
@@ -450,19 +452,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
       },
       {
-        id: 'motion_bci',
-        imgSrc: 'monoblock_aku_img/TAB_motion_BCI.png',
-        title: 'MOTION BCI',
-
-      }
-    ],
-    stationary: [
-      {
-        id: 'ogi',
-        imgSrc: 'stasyoner_aku_img/OGi.png',
-        title: 'OGI',
+        id: 'motion_agm',
+        imgSrc: 'monoblock_aku_img/MotionAGM.png',
+        title: 'MOTION AGM',
 
       },
+      {
+        id: 'motion_gel',
+        imgSrc: 'monoblock_aku_img/MotionGEL.png',
+        title: 'MOTION GEL',
+
+      }
+   
+    ],
+    stationary: [
       {
         id: 'opzs',
         imgSrc: 'stasyoner_aku_img/OPzS.png',
@@ -470,9 +473,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
       },
       {
-        id: 'opzv',
-        imgSrc: 'stasyoner_aku_img/OPzV.png',
-        title: 'OPZV',
+        id: 'ogi',
+        imgSrc: 'stasyoner_aku_img/OGi.png',
+        title: 'OGI',
+
+      },
+      {
+        id: 'ups',
+        imgSrc: 'stasyoner_aku_img/UPS.png',
+        title: 'UPS',
 
       },
       {
@@ -481,12 +490,14 @@ document.addEventListener('DOMContentLoaded', function () {
         title: 'TOPZS',
 
       },
+    
       {
-        id: 'ups',
-        imgSrc: 'stasyoner_aku_img/UPS.png',
-        title: 'UPS',
+        id: 'opzv',
+        imgSrc: 'stasyoner_aku_img/OPzV.png',
+        title: 'OPZV',
 
-      }
+      },
+     
     ],
  
     li_ion:
