@@ -61,11 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let isDragging = false;
   let startX;
   let scrollLeft;
-  let cardsLoaded = 0;
 
-  // Dokunmatik için sürükleme hızı artırıldı
-  const touchDragSpeed = 2; // Dokunmatik sürükleme hızı
-  const mouseDragSpeed = 1;  // Fare sürükleme hızı
+  const touchDragSpeed = 2.5; // Dokunmatik sürükleme hızı
+  const mouseDragSpeed = 1;   // Fare sürükleme hızı
 
   // Kartları dinamik olarak ekleme (dummy fonksiyon olarak bıraktım)
   function addCards(count) {
@@ -133,6 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
     isDragging = true;
     startX = e.pageX || e.touches[0].pageX;
     scrollLeft = scrollWrapper.scrollLeft;
+
+    // Animasyonları iptal et (momentum gibi etkiler yok)
   }
 
   function stopDragging() {
@@ -146,13 +146,15 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     const x = e.pageX || e.touches[0].pageX;
     const isTouch = e.type.includes('touch');
-    const walk = (x - startX) * (isTouch ? touchDragSpeed : mouseDragSpeed); // Dokunmatik için hız artırıldı
+    const walk = (x - startX) * (isTouch ? touchDragSpeed : mouseDragSpeed);
+
     scrollWrapper.scrollLeft = scrollLeft - walk;
     manageCards();
   }
 
+  // Optimize edilmiş olay dinleyicileri
   scrollWrapper.addEventListener("mousedown", startDragging);
-  scrollWrapper.addEventListener("touchstart", startDragging);
+  scrollWrapper.addEventListener("touchstart", startDragging, { passive: true });
   scrollWrapper.addEventListener("mouseleave", stopDragging);
   scrollWrapper.addEventListener("mouseup", stopDragging);
   scrollWrapper.addEventListener("touchend", stopDragging);
