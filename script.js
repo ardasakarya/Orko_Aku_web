@@ -35,7 +35,6 @@ window.onbeforeunload = function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollWrapper = document.querySelector(".scroll-wrapper");
-  const originalWrappers = Array.from(document.querySelectorAll(".wrapper"));
   const cardWidth = 250; // Kart genişliği
   const initialCards = 30; // Başlangıçta yüklenecek kart sayısı
   const loadMoreThreshold = 26; // Daha fazla kart yükleme eşiği
@@ -48,8 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let autoScrollInterval;
   let cardsLoaded = 0;
 
-  // Kartları dinamik olarak ekleme
-
+  // Kartları dinamik olarak ekleme (dummy fonksiyon olarak bıraktım)
+  function addCards(count) {
+    // Kart ekleme işlemi
+  }
 
   // Başlangıçta yeterli kartları ekle
   addCards(initialCards);
@@ -113,8 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(animateScroll);
   }
 
-
-
   function scrollToNextCard() {
     const currentScrollLeft = scrollWrapper.scrollLeft;
     const maxScrollLeft = scrollWrapper.scrollWidth - scrollWrapper.clientWidth;
@@ -134,39 +133,41 @@ document.addEventListener("DOMContentLoaded", function () {
     autoScrollInterval = setInterval(scrollToNextCard, autoScrollIntervalTime);
   }
 
+  // Otomatik kaydırmayı başlat
   initiateAutoScroll();
 
-
-  // Sürükleme ve fare olaylarını yönetme
-  scrollWrapper.addEventListener("mousedown", (e) => {
+  // Sürükleme ve dokunma olaylarını yönetme
+  function startDragging(e) {
     clearInterval(autoScrollInterval); // Otomatik kaydırmayı durdur
     isDragging = true;
-    startX = e.pageX - scrollWrapper.offsetLeft;
+    startX = e.pageX || e.touches[0].pageX;
     scrollLeft = scrollWrapper.scrollLeft;
-  });
+  }
 
-  scrollWrapper.addEventListener("mouseleave", () => {
+  function stopDragging() {
     if (isDragging) {
       isDragging = false;
       initiateAutoScroll(); // Otomatik kaydırmayı tekrar başlat
     }
-  });
+  }
 
-  scrollWrapper.addEventListener("mouseup", () => {
-    if (isDragging) {
-      isDragging = false;
-      initiateAutoScroll(); // Otomatik kaydırmayı tekrar başlat
-    }
-  });
-
-  scrollWrapper.addEventListener("mousemove", (e) => {
+  function dragging(e) {
     if (!isDragging) return;
     e.preventDefault();
-    const x = e.pageX - scrollWrapper.offsetLeft;
+    const x = e.pageX || e.touches[0].pageX;
     const walk = (x - startX) * 1; // Sürükleme hızı (1 ile çarpma)
     scrollWrapper.scrollLeft = scrollLeft - walk;
     manageCards(); // Sürükleme sırasında döngüyü kontrol et
-  });
+  }
+
+  // Fare ve dokunma olaylarını ekle
+  scrollWrapper.addEventListener("mousedown", startDragging);
+  scrollWrapper.addEventListener("touchstart", startDragging);
+  scrollWrapper.addEventListener("mouseleave", stopDragging);
+  scrollWrapper.addEventListener("mouseup", stopDragging);
+  scrollWrapper.addEventListener("touchend", stopDragging);
+  scrollWrapper.addEventListener("mousemove", dragging);
+  scrollWrapper.addEventListener("touchmove", dragging);
 
   // Ekranın ilk yüklemesi veya pencere boyutu değiştiğinde
   scrollWrapper.addEventListener("scroll", () => {
