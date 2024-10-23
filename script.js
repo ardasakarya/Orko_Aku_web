@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let scrollLeft;
   let cardsLoaded = 0;
 
-  // Touch için sürükleme hızı daha düşük ayarlanıyor
-  const touchDragSpeed = 0.5;
-  const mouseDragSpeed = 1;
+  // Dokunmatik için sürükleme hızı artırıldı
+  const touchDragSpeed = 2; // Dokunmatik sürükleme hızı
+  const mouseDragSpeed = 1;  // Fare sürükleme hızı
 
   // Kartları dinamik olarak ekleme (dummy fonksiyon olarak bıraktım)
   function addCards(count) {
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     const x = e.pageX || e.touches[0].pageX;
     const isTouch = e.type.includes('touch');
-    const walk = (x - startX) * (isTouch ? touchDragSpeed : mouseDragSpeed);
+    const walk = (x - startX) * (isTouch ? touchDragSpeed : mouseDragSpeed); // Dokunmatik için hız artırıldı
     scrollWrapper.scrollLeft = scrollLeft - walk;
     manageCards();
   }
