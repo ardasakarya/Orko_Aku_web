@@ -665,4 +665,15 @@ indirmeButton.addEventListener('click', function (event) {
 });
 }
 
+function anasayfaBtnHtml()
+{
+const indirmeButton = document.getElementById('anasayfaBtn');
+
+// Butona click event listener ekle
+indirmeButton.addEventListener('click', function (event) {
+
+  window.location.href = '/Orko_Aku_web/index.html';
+});
+}
+
 
