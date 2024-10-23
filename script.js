@@ -50,7 +50,7 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0); // Sayfa kapanmadan önce kaydırmayı en üste çeker
 };
 
-
+ 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollWrapper = document.querySelector(".scroll-wrapper");
   const cardWidth = 250; // Kart genişliği
