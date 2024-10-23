@@ -57,37 +57,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const initialCards = 30; // Başlangıçta yüklenecek kart sayısı
   const loadMoreThreshold = 26; // Daha fazla kart yükleme eşiği
   const loadMoreCount = 30; // Daha fazla kart yükleme miktarı
-  const autoScrollIntervalTime = 5000; // 10 saniye
   const scrollDuration = 500; // Kaydırma süresi (500 ms)
   let isDragging = false;
   let startX;
   let scrollLeft;
-  let autoScrollInterval;
   let cardsLoaded = 0;
+
+  // Touch için sürükleme hızı daha düşük ayarlanıyor
+  const touchDragSpeed = 0.5;
+  const mouseDragSpeed = 1;
 
   // Kartları dinamik olarak ekleme (dummy fonksiyon olarak bıraktım)
   function addCards(count) {
     // Kart ekleme işlemi
   }
 
-  // Başlangıçta yeterli kartları ekle
   addCards(initialCards);
 
-  // Performans için kartları yönetme
   function manageCards() {
     const scrollPosition = scrollWrapper.scrollLeft;
     const maxScrollLeft = scrollWrapper.scrollWidth - scrollWrapper.clientWidth;
 
-    // Yeni kartları ekle
     if (scrollPosition + scrollWrapper.clientWidth >= maxScrollLeft - cardWidth * loadMoreThreshold) {
       addCards(loadMoreCount);
     }
 
-    // Aktif kartı belirle ve stilini güncelle
     updateActiveCard();
   }
 
-  // Aktif kartı güncelleme
   function updateActiveCard() {
     const cards = document.querySelectorAll(".wrapper");
     const viewportLeft = scrollWrapper.scrollLeft;
@@ -106,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Yumuşak geçişle kaydırma yapma
   function smoothScrollTo(targetLeft) {
     const startLeft = scrollWrapper.scrollLeft;
     const startTime = performance.now();
@@ -132,31 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(animateScroll);
   }
 
-  function scrollToNextCard() {
-    const currentScrollLeft = scrollWrapper.scrollLeft;
-    const maxScrollLeft = scrollWrapper.scrollWidth - scrollWrapper.clientWidth;
-
-    // Eğer scroll pozisyonu son kartın görünümde olduğuna yakınsa kaydırmayı durdur
-    if (currentScrollLeft >= maxScrollLeft) {
-      clearInterval(autoScrollInterval); // Otomatik kaydırmayı durdur
-      return;
-    }
-
-    const nextScrollLeft = currentScrollLeft + cardWidth;
-    smoothScrollTo(nextScrollLeft);
-  }
-
-  // Otomatik kaydırmayı başlat
-  function initiateAutoScroll() {
-    autoScrollInterval = setInterval(scrollToNextCard, autoScrollIntervalTime);
-  }
-
-  // Otomatik kaydırmayı başlat
-  initiateAutoScroll();
-
   // Sürükleme ve dokunma olaylarını yönetme
   function startDragging(e) {
-    clearInterval(autoScrollInterval); // Otomatik kaydırmayı durdur
     isDragging = true;
     startX = e.pageX || e.touches[0].pageX;
     scrollLeft = scrollWrapper.scrollLeft;
@@ -165,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function stopDragging() {
     if (isDragging) {
       isDragging = false;
-      initiateAutoScroll(); // Otomatik kaydırmayı tekrar başlat
     }
   }
 
@@ -173,12 +145,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX || e.touches[0].pageX;
-    const walk = (x - startX) * 1; // Sürükleme hızı (1 ile çarpma)
+    const isTouch = e.type.includes('touch');
+    const walk = (x - startX) * (isTouch ? touchDragSpeed : mouseDragSpeed);
     scrollWrapper.scrollLeft = scrollLeft - walk;
-    manageCards(); // Sürükleme sırasında döngüyü kontrol et
+    manageCards();
   }
 
-  // Fare ve dokunma olaylarını ekle
   scrollWrapper.addEventListener("mousedown", startDragging);
   scrollWrapper.addEventListener("touchstart", startDragging);
   scrollWrapper.addEventListener("mouseleave", stopDragging);
@@ -187,11 +159,11 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollWrapper.addEventListener("mousemove", dragging);
   scrollWrapper.addEventListener("touchmove", dragging);
 
-  // Ekranın ilk yüklemesi veya pencere boyutu değiştiğinde
   scrollWrapper.addEventListener("scroll", () => {
-    requestAnimationFrame(manageCards); // Performans için scroll olayını optimize et
+    requestAnimationFrame(manageCards);
   });
 });
+
 
 document.addEventListener('scroll', function () {
   const contactContainer = document.querySelector('.contact-container');
