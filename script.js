@@ -54,20 +54,22 @@ window.onbeforeunload = function () {
 document.addEventListener("DOMContentLoaded", function () {
   const scrollWrapper = document.querySelector(".scroll-wrapper");
   const cardWidth = 250; // Kart genişliği
-  const initialCards = 30; // Başlangıçta yüklenecek kart sayısı
-  const loadMoreThreshold = 26; // Daha fazla kart yükleme eşiği
-  const loadMoreCount = 30; // Daha fazla kart yükleme miktarı
   const scrollDuration = 500; // Kaydırma süresi (500 ms)
   let isDragging = false;
   let startX;
   let scrollLeft;
 
-  const touchDragSpeed = 2.5; // Dokunmatik sürükleme hızı
+  const touchDragSpeed = 3.5; // Dokunmatik sürükleme hızı artırıldı
   const mouseDragSpeed = 1;   // Fare sürükleme hızı
 
   // Kartları dinamik olarak ekleme (dummy fonksiyon olarak bıraktım)
   function addCards(count) {
-    // Kart ekleme işlemi
+    for (let i = 0; i < count; i++) {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.textContent = `Card ${i + 1}`;
+      scrollWrapper.appendChild(card);
+    }
   }
 
   addCards(initialCards);
@@ -84,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateActiveCard() {
-    const cards = document.querySelectorAll(".wrapper");
+    const cards = document.querySelectorAll(".card");
     const viewportLeft = scrollWrapper.scrollLeft;
     const viewportRight = viewportLeft + scrollWrapper.clientWidth;
 
@@ -129,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sürükleme ve dokunma olaylarını yönetme
   function startDragging(e) {
     isDragging = true;
+    scrollWrapper.classList.add("is-dragging");
     startX = e.pageX || e.touches[0].pageX;
     scrollLeft = scrollWrapper.scrollLeft;
 
@@ -138,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function stopDragging() {
     if (isDragging) {
       isDragging = false;
+      scrollWrapper.classList.remove("is-dragging");
     }
   }
 
@@ -154,18 +158,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Optimize edilmiş olay dinleyicileri
   scrollWrapper.addEventListener("mousedown", startDragging);
-  scrollWrapper.addEventListener("touchstart", startDragging, { passive: true });
+  scrollWrapper.addEventListener("touchstart", startDragging, { passive: false });
   scrollWrapper.addEventListener("mouseleave", stopDragging);
   scrollWrapper.addEventListener("mouseup", stopDragging);
   scrollWrapper.addEventListener("touchend", stopDragging);
   scrollWrapper.addEventListener("mousemove", dragging);
-  scrollWrapper.addEventListener("touchmove", dragging);
+  scrollWrapper.addEventListener("touchmove", dragging, { passive: false });
 
   scrollWrapper.addEventListener("scroll", () => {
     requestAnimationFrame(manageCards);
   });
 });
-
 
 document.addEventListener('scroll', function () {
   const contactContainer = document.querySelector('.contact-container');

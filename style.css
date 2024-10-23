@@ -1363,10 +1363,26 @@ nav ul li a:hover {
 
 .scroll-wrapper {
     display: flex;
-    overflow-x: hidden;
-    /* Scroll barı gizle */
+    overflow-x: scroll;
     scroll-behavior: smooth;
-}
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    pointer-events: none; /* Varsayılan olarak kaydırmayı kapat */
+  }
+
+  .card {
+    width: 250px;
+    height: 150px;
+    background-color: #eee;
+    margin-right: 10px;
+    pointer-events: auto; /* Kartların üzerinde kaydırma izin ver */
+  }
+
+
+
+  .scroll-wrapper.is-dragging {
+    scroll-behavior: auto; /* Sürükleme sırasında yumuşak kaydırmayı kapat */
+  }
 
 .swiper-button-prev,
 .swiper-button-next {
