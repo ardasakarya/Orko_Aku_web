@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'Weight (kg)', value: ['12.3', '12.8', '13.9', '15.0', '16.5', '17.5', '18.9', '22.5', '24.7'] },
                 { feature: 'PCS/pallet (EUR/CNT)', value: ['72/120', '72/100', '63/108', '63/90', '51/80', '51/80', '42/72', '36/60', '36/60'] },
                 { feature: 'Remarks*', value: ['SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H, HD'] },
-                { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
+              
             ]
         },
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'Weight (kg)', value: ['17.9', '20.5', '23.2', '26.0', '29.2'] },
                 { feature: 'PCS/pallet (EUR/CNT)', value: ['63/90', '51/80', '42/60', '36/60', '36/60'] },
                 { feature: 'Remarks*', value: ['AGM, H', 'AGM, H', 'AGM, H', 'AGM, H', 'AGM, H'] },
-                { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
+               
             ]
 
         },
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'Weight (kg)', value: ['17.1', '17.1', '16.6', '16.7', '19.2', '19.6', '19.6', '18.2', '21.9', '24.6', '23.3', '23.3'] },
                 { feature: 'PCS/pallet (EUR/CNT)', value: ['60/90', '60/90', '63/90', '51/80', '51/80', '48/80', '48/80', '42/72', '42/60', '36/60', '42/70', '42/70'] },
                 { feature: 'Remarks*', value: ['SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H', 'SMF, ME, H'] },
-                { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
+                
             ]
 
         },
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'Weight (kg)', value: ['45.3', '58.6'] },
                 { feature: 'PCS/pallet (EUR/CNT)', value: ['21/28', '18/24'] },
                 { feature: 'Remarks*', value: ['SMF, ME, H, HD, EMS', 'SMF, ME, H, HD, EMS'] },
-                { feature: 'TDS', value: ['TDS', 'TDS'] }
+            
             ]
 
         },
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'Weight (kg)', value: ['33.3', '35.6', '36.9', '39.6', '43.1', '52.7', '56.1'] },
                 { feature: 'PCS/pallet (EUR/CNT)', value: ['24/40', '24/35', '24/40', '21/35', '21/28', '18/24', '18/24'] },
                 { feature: 'Remarks*', value: ['SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H, HD, EMS', 'SMF, ME, H, HD, EMS', 'SMF, ME, H, HD, EMS', 'SMF, ME, H, HD, EMS'] },
-                { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
+               
             ]
         },
         tab_oem: {
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'Weight (kg)', value: ['15.0', '17.6', '17.6', '21.0', '23.4'] },
                 { feature: 'PCS/pallet (EUR/CNT)', value: ['72/100', '51/80', '51/80', '42/60', '36/60'] },
                 { feature: 'Remarks*', value: ['SMF, ME, H, VW', 'KH, HD, AGCO', 'KH, HD, THERMO KING', 'KH, HD, THERMO KING', 'KH, HD, AGCO'] },
-                { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
+              
             ]
         },
         tab_polar: {
@@ -170,10 +170,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'EN (A)', value: ['250', '250', '350', '350', '400', '360', '360', '420', '400', '450', '450', '500', '500', '600', '600', '600', '630', '600', '680', '680', '800', '800', '800', '850', '270', '270', '270', '360', '360', '360', '360', '490', '490', '600', '600', '650', '600', '700', '700', '740', '740', '850', '850', '800', '900', '1000'] },
                 { feature: 'LxWxH (mm)', value: ['196x127x159/185', '196x127x159/185', '196x127x159/185', '196x127x159/185', '175x175x190', '207x175x175', '207x175x175', '207x175x175', '207x175x190', '207x175x190', '242x175x175', '242x175x175', '242x175x190', '242x175x190', '242x175x190', '278x175x175', '278x175x175', '278x175x190', '278x175x190', '278x175x190', '315x175x190', '353x175x175', '353x175x190', '353x175x190', '196x128x202/223', '196x128x202/223', '196x134x202/223', '196x134x202/223', '196x134x202/223', '236x128x202/223', '236x128x202/223', '236x128x202/223', '236x128x202/223', '230x173x200/220', '230x173x200/220', '230x173x200/220', '230x173x200/220', '259x175x200/221', '259x175x200/221', '259x175x200/221', '259x175x200/221', '306x173x220/221', '306x173x200/221', '330x173x218/239', '330x173x218/239', '330x173x218/237'] },
                 { feature: 'BHD', value: ['B0', 'B0', 'B0', 'B0', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B13', 'B0', 'B0', 'B01', 'B01', 'B01', 'B0', 'B0', 'B0', 'B0', 'B01', 'B01', 'B01', 'B01', 'B1', 'B1', 'B1', 'B1', 'B01', 'B01', 'B1', 'B1', 'B1'] },
-                { feature: 'Layout', value: ['0', '1', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '0', '0', '0', '0'] },
-                { feature: 'Weight (kg)', value: ['7.2', '7.2', '8.0', '8.0', '10.5', '10.7', '10.7', '11.2', '11.7', '12.2', '12.7', '13.3', '13.9', '14.4', '14.4', '15.5', '15.9', '16.1', '17.2', '17.2', '20.0', '20.5', '21.0', '22.4', '9.4', '9.4', '9.4', '10.6', '10.6', '11.9', '11.9', '13.5', '13.5', '14.9', '14.9', '15.5', '15.5', '17.3', '17.3', '17.8', '17.8', '20.9', '20.9', '23.4', '24.3', '26.2'] },
-                // buraya bak {feature: 'Remarks*', value: ['SMF, H', 'SMF, H', 'SMF, H, HD', 'H', 'H, HD', 'H, HD', 'H, HD', 'H, HD', 'H, HD', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD'] },
-                { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
+                { feature: 'Layout', value: ['0', '1', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0'] },
+               { feature: 'Weight (kg)', value: ['7.2', '7.2', '8.0', '8.0', '10.5', '10.7', '10.7', '11.2', '11.7', '12.2', '12.7', '13.3', '13.9', '14.4', '14.4', '15.5', '15.9', '16.1', '17.2', '17.2', '20.0', '20.5', '21.0', '22.4', '9.4', '9.4', '9.4', '10.6', '10.6', '11.9', '11.9', '13.5', '13.5', '14.9', '14.9', '15.5', '15.5', '17.3', '17.3', '17.8', '17.8', '20.9', '20.9', '23.4', '24.3', '26.2'] },
+               { feature: 'PCS/pallet (EUR/CNT)', value: ['96/128', '96/128', '96/128', '96/128', '72/120', '72/120', '72/120', '72/120', '72/100', '72/100', '63/108', '63/108', '63/90', '63/90', '63/90', '51/80', '51/80', '51/80', '51/80', '51/80', '42/60', '36/72', '36/60', '36/60', '96/128', '96/128', '96/128', '96/128', '96/128', '72/96', '72/96', '72/96', '72/96' ,'60/90', '60/90', '60/90', '60/90', '48/80', '48/80', '48/80', '48/80', '42/70', '42/70', '42/60', '42/60', '42/60'] },
+               { feature: 'Remarks*', value: ['SMF, H', 'SMF, H', 'SMF, H', 'SMF, H', 'K', 'SMF, H', 'SMF, H', 'SMF, H', 'SMF, H', 'SMF, H', 'SMF, H', 'SMF, H', 'SMF, H', 'SMF, H', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, HD', 'SMF, H, JIS', 'SMF, H, JIS', 'SMF, H, JIS', 'SMF, H, JIS, A', 'SMF, H, JIS, A', 'SMF, H, JIS, A', 'SMF, H, JIS, A', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H, HD', 'SMF, ME, H, HD, P', 'SMF, ME, H, HD, S', 'SMF, ME, H, HD, DP'] }
+
 
             ]
         },
@@ -197,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { feature: 'Weight (kg)', value: ['26.5', '26.5', '31.1', '31.8', '35.6', '33.3', '33.3', '38.7', '36.9', '42.7', '42.7', '43.3', '43.3', '45.0', '52.7', '56.1', '30.8'] },
                 { feature: 'PCS/pallet (EUR/CNT)', value: ['36/48', '36/48', '24/40', '24/36', '24/35', '24/40', '24/40', '21/35', '24/40', '21/28', '21/28', '21/28', '21/28', '21/28', '18/24', '18/24', '24/36'] },
                 { feature: 'Remarks*', value: ['H', 'H', 'H, HD', 'H', 'H, HD', 'H, HD', 'H, HD', 'H, HD', 'H, HD', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD, EMS', 'H, HD'] },
-                { feature: 'TDS', value: ['TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS', 'TDS'] }
+               
             ]
         },
 
