@@ -61,10 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let isDragging = false;
   let startX;
   let scrollLeft;
-  let touchStartX;
 
-  const touchDragSpeed = 3; // Dokunmatik sürükleme hızı
-  const mouseDragSpeed = 1.5;   // Fare sürükleme hızı
+  const touchDragSpeed = 2.5; // Dokunmatik sürükleme hızı
+  const mouseDragSpeed = 1;   // Fare sürükleme hızı
 
   // Kartları dinamik olarak ekleme (dummy fonksiyon olarak bıraktım)
   function addCards(count) {
@@ -102,12 +101,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function smoothScrollTo(targetLeft) {
+    const startLeft = scrollWrapper.scrollLeft;
+    const startTime = performance.now();
+
+    function animateScroll(time) {
+      const elapsed = time - startTime;
+      const progress = Math.min(elapsed / scrollDuration, 1);
+      const newScrollLeft = startLeft + (targetLeft - startLeft) * easeInOutQuad(progress);
+
+      scrollWrapper.scrollLeft = newScrollLeft;
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        manageCards();
+      }
+    }
+
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+
+    requestAnimationFrame(animateScroll);
+  }
+
   // Sürükleme ve dokunma olaylarını yönetme
   function startDragging(e) {
     isDragging = true;
     startX = e.pageX || e.touches[0].pageX;
     scrollLeft = scrollWrapper.scrollLeft;
-    touchStartX = scrollLeft; // Dokunma sürüklemesi başlangıç noktası
+
+    // Animasyonları iptal et (momentum gibi etkiler yok)
   }
 
   function stopDragging() {
@@ -119,15 +144,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function dragging(e) {
     if (!isDragging) return;
     e.preventDefault();
-    
     const x = e.pageX || e.touches[0].pageX;
     const isTouch = e.type.includes('touch');
-    const walk = (x - startX) * (isTouch ? touchDragSpeed : mouseDragSpeed); // Dokunma hızını arttırdık
+    const walk = (x - startX) * (isTouch ? touchDragSpeed : mouseDragSpeed);
 
     scrollWrapper.scrollLeft = scrollLeft - walk;
-
-    // Performans için daha az scroll işlemeyi optimize ettik
-    requestAnimationFrame(manageCards);
+    manageCards();
   }
 
   // Optimize edilmiş olay dinleyicileri
@@ -137,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollWrapper.addEventListener("mouseup", stopDragging);
   scrollWrapper.addEventListener("touchend", stopDragging);
   scrollWrapper.addEventListener("mousemove", dragging);
-  scrollWrapper.addEventListener("touchmove", dragging, { passive: false });
+  scrollWrapper.addEventListener("touchmove", dragging);
 
   scrollWrapper.addEventListener("scroll", () => {
     requestAnimationFrame(manageCards);
