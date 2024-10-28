@@ -643,7 +643,7 @@ window.onscroll = function () {
     header.classList.remove('scrolled');
   }
 };
-require('dotenv').config();
+
 
 const prevButton = document.querySelector('.swiper-button-prev');
 const nextButton = document.querySelector('.swiper-button-next');
