@@ -187,8 +187,8 @@ nav ul li a:hover {
  /* Küçük ekranlar için menü ve hamburger stilleri */
  @media (max-width: 1024px) {
      header {
-        padding: 50px;
-        height: 15vw;
+        padding: 40px;
+        height: 1vw;
      }
   
      nav ul {
@@ -226,8 +226,8 @@ nav ul li a:hover {
   
   @media (max-width: 768px) {
       header {
-          padding: 50px;
-          height: 20vw;
+        padding: 40px;
+        height: 1vw;
       }
   
       nav ul {
@@ -270,8 +270,8 @@ nav ul li a:hover {
  }
   @media (max-width: 600px) {
       header {
-          padding: 50px;
-          height: 20vw;
+        padding: 40px;
+        height: 1vw;
       }
   
       nav ul {
@@ -430,7 +430,7 @@ table tbody tr:nth-child(even) {
 @media(max-width:600px)
 {
     table {
-        width: 150%; /* Mobil ekranlarda tam genişlik */
+        width: 100%; /* Mobil ekranlarda tam genişlik */
         overflow-x: auto; /* Yatay kaydırma ekleyelim */
     }
 
