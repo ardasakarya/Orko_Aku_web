@@ -58,32 +58,43 @@ document.addEventListener("DOMContentLoaded", function () {
   let isDragging = false;
   let startX;
   let scrollLeft;
+  const totalProductCount = 20; // Ürünlerin toplam sayısı
+  let currentProductCount = 0; // Eklenen ürün sayısını takip etmek için
 
   const touchDragSpeed = 3.5; // Dokunmatik sürükleme hızı artırıldı
   const mouseDragSpeed = 1;   // Fare sürükleme hızı
 
-  // Kartları dinamik olarak ekleme (dummy fonksiyon olarak bıraktım)
   function addCards(count) {
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < count && currentProductCount < totalProductCount; i++) {
       const card = document.createElement("div");
       card.classList.add("card");
-      card.textContent = `Card ${i + 1}`;
+     
       scrollWrapper.appendChild(card);
+      currentProductCount++;
     }
   }
 
+  const initialCards = 10;  // Başlangıçta eklenen kart sayısı
   addCards(initialCards);
+
+  const loadMoreThreshold = 2; // Kaydırmada eklenecek kart eşiği
+  const loadMoreCount = 5; // Eklenmesi gereken kart sayısı
 
   function manageCards() {
     const scrollPosition = scrollWrapper.scrollLeft;
     const maxScrollLeft = scrollWrapper.scrollWidth - scrollWrapper.clientWidth;
-
-    if (scrollPosition + scrollWrapper.clientWidth >= maxScrollLeft - cardWidth * loadMoreThreshold) {
+  
+    if (
+      scrollPosition + scrollWrapper.clientWidth >= maxScrollLeft - cardWidth * loadMoreThreshold &&
+      currentProductCount < totalProductCount
+    ) {
       addCards(loadMoreCount);
+      requestAnimationFrame(manageCards); // Yeniden yönetim çağrısı
     }
-
+    
     updateActiveCard();
   }
+  
 
   function updateActiveCard() {
     const cards = document.querySelectorAll(".card");
@@ -128,14 +139,11 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(animateScroll);
   }
 
-  // Sürükleme ve dokunma olaylarını yönetme
   function startDragging(e) {
     isDragging = true;
     scrollWrapper.classList.add("is-dragging");
     startX = e.pageX || e.touches[0].pageX;
     scrollLeft = scrollWrapper.scrollLeft;
-
-    // Animasyonları iptal et (momentum gibi etkiler yok)
   }
 
   function stopDragging() {
@@ -156,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
     manageCards();
   }
 
-  // Optimize edilmiş olay dinleyicileri
   scrollWrapper.addEventListener("mousedown", startDragging);
   scrollWrapper.addEventListener("touchstart", startDragging, { passive: false });
   scrollWrapper.addEventListener("mouseleave", stopDragging);
@@ -169,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(manageCards);
   });
 });
+
 
 document.addEventListener('scroll', function () {
   const contactContainer = document.querySelector('.contact-container');
