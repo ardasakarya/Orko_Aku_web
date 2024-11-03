@@ -38,8 +38,8 @@ function showContent(type) {
     contentArea.innerHTML = `
             <div class="battery_item">
                 <img src="images/battery_tool.jpg" alt="Battery Replacement Tool">
-                <h3>Battery Replacement Tool</h3>
-                <a href="downloads/battery_tool.pdf" class="product-btn">View</a>
+                <h3>Pil değiştirme aleti</h3>
+                <a href="downloads/battery_tool.pdf" class="product-btn">PDF</a>
             </div>
         `;
   }else if (type === 'catalogues') {
@@ -89,7 +89,7 @@ function showContent(type) {
             <div class="certificates_item">
                 <img src="certs/cert_9001.png" alt="TAB-9001">
                 <h3>ISO 9001</h3>
-                <a href="certs/TAB-9001-RECERT9-Certificate- ENG-22092021.pdf" target="_blank"  class="product-btn">view<alt="TAB 9001"></a>
+                <a href="certs/TAB-9001-RECERT9-Certificate- ENG-22092021.pdf" target="_blank"  class="product-btn">PDF<alt="TAB 9001"></a>
             </div>
             <div class="certificates_item">
                 <img src="certs/bisnode.png" alt="BONITETA">
@@ -99,39 +99,39 @@ function showContent(type) {
             <div class="certificates_item">
                 <img src="certs/cert_14001.png" alt="TAB-14001">
                 <h3>ISO 14001</h3>
-                <a href="certs/TAB-14001-RECERT8-Certificate -ENG-22092021.pdf" target="_blank"  class="product-btn">view<alt="TAB-14001"></a>
+                <a href="certs/TAB-14001-RECERT8-Certificate -ENG-22092021.pdf" target="_blank"  class="product-btn">PDF<alt="TAB-14001"></a>
             </div>
 
              <div class="certificates_item">
                 <img src="certs/SIRA2.png" alt="SIRA-CSA">
                 <h3>ATEX CELLS</h3>
-                 <a href="certs/ATEX_CELLS.pdf" target="_blank"  class="product-btn">view<alt="SIRA-CSA"></a>
+                 <a href="certs/ATEX_CELLS.pdf" target="_blank"  class="product-btn">PDF<alt="SIRA-CSA"></a>
             </div>
             <div class="certificates_item">
                 <img src="certs/SIQ-1.png" alt="SIQ">
                 <h3>ATEX Production Quality Assurance Notification</h3>
-               <a href="certs/ATEX_Production_Quality_Assurance_Notification.pdf" target="_blank"  class="product-btn">view<alt="SIQ"></a>
+               <a href="certs/ATEX_Production_Quality_Assurance_Notification.pdf" target="_blank"  class="product-btn">PDF<alt="SIQ"></a>
             </div>
             <div class="certificates_item">
                 <img src="certs/iecex.png" alt="IECEx-BATTERIES">
                 <h3>IECEx BATTERIES</h3>
-                 <a href="certs/IECEx_BATTERIES.pdf" target="_blank"  class="product-btn">view<alt="IECEx BATTERIES"></a>
+                 <a href="certs/IECEx_BATTERIES.pdf" target="_blank"  class="product-btn">PDF<alt="IECEx BATTERIES"></a>
             </div>
  <div class="certificates_item">
                 <img src="certs/iecex.png" alt="IECEx-CELLS">
                 <h3>IECEx CELLS</h3>
-                 <a href="certs/IECEx_CELLS.pdf" target="_blank"  class="product-btn">view<alt="IECEx-CELLS"></a>
+                 <a href="certs/IECEx_CELLS.pdf" target="_blank"  class="product-btn">PDF<alt="IECEx-CELLS"></a>
             </div>
              <div class="certificates_item">
                 <img src="certs/ineris_new.png" alt="ineris">
                 <h3>ATEX BATTERIES</h3>
-                <a href="certs/ATEX_BATTERIES.pdf" target="_blank"  class="product-btn">view<alt="ineris"></a>
+                <a href="certs/ATEX_BATTERIES.pdf" target="_blank"  class="product-btn">PDF<alt="ineris"></a>
             </div>
            
           <div class="certificates_item">
                 <img src="certs/smiatf.png" alt="IATF_16949">
                 <h3>IATF 16949</h3>
-                <a href="certs/IATF_16949.pdf.pdf" target="_blank"  class="product-btn">view<alt="IATF_16949"></a>
+                <a href="certs/IATF_16949.pdf.pdf" target="_blank"  class="product-btn">PDF<alt="IATF_16949"></a>
             </div>
 
         `;
@@ -139,8 +139,8 @@ function showContent(type) {
     contentArea.innerHTML = `
             <div class="presentation_item">
                 <img src="images/presentation.jpg" alt="Presentation">
-                <h3>Presentation</h3>
-                <a href="https://online.fliphtml5.com/vvbpc/uuyb/" class="product-btn">View</a>
+                <h3>Sunum</h3>
+                <a href="https://online.fliphtml5.com/vvbpc/uuyb/" class="product-btn">PDF</a>
             </div>
         `;
   }
