@@ -695,9 +695,22 @@ nav ul li a:hover {
 }
 
 /* Sosyal Medya İkonları */
+.follow-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.follow-us h4 {
+    margin-bottom: 10px; /* Başlık ile ikonlar arasında biraz boşluk bırakır */
+}
+
 .follow-us .icons {
     display: flex;
+    justify-content: space-between;
     gap: 15px;
+    width: 100px; /* İkonların sabit bir genişlik içinde eşit aralıklarla yerleşmesi için */
 }
 
 .follow-us .icons i {
@@ -707,31 +720,21 @@ nav ul li a:hover {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-
 /* Facebook hover rengi */
 .footer-col .icons .fa-facebook-f:hover {
     color: #3b5998;
-    /* Facebook mavi rengi */
 }
-
-/* Twitter hover rengi */
-.footer-col .icons .fa-twitter:hover {
-    color: #1da1f2;
-    /* Twitter mavi rengi */
-}
-
 
 /* Instagram hover rengi */
 .footer-col .icons .fa-instagram:hover {
     color: #e4405f;
-    /* Instagram pembe-kırmızı rengi */
 }
 
 /* WhatsApp hover rengi */
 .footer-col .icons .fa-whatsapp:hover {
     color: #25d366;
-    /* WhatsApp yeşil rengi */
 }
+
 
 /* Footer Alt Kısım */
 .footer-bottom {
@@ -781,6 +784,7 @@ nav ul li a:hover {
     }
 
     .footer-col {
+        align-items: start;
         width: 100%;
         margin-bottom: 20px;
     }
