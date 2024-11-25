@@ -42,13 +42,23 @@ const swiper = new Swiper('.swiper-container', {
     disableOnInteraction: false,
   },
 });
-if (history.scrollRestoration) {
-  history.scrollRestoration = 'manual'; // Tarayıcıya kaydırma pozisyonunu saklamamasını söyler
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = "manual"; // Tarayıcının otomatik kaydırmasını kapat
 }
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0); // Sayfa kapanmadan önce kaydırmayı en üste çeker
+// Geri dönüldüğünde veya sayfa yeniden yüklendiğinde pozisyonu koru
+window.onload = function () {
+  const savedPosition = sessionStorage.getItem("scrollPosition");
+  if (savedPosition) {
+    window.scrollTo(0, parseInt(savedPosition, 10)); // Pozisyona hemen git
+  }
 };
+
+// Sayfadan çıkarken kaydırma pozisyonunu kaydet
+window.onbeforeunload = function () {
+  sessionStorage.setItem("scrollPosition", window.scrollY);
+};
+
 
  
 document.addEventListener("DOMContentLoaded", function () {

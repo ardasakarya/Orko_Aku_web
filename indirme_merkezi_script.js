@@ -11,7 +11,7 @@ window.onscroll = function () {
   }
 };
 document.addEventListener('DOMContentLoaded', function() {
-  showContent('battery'); // Sayfa açıldığında "battery" içeriğini göster
+  showContent('catalogues'); // Sayfa açıldığında "catalogues" içeriğini göster
   setActiveButton('battery-btn'); // İlk butonu aktif yap
 });
 
@@ -34,15 +34,7 @@ function showContent(type) {
   const contentArea = document.getElementById('content-area');
   contentArea.innerHTML = ''; // Önce alanı temizliyoruz
 
-  if (type === 'battery') {
-    contentArea.innerHTML = `
-            <div class="battery_item">
-                <img src="images/battery_tool.jpg" alt="Battery Replacement Tool">
-                <h3>Pil değiştirme aleti</h3>
-                <a href="downloads/battery_tool.pdf" class="product-btn">PDF</a>
-            </div>
-        `;
-  }else if (type === 'catalogues') {
+if (type === 'catalogues') {
     contentArea.innerHTML = `
         <div class="catalogues_item">
             <h3>TAB STARTER BATTERIES</h3>
